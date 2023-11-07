@@ -1,0 +1,1808 @@
+@import "node_modules/bootstrap/scss/bootstrap";
+
+@import url("https://fonts.googleapis.com/css2?family=Verdana:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500&family=Roboto&display=swap");
+
+ 
+
+.backgroundImage {
+
+  background-image: url("../../assets/black-mercedes-benz-luxury-car-hd-ejv7552y5ziw5gn4-removebg-preview 1 (2).png");
+
+  // background-size: 110vh;
+
+  background-color: black;
+
+  background-repeat: no-repeat;
+
+  height: 130vh;
+
+  width: 100%;
+
+}
+
+ 
+
+ 
+
+.navbar-logos {
+
+  border: solid gray;
+
+  border-radius: 100%;
+
+  width: 38px;
+
+  height: 38px;
+
+  padding: 5px;
+
+  margin-right: 2rem;
+
+  // flex-shrink: 0;
+
+}
+
+ 
+
+.car-subs-logogroup {
+
+  display: flex;
+
+}
+
+ 
+
+.brand-logo {
+
+  padding-left: 70px;
+
+  margin-top: -10px;
+
+}
+
+ 
+
+.navbar-links {
+
+  color: white;
+
+  display: flex;
+
+  justify-content: flex-end;
+
+  margin-right: 10px;
+
+  margin-right: -240px;
+
+}
+
+ 
+
+.navbar-links p {
+
+  // color: black;
+
+  padding-right: 25px;
+
+  // margin-right: 10px;
+
+  margin-top: 1px;
+
+  color: #c9d6df;
+
+  font-family: Verdana;
+
+  font-size: 19px;
+
+  font-style: normal;
+
+  font-weight: 400;
+
+  line-height: normal;
+
+}
+
+ 
+
+.language-menu {
+
+  display: flex;
+
+  color: white;
+
+  // justify-content: center;
+
+  align-items: baseline;
+
+  // padding: auto;
+
+  padding-right: 10px;
+
+  // margin-left: 10px;
+
+}
+
+ 
+
+.navbar-drop-arrow {
+
+  margin-top: 6px;
+
+  width: 16px;
+
+  height: 10px;
+
+  justify-content: center;
+
+  margin-left: 3px;
+
+}
+
+ 
+
+.car-subs-search input {
+
+  background-color: #f4f4f4;
+
+ 
+
+  width: 20rem;
+
+ 
+
+  height: 2.5rem;
+
+}
+
+ 
+
+.car-subs-search img {
+
+  max-width: 20%;
+
+ 
+
+  max-height: 20%;
+
+}
+
+ 
+
+.vr {
+
+  width: 2px;
+
+ 
+
+  color: black;
+
+}
+
+ 
+
+.card-container {
+
+  position: relative;
+
+  margin-top: 5rem;
+
+  // transform: scale(1.2);
+
+  margin-left: 20px;
+
+  border-radius: 15px;
+
+  border: solid #d9d9d9;
+
+  // height: 450px;
+
+  padding: 10px;
+
+  margin-right: 2.8rem;
+
+  margin-left: 4.5rem;
+
+  // height: 350px;
+
+}
+
+ 
+
+.first-card-text {
+
+  position: absolute;
+
+  color: #fff;
+
+  font-family: Verdana;
+
+  font-size: 33px;
+
+  font-style: normal;
+
+  font-weight: 700;
+
+  line-height: 130%;
+
+  /* 52px */
+
+  letter-spacing: -0.8px;
+
+  // padding: 1rem 0rem;
+
+  // padding-bottom: 4rem;
+
+}
+
+ 
+
+.first-card {
+
+  width: 31rem !important;
+
+  margin-bottom: 15px;
+
+  border-radius: 16px;
+
+  margin-left: 0rem;
+
+}
+
+ 
+
+.first-card-text-3 {
+
+  color: #fff;
+
+  font-family: Verdana;
+
+  font-size: 22px;
+
+  font-style: normal;
+
+  font-weight: 800;
+
+  line-height: 150%;
+
+  /* 36px */
+
+  padding-bottom: 2rem;
+
+  padding-top: 1rem;
+
+}
+
+ 
+
+.card-img-top {
+
+  object-fit: cover;
+
+  height: 395px;
+
+  border-radius: 15px;
+
+}
+
+ 
+
+.list-group-item {
+
+  font-size: 15px !important;
+
+  word-spacing: 5px;
+
+  background: none;
+
+  border: none;
+
+  color: white;
+
+  margin: 0;
+
+  margin-left: -15px;
+
+  // gap: 72px;
+
+  display: flex;
+
+}
+
+ 
+
+.list-group-horizontal {
+
+  gap: 64px;
+
+}
+
+ 
+
+.car-name {
+
+  width: 200px;
+
+  color: #FFF;
+
+  font-family: Verdana;
+
+  font-size: 0.9rem;
+
+  font-style: normal;
+
+  font-weight: 800;
+
+  line-height: 150%;
+
+  /* 36px */
+
+}
+
+ 
+
+.list-group {
+
+  margin: -13px;
+
+}
+
+ 
+
+.car-name-logo-list {
+
+  margin-left: 0.3rem;
+
+}
+
+ 
+
+.car-name-side-ele {
+
+  margin-left: -88px;
+
+  display: flex;
+
+  flex-direction: row;
+
+  // justify-content: space-between;
+
+  // gap: 20px;
+
+}
+
+ 
+
+.car-name-side-ele-logo {
+
+  width: 24px;
+
+  height: 24px;
+
+}
+
+ 
+
+#png1 {
+
+  margin-left: -7.5rem;
+
+}
+
+ 
+
+.car-name-side-ele-text {
+
+  // font-size: 14px;
+
+  word-spacing: 1px;
+
+  padding-left: 1px;
+
+  color: #D9D9D9;
+
+  font-family: Verdana;
+
+  font-size: 0.6rem;
+
+  margin: auto;
+
+  font-style: normal;
+
+  font-weight: 500;
+
+  line-height: 150%;
+
+  /* 21px */
+
+  letter-spacing: -0.28px;
+
+}
+
+ 
+
+.car-price-text {
+
+  color: #fff;
+
+  font-family: Verdana;
+
+  font-size: 32px;
+
+  font-style: normal;
+
+  font-weight: 700;
+
+  line-height: normal;
+
+}
+
+ 
+
+.car-price-offer-text {
+
+  color: #d9d9d9;
+
+  font-family: PJSans;
+
+  font-size: 20px;
+
+  font-style: normal;
+
+  font-weight: 700;
+
+  line-height: normal;
+
+  text-decoration-line: line-through;
+
+}
+
+ 
+
+.sub-string {
+
+  color: #d9d9d9;
+
+  font-family: PJSans;
+
+  font-size: 12px;
+
+  font-style: normal;
+
+  font-weight: 700;
+
+  line-height: normal;
+
+  // text-decoration: overline;
+
+  margin-top: -10px;
+
+  padding-left: 3px;
+
+}
+
+ 
+
+.car-offer-price {
+
+  display: flex;
+
+  align-items: center;
+
+}
+
+ 
+
+.see-details {
+
+  border-radius: 30px;
+
+  width: 213px !important;
+
+  height: 51px !important;
+
+  color: #fff;
+
+  font-family: Verdana;
+
+  font-size: 18px;
+
+  font-style: normal;
+
+  font-weight: 700;
+
+  line-height: normal;
+
+  text-transform: uppercase;
+
+}
+
+ 
+
+.card-container {
+
+  display: flex;
+
+}
+
+ 
+
+.second-card {
+
+  padding-left: 2rem;
+
+  width: 26rem;
+
+}
+
+ 
+
+.search-filters {
+
+  color: #232738;
+
+  font-family: Verdana;
+
+  font-size: 18px;
+
+  font-style: normal;
+
+  font-weight: 600;
+
+  line-height: normal;
+
+  letter-spacing: -0.3px;
+
+}
+
+ 
+
+.search-filters-side-text {
+
+  color: #232738;
+
+  font-family: Verdana;
+
+  font-size: 18px !important;
+
+  font-style: normal;
+
+  font-weight: 500;
+
+  line-height: normal;
+
+  letter-spacing: -0.3px;
+
+}
+
+ 
+
+.search-filters-crosspng {
+
+  width: 32px;
+
+  height: 32px;
+
+  border-radius: 5px;
+
+  border: 0.8px solid rgba(0, 0, 0, 0.15);
+
+  margin-left: 8.4rem;
+
+}
+
+ 
+
+.search-box {
+
+  padding-top: 16px;
+
+  padding-bottom: 16px;
+
+  width: 27.3rem;
+
+  // display: flex;
+
+}
+
+ 
+
+.search-box-span {
+
+  display: flex;
+
+  width: 24.5rem;
+
+}
+
+ 
+
+.serach-box-img {
+
+  padding-left: 45px;
+
+  // padding-right: 3px;
+
+  // background: url("search-outline 1.png") no-repeat left;
+
+  background: url("../icons/search-outline 1.png") no-repeat left;
+
+  background-size: 20px;
+
+  background-position: 15px;
+
+  // margin-left: 5px;
+
+}
+
+ 
+
+.text-below-searchbox {
+
+  color: #232738;
+
+  font-family: Verdana;
+
+  font-size: 20px;
+
+  font-style: normal;
+
+  font-weight: 600;
+
+  line-height: normal;
+
+  letter-spacing: -0.3px;
+
+}
+
+ 
+
+.filter-list {
+
+  display: flex;
+
+  flex-wrap: wrap;
+
+  text-decoration: none;
+
+}
+
+ 
+
+.filter-item {
+
+  // border: solid rgb(214, 200, 173);
+
+  // padding: 20px;
+
+  border: 0.8px solid #D9D9D9;
+
+  margin-left: 10px;
+
+  background: white;
+
+  text-decoration: none;
+
+  color: black;
+
+  display: flex;
+
+  border-radius: 5px;
+
+  align-items: center;
+
+}
+
+ 
+
+.filter-item:hover {
+
+  background-color: red;
+
+  color: white;
+
+  border-color: red;
+
+}
+
+ 
+
+.cross-icon:hover {
+
+  color: white;
+
+  transform: rotate(45deg);
+
+}
+
+ 
+
+.cross-icon {
+
+  background: url("../icons/plus-icon.png");
+
+  background-position: 30%;
+
+  // transform: rotate(0deg);
+
+  // align-items: end;
+
+  // margin: auto;
+
+  // display: block;
+
+  // display: flex;
+
+  height: 25px;
+
+  width: 25px;
+
+}
+
+ 
+
+.text-below-filter-second-card {
+
+  margin-top: 14px;
+
+  color: #322651;
+
+  font-family: Verdana;
+
+  font-size: 12px;
+
+  font-style: italic;
+
+  font-weight: 500;
+
+  line-height: normal;
+
+  letter-spacing: -0.3px;
+
+  text-decoration-line: underline;
+
+}
+
+ 
+
+.location-icon-second-card {
+
+  width: 18px;
+
+  height: 18px;
+
+}
+
+ 
+
+.budget {
+
+  color: #232738;
+
+  font-family: Verdana;
+
+  font-size: 20px;
+
+  font-style: normal;
+
+  font-weight: 600;
+
+  line-height: normal;
+
+  letter-spacing: -0.3px;
+
+  display: block;
+
+}
+
+ 
+
+.budget-slider {
+
+  width: 23rem;
+
+  // background: red;
+
+}
+
+ 
+
+input[type="range"]::-webkit-slider-runnable-track {
+
+  width: 300px;
+
+  height: 5px;
+
+  background: transparent;
+
+  border-color: transparent;
+
+  border-width: 6px 0;
+
+  color: transparent;
+
+ 
+
+  //=============================================================
+
+  appearance: none;
+
+  // margin:5px;
+
+  width: calc(100% - 10px);
+
+  width: -webkit-calc(100% - 10px);
+
+  // height:25px;
+
+  // outline:none;
+
+  background: bisque;
+
+  // border-radius:12px;
+
+  // overflow: hidden;
+
+}
+
+ 
+
+input[type="range"]::-webkit-slider-thumb {
+
+  background: #ff0000;
+
+  border-radius: 10px;
+
+}
+
+ 
+
+.price-range {
+
+  display: flex;
+
+  // align-items: center;
+
+  justify-content: space-between;
+
+}
+
+ 
+
+input[type="range"]::-webkit-slider-runnable-track {
+
+  background: #ffffff;
+
+}
+
+ 
+
+input[type="range"]::-webkit-slider-runnable-track {
+
+  background: #777777;
+
+}
+
+ 
+
+.price-range-number {
+
+  color: rgba(50, 38, 81, 0.75);
+
+  // text-align: right;
+
+  font-family: Verdana;
+
+  font-size: 14px;
+
+  font-style: normal;
+
+  font-weight: 600;
+
+  line-height: normal;
+
+  letter-spacing: -0.3px;
+
+}
+
+ 
+
+.Condition-second-card {
+
+  display: flex;
+
+  justify-content: space-between;
+
+}
+
+ 
+
+.Condition-second-card-arrow {
+
+  width: 12px;
+
+  height: 6px;
+
+  align-self: center;
+
+}
+
+ 
+
+.Condition-second-card-text {
+
+  color: var(--gray-scale-gray-900, #1a1a1a);
+
+  font-family: Verdana;
+
+  font-size: 18px;
+
+  font-style: normal;
+
+  font-weight: 500;
+
+  line-height: 150%;
+
+  /* 27px */
+
+}
+
+ 
+
+.third-card {
+
+  // padding: 10px;
+
+  // margin-left: 60px;
+
+  margin-left: 15px;
+
+  width: 34rem;
+
+  // padding-left: 1rem;
+
+  // margin-right: 2rem;
+
+}
+
+ 
+
+.vertical-line {
+
+  border-right: 1px solid #d0d0d0;
+
+  // background: ;
+
+}
+
+ 
+
+.third-card-headers {
+
+  margin-bottom: -20px;
+
+  display: flex;
+
+  justify-content: space-between;
+
+  padding: 10px;
+
+  color: rgba(26, 32, 44, 0.5);
+
+  font-family: Verdana;
+
+  font-size: 20px;
+
+  font-style: normal;
+
+  font-weight: 700;
+
+  line-height: 150%;
+
+  /* 30px */
+
+  width: 100%;
+
+  cursor: poVerdana;
+
+  text-align: center;
+
+  padding-top: 11.07px;
+
+  padding-left: 17.67px;
+
+}
+
+ 
+
+.third-card-headers-hover-effect:hover {
+
+  color: #db2423;
+
+ 
+
+}
+
+ 
+
+.third-card-headers-hover-effect {
+
+  // color: #DB2423;
+
+  font-family: Verdana;
+
+  font-size: 1.1rem;
+
+  font-style: normal;
+
+  font-weight: 700;
+
+  line-height: 150%;
+
+  /* 30px */
+
+}
+
+ 
+
+.third-card-purchase-price {
+
+  display: flex;
+
+  justify-content: space-between;
+
+  padding-left: 43px;
+
+  padding-right: 8px;
+
+  padding-top: 19px;
+
+ 
+
+  color: #000;
+
+  font-family: Verdana;
+
+  font-size: 16px;
+
+  font-style: normal;
+
+  font-weight: 900;
+
+  line-height: normal;
+
+  letter-spacing: -0.36px;
+
+  // text-align: justify;
+
+}
+
+ 
+
+.final-output {
+
+  border-radius: 8px;
+
+  border: 1px solid #db2423;
+
+  background: rgba(219, 36, 35, 0.04);
+
+  // padding: 21.45px;
+
+  margin: 21.45px;
+
+}
+
+ 
+
+.finding-car {
+
+  padding-top: 3%;
+
+  color: #000;
+
+  font-family: Verdana;
+
+  font-size: 48px;
+
+  font-style: normal;
+
+  font-weight: 700;
+
+  line-height: normal;
+
+  text-align: center;
+
+}
+
+ 
+
+.finding-car-btn {
+  display: flex;
+    // gap: 40%;
+    /* justify-content: space-between; */
+    width: 42rem;
+    padding: 1rem;
+    // margin-left: 33rem !important;
+    margin-bottom: 1rem;
+
+}
+
+ 
+
+.finding-car-btn-btn {
+
+  border: solid rgba(0, 0, 0, 0.16);
+  border-radius: 58px;
+
+  width: 11rem !important;
+
+  // margin-left: -12rem;
+  font-family: Verdana;
+  height: 3.5rem;
+
+  text-align: center;
+
+}
+
+ 
+
+ 
+
+#inputPassword6{
+
+  text-align: right;
+
+}
+
+ 
+
+.finding-car-btn-btn:hover {
+
+  background: black;
+
+  color: white;
+
+}
+
+ 
+
+.row-data {
+
+  // border: solid gray;
+
+  border: 1px solid rgba(0, 0, 0, 0.4);
+
+  box-shadow: 0px 0px 2px 0px rgba(0, 0, 0, 0.25);
+
+  // gap: 1rem;
+
+  border-radius: 8px;
+
+  justify-content: space-between;
+
+  padding-left: 1rem;
+
+  margin-top: 0rem;
+
+  padding-top: 2rem;
+
+  text-align: center;
+
+}
+
+ 
+
+ 
+
+.car-types {
+
+  gap: 1rem;
+
+}
+
+ 
+
+.car-types-grid {
+
+  background: rgba(217, 217, 217, 0.15);
+
+  padding: 3rem;
+
+}
+
+ 
+
+.footer {
+
+  background: black;
+
+  height: 13rem;
+
+  // flex: auto;
+
+ 
+
+  // position: relative;
+
+ 
+
+  display: flex;
+
+}
+
+ 
+
+.footer-download {
+
+  color: white;
+
+  margin-top: 2rem;
+
+  margin-left: 5rem;
+
+ 
+
+  float: left;
+
+ 
+
+  padding: 2%;
+
+}
+
+ 
+
+.google-apple-btn {
+
+  display: flex;
+
+  flex-direction: row;
+
+  margin-top: 5rem;
+
+  margin-bottom: auto;
+
+  margin-left: 3rem;
+
+}
+
+ 
+
+.google-play-store {
+
+  position: relative;
+
+ 
+
+  padding-right: 3px;
+
+}
+
+ 
+
+.google-img-bg,
+
+.google-img-text {
+
+  position: absolute;
+
+ 
+
+  // padding-left: 30px;
+
+ 
+
+  margin-left: 10px;
+
+ 
+
+  top: 0;
+
+ 
+
+  margin-right: 0;
+
+ 
+
+  left: 0;
+
+}
+
+ 
+
+.apple-btn {
+
+  //     width: 282.725px;
+
+ 
+
+  // height: 80px;
+
+ 
+
+  // flex-shrink: 0;
+
+ 
+
+  width: 212.725px;
+
+ 
+
+  height: 62px;
+
+}
+
+ 
+
+.google-img-bg {
+
+  width: 207.725px;
+
+ 
+
+  height: 56px;
+
+}
+
+ 
+
+.google-img-text {
+
+  // width: 212.725px;
+
+ 
+
+  // height: 62px;
+
+ 
+
+  margin-left: 50px;
+
+ 
+
+  margin-top: 12px;
+
+ 
+
+  width: 133.725px;
+
+ 
+
+  height: 33px;
+
+}
+
+ 
+
+#footer-description {
+
+  color: rgba(255, 255, 255, 0.80);
+
+  font-family: Verdana;
+
+  font-size: 1.2rem;
+
+  font-style: normal;
+
+  font-weight: 400;
+
+  line-height: normal;
+
+}
+
+ 
+
+#footer-heading {
+
+  color: #fff;
+
+  font-family: Verdana;
+
+  font-size: 1.8rem;
+
+  font-style: normal;
+
+  font-weight: 700;
+
+  line-height: 46px;
+
+  margin-bottom: 0.2rem;
+
+  /* 109.524% */
+
+}
+
+ 
+
+hr {
+
+  color: rgb(255, 255, 255);
+
+ 
+
+  margin: 0;
+
+}
+
+ 
+
+.footer-bottom {
+
+  background: black;
+
+ 
+
+  display: flex;
+
+  height: 5rem;
+
+  width: auto;
+
+ 
+
+  // flex-direction: row;
+
+ 
+
+  justify-content: center;
+
+ 
+
+  align-items: center;
+
+ 
+
+  // gap: 1146px;
+
+}
+
+ 
+
+.footer-aurion-logo {
+
+  width: 8rem;
+
+  height: 2rem;
+
+  flex-shrink: 0;
+
+  margin-left: 9rem;
+
+  margin-top: 34px;
+
+  margin-bottom: 34px;
+
+}
+
+ 
+
+.footer-btn {
+
+  color: #fff;
+
+ 
+
+  border: 0;
+
+ 
+
+  background: none;
+
+  color: var(--text-gray-300, #D9DBE1);
+
+  // font-feature-settings: 'salt'on, 'liga'off;
+
+  font-family: Verdana;
+
+  font-size: 0.9rem;
+
+  font-style: normal;
+
+  font-weight: 400;
+
+  line-height: 24px;
+
+  margin: 0rem 1rem;
+
+ 
+
+  /* 120% */
+
+}
+
+ 
+
+.footer-btn-group {
+
+  justify-content: center;
+
+ 
+
+  margin: auto;
+
+}
+
+ 
+
+.quick-links-footer {
+
+  height: 2rem;
+
+  width: 11rem;
+
+  margin-right: 8rem;
+
+}
+
+.top-navbar{
+  display: flex;
+  justify-content: space-between;
+  // margin: 0 4rem;
+  // margin-top: 2rem;
+}
+
+.top-navbar img{
+height: 2rem;
+width: 2rem;
+}
+
+.top-navbar:hover{
+  cursor: poVerdana;
+}
+
+.top-navbar a{
+  margin-top: auto;
+  margin-bottom: auto;
+}
+
+.howItWorks {
+  color: #0381BA;
+  font-size: 50px;
+  font-family: "Verdana";
+  font-weight: bolder;
+  text-align: center;
+  width: 100%;
+  margin-top: 100px;
+}
+
+.imageDown {
+  height: 22px;
+}
+
+.find-more-button-main {
+  position: absolute;
+  bottom: 30px;
+  margin: 0 auto;
+  text-align: center;
+  width: 100%;
+}
+
+.highPerform {
+  width: 100%;
+  text-align: center;
+  color: black;
+  font-size: 18px;
+  font-family: Verdana;
+  font-weight: 600;
+  word-wrap: break-word
+}
+
+.shadow-box {
+  // width: 50px; 
+  // height: 50px; 
+  // background: white; 
+  // border-radius: 30px; 
+  // box-shadow: 0px 5px 10px #d4d2d2;
+  // text-align: center;
+
+  // width: 125px;
+  // height: 109px;
+  // background: white;
+  // border-radius: 7px;
+  // box-shadow: 0px 5px 10px #d4d2d2;
+  // text-align: center;
+  // margin: 0px 0 14px 0;
+
+  // new
+  width: 125px;
+  height: 109px;
+  background: white;
+  border-radius: 7px;
+  box-shadow: 0px 5px 10px #d4d2d2;
+  text-align: center;
+  /* margin: 0px 0 14px 67px; */
+  margin: auto;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  // img{
+  //     width: 66px;
+  //     height: 66px;
+  // }
+}
+
+.browsSelect {
+  color: black;
+  font-size: 18px;
+  font-family: Verdana;
+  font-weight: 600;
+  line-height: 54px;
+  word-wrap: break-word;
+  text-align: center;
+}
+
+.boxOneText {
+  /* width: 100%; */
+  height: 100%;
+  color: #424242;
+  font-size: 14px;
+  font-family: Verdana;
+  font-weight: 400;
+  line-height: 28px;
+  word-wrap: break-word;
+  padding: 0px 10% 0px 9%;
+  text-align: center;
+}
+
+.imageContainer {
+  background-image: url(../../assets/vector.png);
+  background-repeat: repeat-x;
+  background-position: 390px 51px;
+  margin-top: 70px;
+
+  .col {
+      background-color: #fff;
+  }
+
+  .vectorImage-main {
+      position: relative;
+  }
+
+  .vectorImage {
+      width: 130%;
+      height: auto;
+      position: absolute;
+      left: -20px;
+      top: 20px;
+  }
+}
+
+.box-text {
+  width: 100%;
+  height: 100%;
+  color: #424242;
+  font-size: 13px;
+  font-family: Verdana;
+  font-weight: 400;
+  line-height: 20px;
+  word-wrap: break-word
+}
+
+
+.selectByBrand {
+  color: black;
+  font-size: 22px;
+  font-family: Verdana;
+  font-weight: 600;
+  flex: auto
+}
+
+.rectangleImage {
+  position: absolute;
+  right: 60px;
+  // justify-content: flex-end;
+}
+
+
+
+.viewAll {
+  font-family: Verdana;
+  font-weight: 600;
+  color: #B7C301;
+  margin-top: 8px;
+}
+
+.rightArrowIcon {
+  cursor: poVerdana;
+  margin-top: 7px;
+}
+
+.viweAndRight {
+  display: flex;
+}
+
+.rectViewAll {
+  margin-top: 50px;
+}
+
+.card {
+  background-color: #f0eaea;
+  height: 80px;
+  width: 110px;
+  justify-content: center;
+  text-align: center;
+}
+
+.carCard {
+  width: 25px;
+  height: 25px;
+  justify-content: center;
+}
+
+.finding-car {
+  padding-top: 110px;
+  color: #000;
+  font-family: Verdana;
+  font-size: 48px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  text-align: center;
+}
+
+.finding-car-btn {
+  display: flex;
+  justify-content: space-between;
+  width: 42rem;
+  padding: 1rem;
+}
+
+.finding-car-btn-btn {
+  // padding-left: 20px
+  border: solid rgba(0, 0, 0, 0.16);
+  border-radius: 58px;
+}
+
+.finding-car-btn-btn:hover {
+  background: black;
+  color: white;
+}
+
+.row-data {
+  height: auto;
+  border: 1px solid #eeecec;
+  box-shadow: 0px 0px 2px 0px rgba(0, 0, 0, 0.25);
+  border-radius: 8px;
+  background: #F3F3F3;
+  text-align: center;
+  padding: 12px 0;
+}
+
+.row-data p {
+  margin-bottom: 0;
+}
+
+.row-data img {
+  height: 30px
+}
+
+.row-data:hover {
+  border: 1px solid #838383;
+}
+
+.car-types {
+  gap: 1rem;
+  align-items: center;
+  justify-content: center;
+  font-size: 13px;
+}
+
+.car-row{
+  max-width: 13.4rem;
+  min-width: 13.4rem;
+
+  p{
+      margin-top: 6px;
+  }
+}
+
+
+.brands-view-all {
+  margin: 15px -10px;
+  display: flex;
+}
+
+ 
+
+//============================================================================================

@@ -1,0 +1,125 @@
+<nav id="car-subs-nav" class="navbar py-3 navbar-fixed-top"
+[style.background-color]="bgcolor" [style.width]="bgwidth" [style.padding-left]="bgpad" [style.padding-right]="bgpad">
+
+    <div>
+        <a class="nav-brand">
+            <img src ={{sideburger}} height="20px" width="25px" class="expand" (click)="expandSideBar()" style="margin-top: 6px;">
+            <img class="imgg" src={{aurologo}} alt="Bootstrap">
+        </a>
+
+        <div class="sidebar" [style.display]="isExpand ? 'inherit' : 'none'">
+            <!-- <img class="img3" src="..\assets\b494ahn2td2ykcqak6hr_1-removebg-preview 1.png" alt="img"
+              style="width:150px;height:40px;">
+           -->
+            <ul class="ul1">
+              <li style="margin-top: 25px;"> <img src="..\assets\Category.png" alt="Icon 1" style="width:20px;height:12px;"> <a
+                 class="anchor"  (click)="redirect('work-space')">Dashboard</a></li>
+              <li style="margin-top: 20px;"><img src="../../assets/Profiles.png" alt="Icon 1" style="width:20px;height:12px;"> 
+                <!-- routerLink="/main-profile" -->
+                <a class="anchor" (click)="redirect('/main-profile')">Profile</a></li>
+              <li style="margin-top: 20px;"><img src="..\assets\security-user.png" alt="Icon 1" style="width:20px;height:15px;">
+                <a class="anchor" (click)="redirect('rm-home-page')" >RM Homepage</a></li>
+              <li style="margin-top: 20px;"><img src="..\assets\Ticket.png" alt="Icon 1" style="width:20px;height:15px;"> <a
+                class="anchor">Messages</a></li>
+              <li style="margin-top: 20px;"><img src="..\assets\Document.png" alt="Icon 1" style="width:20px;height:15px;"> <a
+                class="anchor">Purchases</a></li>
+
+              <li style="margin-top: 20px;"><img src="..\assets\Calendar.png" alt="Icon 1" style="width:20px;height:15px;"> <a
+
+                class="anchor">Returns</a></li>
+
+              <li style="margin-top: 20px;"><img src="..\assets\Activity.png" alt="Icon 1" style="width:20px;height:15px;"> <a
+
+                class="anchor">Gallery</a></li>
+
+              <li style="margin-top: 20px;"><img src="..\assets\Setting.png" alt="Icon 1" style="width:20px;height:15px;"><a
+
+                class="anchor"  routerLink="/profile-settings">Settings</a></li>
+
+         
+
+            </ul>
+
+          </div>
+
+    </div>
+
+    <ul class="nav justify-content-end" style="margin-right: -180px;">
+
+        <li class="nav-item">
+
+          <a class="nav-link active" routerLink="/Homepage" aria-current="page" [style.color]="txtcolor">Home</a>
+
+        </li>
+
+        <li class="nav-item">
+
+            <a class="nav-link" aria-current="page" [style.color]="txtcolor">About Us</a>
+
+        </li>
+
+        <li class="nav-item">
+
+            <a class="nav-link" aria-current="page" [style.color]="txtcolor">Trucks</a>
+
+        </li>
+
+        <li class="nav-item">
+
+            <a class="nav-link" aria-current="page" [style.color]="txtcolor">Services</a>
+
+        </li>
+
+        <li class="nav-item">
+
+            <a class="nav-link" aria-current="page" (click)="redirect('work-space')" [style.color]="txtcolor">My Workspace</a>
+
+        </li>
+
+        <li>
+
+          <div class="car-subs-logogroup">
+            <img src={{like}} class="px-2" >
+            <img src={{noti}} class="px-2" (click)="expandNotiBar()">
+            <div class="notibar" [style.display]="isNotiExpand ? 'inherit' : 'none'">
+              <ul class="drop">
+                <p>You have <span><b>4</b></span> new notifications</p>
+                <li><i class="fa-solid fa-circle-user"></i>
+                  <a class="user-names"><b>Jerome Bell</b></a><a class="time-ago">42 mins ago</a>
+                  <p class="notification-text">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quidem, voluptatum?</p>
+                </li>
+                <li><i class="fa-solid fa-circle-user"></i>
+                  <a class="user-names"><b>Anna Miles</b></a><a class="time-ago">48 mins ago</a>
+                  <p class="notification-text">Lorem ipsum dolor sit amet.</p>
+                </li>
+                <li><i class="fa-solid fa-circle-user"></i>
+                  <a class="user-names"><b>Cameron Williamson
+                  </b></a><a class="time-ago">1 day ago</a>
+                  <p class="notification-text">Lorem ipsum dolor, sit amet consectetur adipisicing elit.</p>
+                </li>
+                <li><i class="fa-solid fa-circle-user"></i>
+                  <a class="user-names"><b>Arlene Mccoy</b></a><a class="time-ago">4 days ago</a>
+                  <p class="notification-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio.</p>
+                </li>
+              </ul>
+            </div>
+            <img src={{sett}} class="px-2">
+            <img src="../../assets/Profiles2.png" class="px-2" (click)="expandProfileBar()">
+            <div class="profilebar" [style.display]="isProfileExpand ? 'inherit' : 'none'">
+              <ul class="drop">
+                <p><b>Welcome, John !</b></p>
+                <li ><i class="fas fa-book-open"></i><a>Terms of Usage</a></li>
+                <li ><i class="fas fa-headset"></i><a>Support</a></li>
+                <li routerLink="/"><i class="fa-solid fa-arrow-right-from-bracket"></i><a>LogOut</a></li>
+              </ul>
+          </div>
+        </div>
+        </li>
+
+        <li class="nav-item">
+            <a class="nav-link" aria-current="page" [style.color]="txtcolor">EN<i class="fa-solid fa-angle-down" [style.color]="txtcolor"></i></a>
+        </li>
+
+    </ul>
+    <hr>
+</nav>

@@ -1,0 +1,278 @@
+<div class="left-section">
+    <div style="display: flex; justify-content: space-between; padding: 0px 20px; margin-bottom: -1rem;">
+        <div class="d-flex" style="gap:20px;">
+            <div class="car-profile-pic">
+                <img src={{techDetailsParameter.imgUrl}}>
+            </div>
+            <div class="car-subs-header d-flex" (click)="expandCard()">
+                <p style="cursor: pointer;" (click)="backPage()">{{currentCarDetails[0].category}}</p>
+                <img src="../../assets/logos/Vector.png">
+                <p>{{techDetailsParameter.name.toUpperCase()}}</p>
+            </div>
+        </div>
+
+        <div class="d-flex">
+            <div class="input-group-plus">
+                <input type="button" value="-" class="button-minus" data-field="quantity" (click)="decreNum()">
+                <input type="number" step="1" max="" [value]="quantityy" name="quantity" class="quantity-field">
+                <input type="button" value="+" class="button-plus" data-field="quantity" (click)="increNum()">
+            </div>
+            <i class="fa-solid cardangle" [class.fa-angle-down]="!isCarCardVisible"
+                [class.fa-angle-up]="isCarCardVisible" (click)="expandCard()" style="margin-left: 50px;"></i>
+        </div>
+
+        <!-- <div [style.display]="isCarCardVisible ? 'inherit' : 'none'"
+        [style.height]="isCarCardVisible ? 'fit-content' : '0'"> -->
+    </div>
+    <hr>
+    <div [style.display]="isCarCardVisible ? 'inherit' : 'none'"
+        [style.height]="isCarCardVisible ? 'fit-content' : '0'">
+        <div class="car-images">
+            <div class="car-main-img">
+                <img src="{{techDetailsParameter.imgUrl}}" alt="car-img">
+            </div>
+            <div class="car-etc-img-div">
+                <img src="../../assets/truck-interior1.png" class="mb-2" alt="...">
+                <img src="../../assets/truck-interior2.png" alt="...">
+            </div>
+        </div>
+        <div class="left-card my-3 py-3 px-2 d-flex" style="gap: 50px;">
+            <div>
+                <div class="car-details px-2">
+                    <h2>{{techDetailsParameter.name}}</h2>
+                    <p class="mb-4 mt-3">Engine Capacity {{specificaiton.engine_capacity}} ·
+                        {{specificaiton.Fuel_Type}} · {{specificaiton.transmmission_type}} </p>
+                    <h2>Service Package</h2>
+
+                    <div class="d-flex radio-btn-group mt-3">
+                        <label class="mt-auto mb-auto stanAdv" for="">Standard</label>
+                        <input class="ms-4 checked-radio" type="radio" name="warranty{{compid}}" id="specifyColor"
+                            checked="checked" (change)="selecService(0)" value="Standard" [(ngModel)]="serviceName">
+                        <p class="mt-auto mb-auto ms-3">3 year warranty with free service</p>
+                    </div>
+
+                    <div class="d-flex radio-btn-group mt-3">
+                        <label class="mt-auto mb-auto stanAdv" for="">Advanced</label>
+                        <input class="ms-4 checked-radio" type="radio" name="warranty{{compid}}" id="specifyColor"
+                            (change)="selecService(1)" value="Advanced" [(ngModel)]="serviceName">
+                        <p class="mt-auto mb-auto ms-3">5 year warranty with RSA</p>
+                    </div>
+
+                    <h2 class="mt-4">Mileage Package</h2>
+                    <div>
+                        <div class="d-flex radio-btn-group mt-3">
+                            <input class=" mileage-radio" type="radio" name="Mileage{{compid}}" id="specifyColor"
+                                checked="checked" (change)="selecMile(0)">
+                            <label class="mt-auto mb-auto mr-5 ms-3 mileage-text milegae-cc d-flex" for="">Standard
+
+                            </label>
+                            <span class="label-des">10,000 KM/Year</span>
+                            <div class="d-flex">
+                                <img class="exclamation-icon icon" src="../../assets/info-circle.png" alt="">
+                                <div class="info">Charged at $0.20 for every additional KMs</div>
+                            </div>
+                        </div>
+
+                        <div class="d-flex radio-btn-group mt-3">
+                            <input class=" mileage-radio" type="radio" name="Mileage{{compid}}" id="specifyColor"
+                                (change)="selecMile(1)">
+
+                            <label class="mt-auto mb-auto mr-5 ms-3 mileage-text milegae-cc d-flex" for="">High
+
+                            </label>
+                            <span class="label-des" id="label-1">15,000 KM/Year
+                            </span>
+                            <div class="d-flex">
+                                <img class="exclamation-icon icon" src="../../assets/info-circle.png" alt="">
+                                <div class="info">Charged at $0.35 for every additional KMs</div>
+                            </div>
+                        </div>
+                        <div class="d-flex radio-btn-group mt-3">
+
+                            <input class=" mileage-radio" type="radio" name="Mileage{{compid}}" id="specifyColor"
+                                (change)="selecMile(2)">
+                            <label class="mt-auto mb-auto mr-5 ms-3 mileage-text milegae-cc d-flex" for="">Ultimate
+
+                            </label>
+                            <span class="label-des">25,000 KM/Year</span>
+                            <div class="d-flex">
+                                <img class="exclamation-icon icon" src="../../assets/info-circle.png" alt="">
+                                <div class="info">Charged at $0.05 for every additional KMs</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div *ngIf="currentCarDetails[0].category == 'Trucks'">
+                        <h2 class="mt-4">ORC Details</h2>
+                        <div>
+                            <div class="d-flex radio-btn-group mt-3" id="orc">
+                                <label class="mt-auto mb-auto OCR-cc d-flex" for="">ORC (exclusive):</label>
+                                <label class="ocr-input">$ 8173.90</label>
+                            </div>
+                            <div class="d-flex radio-btn-group mt-3">
+                                <label class="mt-auto mb-auto OCR-cc d-flex" for="">Tax (ORC):</label>
+                                <label class="ocr-input">$ 817.39</label>
+                            </div>
+                            <div class="d-flex radio-btn-group mt-3">
+                                <label class="mt-auto mb-auto OCR-cc d-flex" for="">Term (Months):</label>
+                                
+                                    <select class="ocr-input"   >
+                                     
+                                      
+                                        <option value="">1</option>
+                                        <option value="">2</option>
+                                        <option value="">3</option>
+                                        <option value="">4</option>
+                                        <option value="">5</option>
+                                        <option value="">6</option>
+                                        <option value="">7</option>
+                                        <option value="">8</option>
+                                        <option value="">9</option>
+                                        <option value="">10</option>
+                                        <option value="">11</option>
+                                        <option value="" selected>12</option>
+                                    </select>
+                                
+                            </div>
+                        </div>
+
+                    </div>
+
+                </div>
+            </div>
+
+
+
+            <div class="left-card-right-side ms-5 ">
+
+                <div class="mt-1 d-flex select-variant">
+                    <h2>Select Variant</h2>
+                </div>
+                <div class="select-var-div">
+                    <div *ngFor="let car of carDetails">
+                        <div *ngIf="techDetailsParameter.name==car.name">
+                            <div class="d-flex radio-btn-group mt-2"
+                                *ngFor="let vari of car.select_variant;let idx=index">
+                                <input class="ms-4 checked-radio" type="radio" name="var{{compid}}" value={{idx}}
+                                    id="specifyColor" [checked]="(idx === 0)" (change)="selecVar(idx)">
+                                <p class="mt-auto mb-auto ms-3">{{vari}}</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+
+                <div class="color-div">
+                    <p class="mt-4">Color</p>
+                    <div style="display: flex;">
+                        <div *ngFor="let item of colorList">
+                            <button class="dot redbtn color{{item}}" style="outline: solid 2px #a38c8c;"
+                                (click)="outline($event)"></button>
+                        </div>
+                    </div>
+                </div>
+                <div>
+                    <h2 class="mt-4 accessories">Accessories <span>(optional)</span></h2>
+                    <div class="d-flex mt-3 my-2">
+                        <div>
+                            <img (click)="addBorder()" id="speedometer" class="speedometer iconss"
+                                src="../../assets/logos/dashcam.png" style="margin-right: 20px;">
+                            <div class="info">Dashcam</div>
+                        </div>
+                        <div>
+                            <img (click)="addBorder2()" class="iconss" id="engine"
+                                src="../../assets/logos/built-in-wifi.jpg">
+                            <div class="info">Built-in WiFi</div>
+                        </div>
+                    </div>
+                </div>
+                <div>
+                    <h2 class="mt-4 accessories">Tenure <span>(Months)</span></h2>
+                    <label style="font-size: 13px; color: grey;">Select Preferred
+                        Tenure</label>
+                    <div class="numbers select-size">
+                        <input (click)="calculateTenure('small')" class="numbtn" type="radio"
+                            name="s-size{{compid}}" id="small{{compid}}" value="24" [(ngModel)]="selectedRadio"
+                            [ngClass]="'checkedd'" />
+                        <input (click)="calculateTenure('medium')" class="numbtn" type="radio"
+                            name="s-size{{compid}}" id="medium{{compid}}" value="36" [(ngModel)]="selectedRadio" />
+                        <input (click)="calculateTenure('large')" class="numbtn" type="radio"
+                            name="s-size{{compid}}" id="large{{compid}}" value="48" [(ngModel)]="selectedRadio" />
+                        <input (click)="calculateTenure('xl')" class="numbtn" type="radio"
+                            name="s-size{{compid}}" id="x-large{{compid}}" value="60" [(ngModel)]="selectedRadio" />
+                        <input (click)="calculateTenure('xxl')" class="numbtn" type="radio"
+                            name="s-size{{compid}}" id="xx-large{{compid}}" value="72" [(ngModel)]="selectedRadio" />
+                        <input (click)="calculateTenure('xxxl')" class="numbtn" type="radio"
+                            name="s-size{{compid}}" id="xtra-large{{compid}}" value="84"
+                            [(ngModel)]="selectedRadio" />
+                        <label for="small{{compid}}" class="option-text" [class.activeTen]="selectedRadio == '24'">
+                            <p>24</p>
+                        </label>
+                        <label for="medium{{compid}}" class="option-text" [class.activeTen]="selectedRadio == '36'">
+                            <p>36</p>
+                        </label>
+                        <label for="large{{compid}}" class="option-text" [class.activeTen]="selectedRadio == '48'">
+                            <p>48</p>
+                        </label>
+                        <label for="x-large{{compid}}" class="option-text" [class.activeTen]="selectedRadio == '60'">
+                            <p>60</p>
+                        </label>
+                        <label for="xx-large{{compid}}" class="option-text" [class.activeTen]="selectedRadio == '72'">
+                            <p>72</p>
+                        </label>
+                        <label for="xtra-large{{compid}}" class="option-text"
+                            [class.activeTen]="selectedRadio == '84'">
+                            <p>84</p>
+                        </label>
+
+                    </div>
+                </div>
+            <div>
+                <div *ngIf="currentCarDetails[0].category == 'Trucks'">
+                    <div class="d-flex radio-btn-group mt-4">
+                        <label class="mt-auto mb-auto OCR-cc d-flex" for="">On Road:</label>
+                        <label class="ocr-input">$ {{numberWithCommas(storePrice)}}.60</label>
+                        
+                    </div>
+                    <div class="d-flex radio-btn-group mt-3">
+                        <label class="mt-auto mb-auto OCR-cc d-flex" for="">Taxes:</label>
+                        <label class="ocr-input">$ 19,023.36</label>
+                    </div>
+                    <div class="d-flex radio-btn-group mt-3">
+                        <label class="mt-auto mb-auto OCR-cc d-flex" for="">Residual Value:</label>
+                        <label class="ocr-input">$ {{numberWithCommas('134,708.00')}}</label>
+                    </div>
+                </div>
+            </div>
+
+
+            <div>
+                <div *ngIf="currentCarDetails[0].category == 'Trailers'">
+                    <div class="d-flex radio-btn-group mt-4">
+                        <label class="mt-auto mb-auto OCR-cc d-flex" for="">On Road:</label>
+                        <label class="ocr-input">$ {{numberWithCommas(storePrice)}}.00</label>
+                        
+                    </div>
+                    <div class="d-flex radio-btn-group mt-3">
+                        <label class="mt-auto mb-auto OCR-cc d-flex" for="">Taxes:</label>
+                        <label class="ocr-input">$ 23,159.50    </label>
+                    </div>
+                    <div class="d-flex radio-btn-group mt-3">
+                        <label class="mt-auto mb-auto OCR-cc d-flex" for="">Residual Value:</label>
+                        <label class="ocr-input">$ 0.00 </label>
+                    </div>
+                </div>
+            </div>
+
+
+                <!-- <div class="mt-4">
+                    <h6><b>On Road: {{numberWithCommas(storePrice)}}</b></h6>
+                    <h6><b>Residual Value: {{numberWithCommas('134708')}}</b></h6>
+                </div> -->
+
+        </div>
+        </div>
+    </div>
+
+</div>

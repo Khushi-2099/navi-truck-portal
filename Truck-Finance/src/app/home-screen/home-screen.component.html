@@ -1,0 +1,138 @@
+<app-navbar [navtheme]="'blacktheme'"></app-navbar>
+<div class="backgroundImage">
+    <div class="One">
+        <div>
+            <h1 class="brandNameText">PACCAR</h1>
+        </div>
+        <!-- <div class="twoDivFirst"> -->
+            <!-- <div class="twoDivSecond">
+                <div class="twoDivThird">2</div>
+            </div> -->
+            <!-- <div class="twoDivFourth">It has survived not only five centuries, but also the leap into electronic
+                typesetting, remaining essentially unchanged.</div> -->
+        <!-- </div> -->
+        <!-- <div class="firstDiv"> -->
+            <!-- <div class="secondDiv">
+                <div class="thirdDiv">1</div>
+            </div> -->
+            <!-- <div class="fourthDiv">Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an
+                unknown prVerdana took a galley of type and scrambled it to make a type specimen book.</div> -->
+        <!-- </div> -->
+        <!-- <div class="threeDivFrist"> -->
+            <!-- <div class="threeDivSecond">
+                <div class="threeDivThird">3</div>
+            </div> -->
+            <!-- <div class="threeDivFourth">In addition to speeds, you'll also choose between manual and automatic
+                transmissions.</div> -->
+        <!-- </div> -->
+    </div>
+    <div class="find-more-button-main">
+        <div class="rounded border border-white flex-column justify-content-start align-items-start findMoreFirstDiv">
+            <!-- <div class="w-100 h-100 findMoreSecondDiv"></div> -->
+            <button   [class.greenish-yellow]="isClicked"  class="btn find-more-btn "  style="border-radius: 7px;  "   (click)="onSubmit()">Find out more</button>
+        </div>
+        <div class="fourDotsFirst">
+            <div class="fourDotsSecond"></div>
+            <div class="fourDotsThird"></div>
+            <div class="fourDotsFourth"></div>
+            <div class="fourDotsFifth"></div>
+        </div>
+    </div>
+</div>
+
+<!-- Part-2 -->
+
+<div>
+    <div class="car-container">
+        <img class="car-bg" src="..\assets\image 4.png" alt="">
+        <img class="car-bg real-car" src="..\assets\truc2.png" alt="">
+        <p class="Why-Choose-Us">Why Choose Us</p>
+        <p class="Why-Choose-Us-description">Buying a truck has never been easier. Our streamlined process makes it
+            simple for you to book and confirm your vehicle of choice online
+        </p>
+        <div class="call-logo-div">
+            <img class="call" src="../../assets/Truck-Logos/Call.png" alt="">
+            <div class="call-text">
+                <p class="call-header">Customer Support</p>
+                <p class="call-description">Aliquam erat volutpat. Integer malesuada turpis id fringilla suscipit.
+                    Maecenas ultrices.</p>
+            </div>
+        </div>
+        <div class="price-ada-logo-div">
+            <img class="call" src="../../assets/Truck-Logos/Tag.png" alt="">
+            <div class="call-text">
+                <p class="call-header">Best Price Guaranted</p>
+                <p class="call-description">Aliquam erat volutpat. Integer malesuada turpis id fringilla suscipit.
+                    Maecenas ultrices.</p>
+            </div>
+        </div>
+
+        <div class="loc-logo-div">
+            <img class="call" src="../../assets/Truck-Logos/Loc.png" alt="">
+            <div class="call-text">
+                <p class="call-header">Many Location</p>
+                <p class="call-description">Aliquam erat volutpat. Integer malesuada turpis id fringilla suscipit.
+                    Maecenas ultrices.</p>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+<div class="customer-comments">
+    <div class="customer-comments-header">
+        <p id="review-header">What Our Customers Say</p>
+        <div class="align-arrows-circle">
+            <div class="arrow-group">
+                <img class="arrow arrow-left" src="..\assets\arrow-left.png" alt="arrow">
+                <img class="circle" src="..\assets\Ellipse 12.png" alt="cicle">
+            </div>
+            <div class="arrow-group">
+                <img class="arrow arrow-right" src="..\assets\arrow-right.png" alt="arrow">
+                <img class="circle" src="..\assets\Ellipse 11.png" alt="circle">
+            </div>
+        </div>
+    </div>
+    <p class="customer-comments-description">“I was really impressed with the level of service I received from this
+        truck
+        company. The process was smooth and easy, and the truck I purchased was in excellent condition. The staff was
+        friendly and helpful, and I felt well taken care of throughout my purchase period. I would definitely
+        recommend
+        this company to anyone looking for a premium truck buying experience.”</p>
+
+    <div class="profile-pic-details">
+        <img class="profile-pic" src="..\assets\Ellipse 13.png" alt="circle">
+        <div class="profile-name">
+            <p class="profile-pic-name">Lokman Hossain</p>
+            <p class="profile-pic-country">From <span>Texas</span></p>
+        </div>
+    </div>
+</div>
+
+<app-footer></app-footer>
+<!-- <div class="footer">
+    <div class="footer-download">Ttent=Oct0121&utm_campaign=Evergreen&pcampaignid=MKT-EDR-apac-in-1003227-med-hasem-ap-Evergreen-Oct0121-Text_Search_BKWS-BKWS%7cONSEM_kwid_43700065162604513_creativeid_480912223170_device_c&gclid=CjwKCAjw38SoBhB6EiwA8EQVLnh1_oRgLEitmUU-BT65q913dvyE4Kpl75LTkSNfezxIjsNDz5IxJhoCu6UQAvD_BwE&gclsrc=aw.ds"
+            target="_blank">
+            <img src="..\assets\BTN 3a.png" alt="img" class="playStore-btn"></a>
+    </div>
+</div>
+<hr>
+<div class="footer-bottom">
+    <img class="footer-aurion-logo" src="..\assets\b494ahn2td2ykcqak6hr_1-removebg-preview 2.png" alt="img">
+    <div class="footer-btn-group">
+        <button class="footer-btn">Share</button>
+        <button class="footer-btn">About Us</button>
+        <button class="footer-btn">Contact</button>
+    </div>
+    <img src="..\assets\Group 1000006831.png" alt="" usemap="#image-map" class="quick-links-footer">
+    <map name="image-map">
+        <area target="_blank" alt="Insta" title="Insta" href="https://www.instagram.com/" coords="21,19,17"
+            shape="circle">
+        <area target="_blank" alt="Aurionpro" title="Aurionpro" href="https://www.aurionpro.com/" coords="84,22,21"
+            shape="circle">
+        <area target="_blank" alt="Twitter" title="Twitter" href="https://twitter.com/home?lang=en" coords="149,21,17"
+            shape="circle">
+        <area target="_blank" alt="YouTube" title="YouTube" href="https://www.youtube.com/" coords="210,20,16"
+            shape="circle">
+    </map>
+</div> -->

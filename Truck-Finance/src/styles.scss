@@ -1,0 +1,116 @@
+@import 'node_modules/bootstrap/scss/bootstrap';
+// @import "node_modules/@fontsource/Verdana";
+// @import "node_modules/@fontsource/Verdana";
+@import "primeng/resources/primeng.css";
+@import "primeng/resources/themes/lara-light-blue/theme.css";
+
+@import 'ag-grid-community/styles/ag-grid.css';
+
+@import 'ag-grid-community/styles/ag-theme-alpine.css';
+
+body {
+  margin: 0;
+  line-height: normal;
+}
+
+// :root {
+//   /* fonts */
+//   --font-Verdana: Verdana;
+//   --font-Verdana: Verdana;
+
+//   /* font sizes */
+//   --font-size-xs: 12px;
+//   --font-size-sm: 14px;
+//   --font-size-lg: 18px;
+//   --font-size-xl: 20px;
+//   --font-size-base: 16px;
+//   --font-size-5xl: 24px;
+//   --font-size-7xl: 26px;
+
+//   /* Colors */
+//   --color-white: #fff;
+//   --color-black: #000;
+//   --color-gray: #919193;
+//   --color-darkslategray-100: #36394c;
+//   --color-aliceblue: #ebf1f5;
+//   --color-blueviolet: #5b41e1;
+//   --color-ghostwhite: #f2f1fa;
+//   --color-royalblue: #236af2;
+//   --color-crimson-100: #db2423;
+//   --color-crimson-200: rgba(219, 36, 35, 0.03);
+//   --color-crimson-300: rgba(219, 36, 35, 0);
+//   --color-gainsboro: #d9d9d9;
+
+//   /* Gaps */
+//   --gap-base: 16px;
+//   --gap-7xs: 6px;
+//   --gap-101xl: 120px;
+//   --gap-xl: 20px;
+//   --gap-xs: 12px;
+//   --gap-7xl: 26px;
+//   --gap-5xl: 24px;
+//   --gap-41xl: 60px;
+
+//   /* Border radiuses */
+//   --br-xs: 12px;
+//   --br-5xs: 8px;
+//   --br-11xs: 2px;
+//   --br-3xs: 10px;
+// }
+
+
+// @font-face {
+//   font-family: 'Verdana';
+//   src: url('../../Asset-Finance/src/assets/fonts/Verdana.ttf  ');
+// }
+
+
+// @font-face {
+//   font-family: 'Verdana';
+//   src: url('../../Asset-Finance/src/assets/fonts/Verdana.ttf');
+// }
+
+// @font-face {
+//   font-family: 'ZenKakuGothicAntique';
+//   src: url('../../Asset-Finance/src/assets/fonts/Verdana.ttf');
+// }
+
+
+// @font-face {
+//   font-family: 'PJSans';
+//   src: url('../../Asset-Finance/src/assets/fonts/Verdana.ttf');
+// } 
+
+// @font-face {
+//   font-family: 'verdana';
+//   src: url('../../Asset-Finance/src/assets/fonts/Verdana.ttf');
+// }
+
+
+
+
+.ag-theme-alpine{
+    // --ag-grid-size: 5px !important;
+    --ag-row-height:30px;
+}
+
+.body{
+    margin: 0rem;
+}
+
+body::-webkit-scrollbar {
+    width: 0px;               /* width of the entire scrollbar */
+    height: 0px;
+  }
+  
+body::-webkit-scrollbar-track {
+    background: rgba(255, 255, 255, 0);        /* color of the tracking area */
+  }
+  
+body::-webkit-scrollbar-thumb {
+    background-color: rgb(211, 0, 0);    /* color of the scroll thumb */
+    border-radius: 5px;       /* roundness of the scroll thumb */
+    // border: 2px solid rgb(255, 255, 255);  /* creates padding around scroll thumb */
+}
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }

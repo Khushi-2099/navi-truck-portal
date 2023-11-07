@@ -1,0 +1,55 @@
+<nav id="car-subs-nav" class=" navbar py-3 border border-1 border-top-0 border-start-0 border-end-0 " 
+[style.background-color]="bgcolor" [style.width]="bgwidth" [style.padding-left]="bgpad" [style.padding-right]="bgpad">
+    <div>
+        <a class="nav-brand" href="#"> 
+            <img class="imgg" src={{aurologo}}>
+        </a>
+    </div>
+    <ul class="nav justify-content-end" style="margin-right: -2%;">
+        <li class="nav-item">
+          <a class="nav-link active" (click)="redirect('')" aria-current="page" href="#"
+          [style.color]="txtcolor" style="font-family: Verdana" [class.active]="homeActive">Home</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" aria-current="page" href="#"
+            [style.color]="txtcolor" (click)="expandNotiBar()" style="font-family: Verdana" [class.active]="dealerActive">Dealer</a>
+            <div class="notibar" [style.display]="isNotiExpand ? 'inherit' : 'none'">
+                <ul class="drop">
+                    <p >Become Dealer</p>
+                    <p (click)="redirect('homescreen')" >Auto Finance</p>
+                    <p >Inventory  Finance</p>
+                    <p >Retail Finance</p>  
+                </ul>
+            </div>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" aria-current="page" href="#"
+            [style.color]="txtcolor" (click)=" expandConsumerBar()" style="font-family: Verdana " [class.active]="customerActive">Customer</a>
+            <div class="notibar" [style.display]="isProfileExpand ? 'inherit' : 'none'">
+                <ul class="drop">
+                    <p style="font-family: Verdana">Make a Payment</p>
+                    <p style="font-family: Verdana">Auto Finance</p>
+                    <p style="font-family: Verdana">Inventory  Finance</p>
+                    <p  (click)="navigateToAnotherServer()"  style="font-family: Verdana">Retail Finance</p>
+                </ul>
+              </div>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" aria-current="page" href="#"
+            [style.color]="txtcolor" style="font-family: Verdana">Manufactures</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" aria-current="page" href="#"
+            [style.color]="txtcolor" style="font-family: Verdana">About Us</a>
+        </li>
+        <!-- <li>
+            <button type="button" class="btn loginBtn" (click)="redirect('/user/login')" [style.border]="'solid 1px ' + btncolor" [style.color]="btncolor">Login</button>
+        </li>
+        <li>
+            <button type="button" class="btn loginBtn" (click)="redirect('registration')" [style.border]="'solid 1px ' + btncolor" [style.color]="btncolor">Register</button>
+        </li> -->
+        <li class="nav-item" style="font-family: Verdana; color: whitesmoke; margin-top: .7%;">
+            You can call us at : 1800-378-234
+        </li>
+    </ul>
+</nav>

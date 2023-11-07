@@ -1,0 +1,425 @@
+.an-pending {
+    padding: 90px 65px 70px 65px;
+    display: flex;
+    gap: 15px;
+    justify-content: space-between;
+}
+
+.left-card {
+    height: 46.5rem;
+    padding: 20px 10px;
+    width: 31.5vw;
+    max-width: 31.5vw;
+}
+
+.car-card-detail1{
+    border-radius: 5px;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+    padding: 10px 10px 5px 10px;
+    font-family: "Verdana";
+    margin: 8px 7px;
+}
+
+.car-profile-pic {
+    // margin-top: 0.5rem;
+    background-color: #f8a10b;
+    height: 2.5rem;
+    width: 3.2rem;
+    border-radius: 5px;
+  
+    img {
+        width:100%;
+        height:100%;
+        border-radius: 5px;
+    }
+  }
+  
+  .cardangle {
+    margin-top: 1rem;
+    // margin-bottom: 0.5rem;
+  }
+
+
+.car-name{
+    display: flex;
+    justify-content: space-between;
+
+    p{
+        font-size: 14.5px;
+    }
+}
+
+.car-card img {
+    height: 13rem;
+    width: 23.5rem;
+    border: solid 1px rgb(212, 204, 204);
+    border-radius: 5px;
+    margin-bottom: 17px;
+}
+
+.right-side {
+    width: 60.2vw;
+    height: fit-content;
+    padding: 25px 37px 5px 25px;
+    margin-bottom: 15px;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+    border: solid 1px rgb(244, 238, 238);
+}
+
+.Lorem{
+    font-family: "Verdana";
+    font-weight: 600;
+}
+
+.loanDeal{
+    width: 29.5vw;
+    min-height: 12rem;
+    padding: 25px 25px 5px 25px;
+    margin-bottom: 15px;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+    border: solid 1px rgb(244, 238, 238);
+}
+
+.loanDeal .an-body p{
+    line-height: 22px;
+    font-weight: 600;
+}
+
+.an-drop {
+    padding: 7px 10px;
+    border: solid 1px #0381BA;
+    border-radius: 3px;
+    font-weight: 600;
+    width: 10rem;
+    background-color: #0381BA0A;
+}
+
+select {
+    outline: none;
+}
+
+.an-head {
+    font-family: "Verdana";
+    font-weight: bold;
+    font-size: 1rem;
+    color: #0381BA;
+    line-height: 0.8;
+}
+
+.package-details {
+    margin-top: 1rem;
+    font-family: "Verdana";
+    font-size: 13px;
+    font-weight: 500;
+}
+
+.status{
+    font-family: "Verdana";
+    font-size: 13.5px;
+    font-weight: bold;
+}
+
+.package-details p {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 12px;
+}
+
+.an-sub-head {
+    font-family: "Verdana";
+    font-weight: bold;
+    font-size: 0.95rem;
+    color: #0381BA;
+    line-height: 0.8;
+}
+
+.an-body {
+    display: flex;
+    color: black;
+    font-family: "Verdana";
+    font-size: 13px;
+    justify-content: space-between;
+    align-items: baseline;
+}
+
+.an-body p {
+    font-weight: 500;
+}
+
+.dealership {
+    justify-content: left;
+    height: max-content;
+}
+
+.approval {
+    justify-content: left;
+}
+
+.approval input[type="radio"]{
+    height:17px;
+    width:17px;
+    accent-color: #0381BA;
+    margin-right: 10px;
+}
+
+.approval input[type="text"]{
+    padding: 7.8px 10px;
+    width: 20rem;
+    margin-right: 1rem;
+}
+
+.comp{
+    color: white;
+    background-color: green !important;
+}
+
+.addinp{
+    font-family: "Verdana";
+    font-weight: 600;
+    font-size: 15px;
+}
+
+.approval span{
+    background-color: #FFF069; 
+    border-radius: 5px; 
+    padding: 9.7px 0px; 
+    font-weight: 600;
+    min-width: 7.1rem;
+    max-width: 7.1rem;
+    text-align: center;
+    margin-right: 20px;
+}
+
+.approval i{
+    font-size: 25px;
+    color: #0381BA;
+}
+
+.approval label{
+    width: 14.5rem;
+    font-weight: 500;
+}
+
+.approval select{
+    width: 11rem;
+    margin-right: 20px;
+}
+
+.deal {
+    min-width: 65%;
+    max-width: 65%;
+    font-size: 13px;
+    word-wrap: break-word;
+    margin-bottom: 0;
+    margin-right: 6px;
+}
+
+.deal1{
+    font-size: 13px;
+    padding: 0;
+    margin-bottom: 0;
+}
+
+.addbtn {
+    background-color: #B7C301;
+    color: #000;
+    font-size: 14px;
+    border-radius: 4px;
+    min-width: 6.5rem;
+    margin-left: 10px;
+}
+
+.signbtn {
+    // background-color: #DB2423;
+    color: #0381BA;
+    font-weight: bold;
+    font-size: 14px;
+    border: dotted 2px #0381BA;
+    border-radius: 4px;
+    min-width: 6.5rem;
+    margin-left: 10px;
+}
+
+.an-drag {
+    // height: 3rem;
+    width: 100%;
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+
+:host {
+    ::ng-deep .p-fileupload .p-fileupload-buttonbar {
+        border: none;
+        justify-content: center;
+        align-items: center;
+        margin: auto;
+        height: 2px;
+        padding: 0;
+        text-align: center;
+        font-family: "Verdana";
+    }
+
+    ::ng-deep .p-button {
+        background-color: #db232300 !important;
+        border: none;
+        margin: 0px;
+        margin-top: 12px;
+        padding-top: 0;
+        padding-bottom: 0;
+        height: 36px;
+        font-size: 14px;
+        color: #0381BA;
+        z-index: 2;
+        // margin-right: 10px;
+    }
+
+
+    ::ng-deep .p-fileupload-content {
+        border: 2px dashed #0381BA !important;
+        font-family: "Verdana";
+        padding: 0;
+        padding-top: 50px;
+        min-height: 50px;
+        background-color: #881f2a00;
+    }
+}
+
+.car-subs-footer {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    border-top: 1px solid rgb(141, 140, 140);
+    height: 60px;
+    z-index: 7;
+    background-color: #65B2D4;
+    display: flex;
+    padding-left: 60px;
+    padding-right: 60px;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.redtxt {
+    color: #c41628;
+    padding-right: 20px;
+}
+
+.price {
+    color: #c41628;
+    padding-right: 800px;
+}
+
+.car-subs-footer button{
+    color: #0381BA;
+    font-family: "Verdana";
+}
+
+.cs-footer-com {
+    display: flex;
+}
+
+.cs-footer-com button {
+    color: #000;
+    height: 40px;
+    background-color: #B7C301;
+    padding: 0 3rem;
+    margin-right: -2rem;
+    font-weight: 500;
+}
+
+.drag-file-text {
+    // margin-left: 17rem !important;
+    color: #EEACAD;
+    margin: auto;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    font-family: Verdana;
+    font-size: 0.9rem;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 22.53px;
+    margin-top: -3rem;
+    margin-bottom: 2rem;
+}
+
+:host {
+    // display: block;
+    // background: #fff;
+    // border-radius: 8px;
+    // padding: 8px 16px 16px;
+  }
+  .popup-container {
+    background: rgba(0, 0, 0, 0);
+    backdrop-filter: blur(30px);
+    width: 100%;
+    height: 100vh;
+    flex-shrink: 0;
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    z-index: 99;
+    .popup-box {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 600px;
+      height: 300px;
+      flex-shrink: 0;
+      border-radius: 12px;
+      background: #000;
+      display: flex;
+      align-items: center;
+      flex-direction: column;
+      justify-content: center;
+      .popup-header{
+        position: absolute;
+        top: 20px;
+        right: 20px;
+        button{
+          background: transparent;
+          border: none;
+        }
+      }
+      .popup-title {
+        color: #4caf50;
+        font-family: Verdana;
+        font-size: 40px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: normal;
+        letter-spacing: 11.4px;
+        text-align: center;
+      }
+  
+      .popup-message {
+        color: #fff;
+        text-align: center;
+        font-family: Verdana;
+        font-size: 14px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: 159.9%; /* 28.782px */
+      }
+      .confirm-btn {
+        border-radius: 8px;
+        //background: #db2423;
+        background-color: #B7C301;
+        width: 70px;
+        height: 40px;
+        margin: 0px auto;
+        flex-shrink: 0;
+       // color: #fff;
+       color:black;
+        text-align: center;
+        font-family: Verdana;
+        font-size: 18px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: normal;
+        border: none;
+        text-transform: uppercase;
+      }
+    }
+  }

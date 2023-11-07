@@ -1,0 +1,506 @@
+
+.an-pending{
+
+    padding: 110px 65px 0px 25px;
+    display:flex;
+    gap: 22px;
+    justify-content: space-between;
+}
+
+ 
+
+.left-card{
+
+    // height: 30rem;
+
+    padding: 9px;
+
+    padding-left: 5px;
+    padding-right: 5px;
+    left: 3%;
+
+    width: 30.5vw;
+
+    max-width: 32.5vw;
+
+    // margin-right: 1rem;
+
+}
+
+.car-card-detail1{
+    border-radius: 5px;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+    padding: 10px 10px 5px 10px;
+    font-family: "Verdana";
+    margin: 8px 7px;
+}
+
+.car-profile-pic {
+    // margin-top: 0.5rem;
+    background-color: #f8a10b;
+    height: 2.5rem;
+    width: 3.2rem;
+    border-radius: 5px;
+  
+    img {
+        width:100%;
+        height:100%;
+        border-radius: 5px;
+    }
+  }
+  
+  .cardangle {
+    margin-top: 1rem;
+    // margin-bottom: 0.5rem;
+  }
+
+
+.car-name{
+    display: flex;
+    justify-content: space-between;
+
+    p{
+        font-size: 14.5px;
+    }
+}
+
+ 
+
+.right-side{
+
+    width: 59.2vw;
+    
+    padding: 25px 37px 5px 25px;
+
+    margin-bottom: 15px;
+
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+
+    border: solid 1px rgb(244, 238, 238);
+
+}
+
+.down-side{
+
+    width: 59.2vw;
+    
+    padding: 25px 37px 8px 25px;
+
+    margin-bottom: 15px;
+
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+
+    border: solid 1px rgb(244, 238, 238);
+
+}
+ 
+
+.an-drop{
+
+    padding: 7px 10px;
+
+    border:solid 1px #0381BA;
+
+    border-radius: 3px;
+
+    font-weight: bold;
+
+    width: 10rem;
+
+    background-color: #FEF6F6;
+
+}
+
+ 
+
+select{
+
+    outline: none;
+
+}
+
+ 
+
+.an-head{
+
+    font-family: "Verdana";
+
+    font-weight: bold;
+
+    font-size: 1.1rem;
+
+    color: #0381BA;
+
+    line-height: 0.8;
+
+}
+
+ 
+
+.an-sub-head{
+
+    font-family: "Verdana";
+
+    font-weight: bold;
+
+    font-size: 0.95rem;
+
+    color: #0381BA;
+
+    line-height: 0.8;
+
+}
+
+/* Add a black background color to the top navigation */
+
+.topnav {
+
+    background-color: transparent;
+
+    overflow: hidden;
+
+  }
+
+ 
+
+  /* Style the links inside the navigation bar */
+
+  .topnav a {
+
+    float: left;
+
+    display: block;
+
+    color: #000000;
+
+    text-align: center;
+
+    padding: 14px 16px;
+
+    text-decoration: none;
+
+    font-size: 16px;
+
+    border-bottom: 3px solid transparent;
+
+    font-family: 'Verdana';
+
+  }
+
+ 
+
+  .topnav a:hover {
+
+    border-bottom: 3px solid #0381BA;
+
+    color: #0381BA;
+
+  }
+
+ 
+
+  .topnav a.active {
+
+    border-bottom: 3px solid #0381BA;
+
+  }
+
+ 
+
+  .topnav a{
+
+border-bottom: 3px solid #EBEBEB;
+
+margin-bottom: 1rem;
+
+  }
+
+.an-body{
+    display: flex;
+    color: black;
+    font-family: "Verdana";
+    font-size : 0.8rem;
+    font-weight: 500;
+    gap: 1.8rem;
+    justify-content: space-between;
+}
+
+ 
+
+.dealership{
+    justify-content: left;  
+}
+
+.dealershipp{
+    color: black;
+    font-family: "Verdana";
+    font-size : 0.8rem;
+    font-weight: 500;
+}
+
+.deall{
+    min-width: 16rem;
+    max-width: 16rem;
+}
+
+ 
+
+.card-title{
+
+ 
+
+    margin-top: 0.5rem;
+
+ 
+
+    text-align: center;
+
+ 
+
+}
+
+.accountDetails{
+
+    justify-content: left;
+
+ 
+
+}
+
+.package-details{
+
+    margin-top: 1rem;
+
+    margin-left: 0.5rem;
+
+    font-size: 14px;
+
+    font-family: "Verdana";
+
+}
+
+.car-card{
+
+ 
+
+    margin-left: 1rem;
+
+ 
+
+    margin-top: 0.5rem;
+
+ 
+
+    width: 350px;
+
+ 
+
+    height: 200px;
+
+ 
+
+ 
+
+ 
+
+}
+
+// .topnav{
+
+//     margin-top: -0.6rem;
+
+// }
+
+.deal{
+
+    width: 15rem;
+
+}
+
+/* In your component's CSS file or a global CSS file */
+
+.ag-cell {
+
+    font-size: 12px; /* Adjust the font size as needed */
+
+  }
+
+ 
+
+ 
+
+ 
+
+// .an-drag{
+
+//     border: dashed 2px #DB2423;
+
+//     height: 3rem;
+
+//     width: 100%;
+
+//     border-radius: 5px;
+
+//     margin-bottom: 10px;
+
+// }
+
+ 
+
+.btn-grp-below-disbursment:hover{
+
+    background-color: #5B41E1;
+
+    color: white;
+
+}
+
+ 
+
+.btn-grp-below-disbursment{
+
+    background-color: #F2F1FA;
+
+    color: #644CE2;
+
+    border: none;
+
+    border-radius: 0.5rem;
+
+}
+
+ 
+
+.empty-box{
+
+    background-color: #EBF1F5;
+
+    height: 2rem;
+
+    width: 2rem;
+
+    border-radius: 0.4rem;
+
+    margin-top: auto;
+
+    margin-bottom: auto;
+
+}
+
+ 
+
+.empty-box-p1{
+
+    font-size: 0.9rem;
+
+}
+
+ 
+
+.empty-box-p2{
+
+    font-size: 0.7rem;
+
+    color: #ACACAE !important;
+
+    margin-top: -1rem;
+
+}
+
+ 
+
+.empty-box-p3{
+
+    font-size: 0.7rem;
+
+    margin-top: -1rem;
+
+}
+
+ 
+
+:host ::ng-deep .ag-header{
+
+background-color:   #0381BA70 !important;
+
+}
+
+ 
+
+.table-settings{
+
+    margin-left: -1rem;
+
+    margin-right: -1.5rem;
+
+}
+
+ 
+
+:host ::ng-deep  .ag-cell-value{
+
+width: 8rem !important;
+
+}
+
+ 
+
+:host ::ng-deep {
+
+    .ag-header-cell{
+
+        width: 8rem !important;
+
+        // left: 1.2rem !important;
+
+        text-align: center !important;
+
+    }
+
+ 
+
+    .ag-center-cols-container {
+
+        display: block;
+
+        text-align: center !important;
+
+    }
+
+ 
+
+    .ag-header-cell-label{
+
+        justify-content: space-evenly;
+
+    }
+
+}
+
+ 
+
+.request-disbursement p{
+
+    margin-left: 1rem;
+
+    color: #236AF2;
+
+font-family: Verdana;
+
+font-size: 1rem;
+
+font-style: normal;
+
+font-weight: 500;
+
+line-height: normal;
+
+}
+
+ 
+
+.request-disbursement:hover{
+
+    cursor: poVerdana;
+
+}

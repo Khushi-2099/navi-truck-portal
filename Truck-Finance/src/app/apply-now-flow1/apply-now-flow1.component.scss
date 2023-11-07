@@ -1,0 +1,493 @@
+.navbar {
+  width: fit-content;
+  margin-top: -10px;
+}
+
+.stepper {
+  padding-top: -3rem;
+  margin-top: 4.5rem;
+  margin-left: 4rem;
+  margin-right: 4rem;
+}
+
+.car-profile-pic {
+  // margin-top: 0.5rem;
+  background-color: #f8a10b;
+  height: 2.5rem;
+  width: 3.2rem;
+  border-radius: 5px;
+
+  img {
+      width:100%;
+      height:100%;
+      border-radius: 5px;
+  }
+}
+
+.cardangle {
+  margin-top: 1rem;
+  // margin-bottom: 0.5rem;
+}
+
+.stepper-label {
+  display: flex;
+  justify-content: space-between;
+}
+
+.step li{
+  padding: 0;
+}
+
+.step p{
+  background-color: #e9e4e4;
+  width: max-content;
+  margin-top: 5px;
+  padding: 2px 10px;
+  font-size: 11px;
+  border-radius: 10px;
+  font-weight: bold;
+  color: #8C8C8C;
+  font-family: "Verdana";
+}
+
+.left-card{
+  display: flex;
+  // gap:1rem;
+  justify-content: space-between;
+  margin: 0rem 4rem;
+}
+
+.step .activestep{
+  background-color: #DB2423;
+  color: #ffffff;
+}
+
+.cardd {
+  height: 40rem;
+  width: 24rem;
+  margin-bottom: 5rem;
+  // margin-left: 4rem;
+  // margin-right: 4rem;
+  box-shadow: 0 5px 11px 0 rgba(0, 0, 0, 0.1), 0 4px 11px 0 rgba(0, 0, 0, 0.08);
+}
+.card11{
+  height: 40rem;
+  width: 24rem;
+  box-shadow: 0 5px 11px 0 rgba(0, 0, 0, 0.1), 0 4px 11px 0 rgba(0, 0, 0, 0.08);
+}
+
+.card11{
+  // margin-top: 10rem !important;
+  padding-top: 10px;
+}
+
+#right-panel {
+  // margin-left: 29rem;
+  // margin-top: -5rem;
+  // margin-right: 4rem;
+  width: 51.8rem;
+  height: 13.5rem;
+}
+.truck-info-1 {
+  font-size: 5rem;
+}
+
+.truck-header{
+  font-size: 13px;
+  font-weight: bold;
+  padding-top: 1rem;
+  padding-left: 1rem;
+}
+
+.truck-header i{
+    float: right;
+    margin-top: 2px;
+    padding-right: 1rem;
+}
+
+.card-title {
+  margin-top: 2rem;
+  text-align: center;
+  font-size: 15px;
+  color: #0381BA;
+  font-family: 'Verdana';
+}
+
+.package-details {
+  margin-top: 0.3rem;
+  margin-left: 0.5rem;
+  font-size: 14px;
+  font-family: "Verdana";
+}
+.package-detail1 {
+  margin-top: 0.1rem;
+   margin-left: 0.5rem;
+  font-size: 14px;
+  font-family: "Verdana";
+}
+
+
+.text-label {
+  margin-top: 1px;
+  margin-left: -10px;
+  font-size: 15px;
+  font-family: "Verdana";
+  min-width: 15rem;
+  max-width: 15rem;
+}
+
+hr-1, hr-2 {
+  margin-top: 10px;
+}
+
+.applying-as {
+  font-family: "Verdana";
+  margin-top: 17px;
+  margin-left: 36px;
+  margin-right: 45px;
+}
+
+.business-name{
+  font-family: "Verdana";
+  margin-left: 36px;
+}
+
+.aust-company-number{
+  font-family: "Verdana";
+  margin-left: 36px;
+  align-items: center;
+
+}
+
+#specifyColor {
+  accent-color: #0381BA;
+}
+
+#specifyColor2{
+  accent-color: #0381BA;
+  font-size: 5px;
+  margin-bottom: 2%;
+  
+}
+
+
+.content {
+  margin-left: 230px;
+  margin-right: 5rem;
+  display: flex;
+  justify-content: space-between;
+  margin-top: -20px;
+  font-family: "Verdana";
+}
+
+.retrieve-btn {
+  border-radius: 5px;
+  font-size: 11px;
+  height: 1.7rem;
+  width: 7.5rem;
+  border: 2px solid #0381BA;
+  color: #0381BA;
+  background: #0381BA0A;
+  font-weight: bolder;
+  font-family: "Verdana";
+  margin-left: 2.2rem;
+  margin-bottom: -1px;
+}
+
+.card1, .card2, .card3{
+  min-height: 4rem;
+  // height:   30rem;
+  border-radius: 8px;
+  margin-top: 1rem;
+  // margin-right: 4rem;
+  padding-left: 2rem;
+  // padding: 1rem 1rem;
+  // padding-right: 1rem;
+  box-shadow: 0 5px 11px 0 rgba(0, 0, 0, 0.1), 0 4px 11px 0 rgba(0, 0, 0, 0.08);
+  // margin-left: 29.1rem;
+  width: 51.7rem;
+}
+.card4{
+  min-height: 4rem;
+  // height:   30rem;
+  padding-bottom: 2%;
+  margin-bottom: 5rem;
+  border-radius: 8px;
+  margin-top: 1rem;
+  // margin-right: 4rem;
+  padding-left: 2rem;
+  // padding: 1rem 1rem;
+  // padding-right: 1rem;
+  box-shadow: 0 5px 11px 0 rgba(0, 0, 0, 0.1), 0 4px 11px 0 rgba(0, 0, 0, 0.08);
+  // margin-left: 29.1rem;
+  width: 51.7rem;
+}
+
+.rightcard {
+  margin-left: 35rem;
+  width: 100%;
+  height: 30rem;
+}
+
+.lc-header {
+  font-size: 18px;
+  font-weight: bold;
+  padding-top: 1rem;
+  padding-left: 1rem;
+}
+
+.lc-header i {
+  float: right;
+  margin-top: 2px;
+  padding-right: 1rem;
+}
+
+.cs-footer-com {
+  display: flex;
+}
+
+.cs-footer-com button {
+  color: grey;
+  height: 40px;
+  padding: 0 3rem;
+  margin-right: -2rem;
+}
+
+.car-subs-footer {
+  position: fixed;
+  bottom: 0px;
+  left: 0px;
+  width: 100%;
+  border-top: 1px solid rgb(141, 140, 140);
+  height: 60px;
+  z-index: 7;
+  margin-top: 7rem;
+  background-color: white;
+  display: flex;
+  padding-left: 60px;
+  padding-right: 60px;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.cs-footer-right {
+
+  .submitbtn{
+    color: #000;
+  height: 40px;
+  background-color: #B7C301;
+  
+  padding: 0 3rem;
+  border-radius: 8px;
+  font-size: 15px;
+  font-weight: bold;
+  font-family: Verdana;
+
+  }
+
+  .savebtn{
+    margin-right: 20px;
+    font-weight: bold;
+    font-size: 15px;
+    font-family: Verdana;
+    border-radius: 8px;
+    color:#0381BA;
+    border: solid 2px #0381BA;
+    background-color: white;
+  }
+}
+
+.did-floating-label-content {
+  // color: black;
+  // font-size: 101px;
+  // font-size: 100rem;
+  position: relative;
+  margin-bottom: 40px;
+  color: #323840;
+  display: flex;
+  justify-content: space-between;
+}
+
+
+.did-floating-label {
+  // color:rgb(10, 10, 10);
+  font-size: 15px;
+  font-weight: normal;
+  position: absolute;
+  pointer-events: none;
+  left: 15px;
+  // color: black;
+  margin-top: -1rem;
+  // top:20px;
+  padding: 3px 4px;
+  background: #fff;
+  transition: 0.2s ease all;
+  -moz-transition: 0.2s ease all;
+  -webkit-transition: 0.2s ease all;
+}
+
+.form-check {
+  margin-left: -1rem;
+}
+
+.form-check1, .form-check2{
+  display: flex;
+  justify-content: space-between;
+  margin-left: 0rem;
+  margin-top: 3rem;
+}
+.form-check3{
+  display: flex;
+  justify-content: space-between;
+  margin-left: 0rem;
+  margin-top: 3rem;
+}
+ .form-check4, .form-check5, .form-check6{
+  display: flex;
+  justify-content: space-between;
+  margin-left: 0rem;
+  margin-top: -0.2rem;
+}
+
+.did-floating-input{
+  font-size: 13px;
+  display: flex;
+  width: 90%;
+  height: 35px;
+  // text-align: center;
+  padding: 17px ;
+  background: #fff;
+  border-color: black;
+  border: 1px solid black;
+  border-radius: 3px;
+  box-sizing: border-box;
+  outline: none;
+  font-family: 'Verdana';
+//   ~ .did-floating-label {
+//     // color: black;
+//     top: -8px;
+//     font-size: 12px;
+//     color: rgb(82, 79, 79);
+// }
+}
+
+.name{
+  width: 47rem;
+}
+
+.form-check-industry{
+  min-width: 8rem;
+  max-width: 8rem;
+}
+.form-check-industry2{
+  margin-top:1rem;
+  min-width: 12rem;
+  // max-width: 12rem;
+  margin-bottom: 2%;
+  
+}
+
+.industry{
+  margin-right: 4rem;
+}
+.turnover{
+  margin-top:1rem;
+  margin-right: 4rem;
+}
+
+.sector{
+  margin-top: -2rem;
+}
+
+.division-2{
+  display: flex;
+  align-items: center;
+  margin-left: 0rem;
+  margin-bottom: 2rem;
+}
+
+
+.division-6, .division-5{
+  margin-top: 2rem;
+  display: flex;
+  align-items: center;
+  // margin-left: 2rem;
+}
+
+.first-row-radio, .second-row-radio{
+  margin-top: 1.5rem;
+  display: flex;
+  // justify-content: space-between;
+  font-size: 13px;
+  color: #515151;
+}
+
+.division-3{
+  margin-top: 2.5rem;
+  display: flex;
+  justify-content: space-between;
+}
+.car-card-details{
+  border-radius: 5px;
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+  padding: 10px 10px 5px 10px;
+  font-family: "Verdana";
+  margin: 20px 7px;
+}
+#icons{
+         margin-left: 82%;
+}
+#icon1{
+  // margin-left: 82%;
+}
+.car-name{
+  display: flex;
+  
+  justify-content: space-between;
+
+  p{
+      font-size: 14.5px;
+  }
+}
+.abn-reg-number{
+  width: 28rem;
+}
+
+.established{
+  margin-right: 2.6rem;
+  width: 18rem;
+}
+.car-card-detail1{
+  border-radius: 5px;
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+  padding: 10px 10px 5px 10px;
+  font-family: "Verdana";
+  margin: 15px 7px;
+}
+
+.established2{
+  margin-right: 2.6rem;
+  width: 47rem;
+  height: 7rem;
+}
+
+.package-details{
+  p{
+    font-family: Verdana;
+    font-size: 13px;
+  }
+}
+
+.lc-header{
+  font-size: 16px;
+}
+
+
+.selected{
+  width: 20%;
+  height:15%;
+  font-size:1.1rem;
+  //margin-left:-1rem;
+}
+
+

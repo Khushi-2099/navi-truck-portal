@@ -1,0 +1,64 @@
+@import url(https://fonts.googleapis.co/css?family=Verdana:600,400,300);
+
+
+
+.circle-big {
+  position: relative;
+  width: 114px;
+  height: 114px;
+  margin: 30px auto 25px auto;
+}
+
+.circle-big svg {
+  width: 114px;
+  height: 114px;
+}
+
+.circle-big .bg {
+  fill: none;
+  stroke-width: 10px;
+  stroke: rgb(82, 82, 82);
+}
+
+.circle-big .progress {
+  fill: none;
+  stroke-width: 10px;
+  stroke: rgb(13, 200, 100);
+  stroke-linecap: round;
+  stroke-dasharray: 326.56;
+  stroke-dashoffset: 300;
+          transform: rotate(-90deg);
+          transform-origin: 50% 50%;
+          animation: big 1.5s ease-in-out;
+}
+
+.circle-big .text {
+  position: absolute;
+  color: white;
+  width: 100%;
+  font-family: "Verdana";
+  top: 26px;
+  font-size: 11px;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+//   font-weight: bold;
+  line-height: 15px;
+}
+
+.circle-big .text .small {
+  font-family: "Verdana";
+  margin-top: 12px;
+  font-size: 22px;
+  color: white;
+}
+
+
+@keyframes big {
+  from {
+    stroke-dashoffset: 326.56;
+  }
+  to {
+    stroke-dashoffset: 300;
+  }
+}

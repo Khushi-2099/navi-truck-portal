@@ -1,0 +1,157 @@
+.progress {
+    // height: 2.1rem;
+    height: 2.5rem !important;
+    border-radius: 40px;
+    background-color: #fff;
+    position: relative;
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+}
+
+.progress-bar {
+    border-radius: 40px;
+    position: absolute;
+    height: 2.5rem;
+    z-index: 1;
+}
+
+.step1{
+    margin-top: 0px;
+    position: relative; flex: 1;
+
+    
+    .stepName {
+        z-index: 2;
+        padding: 4px 0px 0px 0px;
+        position: relative;
+        margin: 0px;
+        font-size: 13px;
+        // padding: 0;
+        flex: 1;
+        text-align: center;
+        // margin-left: 3rem;
+    }
+
+    .stepTime{
+        z-index: 2;
+        padding: 2px 0px 5px 0px;
+        position: relative;
+        color: #C5E3F0;
+        font-size: 10.5px;
+        font-style: italic;
+        margin: 0px;
+        flex: 1;
+        text-align: center;
+    }
+}
+
+.activee {
+    margin-top: -6.5px;
+
+    .stepName{
+        padding-top: 10px;
+    }
+}
+
+.stepperLabel {
+    display: flex;
+    width: 100%;
+    // margin-top: 0.4rem;
+    position: relative;
+    align-items: center;
+    font-family: "Verdana";
+    font-weight: 500;
+    justify-content: space-around;
+
+}
+
+
+
+
+.stepperNumber {
+    display: flex;
+    z-index: 2;
+    width: 100%;
+    height: 100%;
+    align-items: center;
+    position: absolute;
+    // margin-top: -2.4rem;
+
+    .stepnum {
+        vertical-align: middle;
+        flex: 1;
+        // text-align: center;
+        margin-bottom: 0 !important;
+    }
+}
+
+
+.step {
+    background-color: white;
+    padding: 3px 7px;
+    border: solid 3px #C5E3F0;
+    font-size: 14px;
+    font-family: "Verdana";
+    font-weight: 500;
+    border-radius: 50%;
+    width: max-content;
+    margin-left: 7px;
+    // margin-top: -2px;
+    vertical-align: middle;
+    // text-align: center;
+    margin-bottom: 0 !important;
+}
+
+.firstani {
+    #p1 {
+        transform: scaleX(0);
+        transform-origin: left center;
+        animation: 2s progress ease-out forwards;
+    }
+}
+
+.secondani {
+
+    // #p1{
+    //     transform: scaleX(0);
+    //     transform-origin: left center;
+    //     animation: 1s progress ease-out forwards;
+    // }
+    #p2 {
+        transform: scaleX(0);
+        transform-origin: left center;
+        animation: 1s progress ease-out forwards;
+        // animation-delay: 1s;
+    }
+
+    #p3 {
+        transform: scaleX(0);
+        transform-origin: left center;
+        animation: 1s progress ease-out forwards;
+        animation-delay: 1s;
+    }
+}
+
+.thirdani {
+    // #p2{
+    //     transform: scaleX(0);
+    //     transform-origin: left center;
+    //     animation: 1s progress ease-out forwards;
+    //     animation-delay: 1s;
+    // }
+    // #p3{
+    //     transform: scaleX(0);
+    //     transform-origin: left center;
+    //     animation: 1s progress ease-out forwards;
+    //     animation-delay: 1s;
+    // }
+}
+
+
+
+
+
+@keyframes progress {
+    to {
+        transform: scaleX(1);
+    }
+}

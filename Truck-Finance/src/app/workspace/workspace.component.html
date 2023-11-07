@@ -1,0 +1,61 @@
+<div>
+    <app-navbar-after-home-page [navtheme]="'whitetheme'"></app-navbar-after-home-page>
+    <div style="padding: 90px 65px 30px 65px; gap: 20px;" class="d-flex" >
+        <div class="ws-white-card">
+            <ul>
+                <li class="activeli"><a><img src="../../assets/logos/Category.png">Dashboard</a></li>
+                <li><a (click)="redirect('/main-profile')"><img src="../../assets/Profiles.png">Profile </a></li>
+                <li><a (click)="redirect('rm-home-page')"><img src="../../assets/security-user.png">RM Homepage</a></li>
+                <li><a><img src="../../assets/Ticket.png">Messages</a></li>
+                <li><a><img src="../../assets/Document.png">Purchases</a></li>
+                <li><a><img src="../../assets/Calendar.png">Returns</a></li>
+                <li><a><img src="../../assets/Activity.png">Gallery</a></li>
+                <li><a><img src="../../assets/Setting.png">Settings</a></li>
+            </ul>
+        </div>
+        <div >
+            <div class="ws-black-card">
+                <p class="ws-bc-head">DashBoard </p>
+                <p class="ws-bc-name">Hello John </p>
+                <div style="display:flex; gap:30px; margin-top: -20px; transform: scale(1.2); margin-left: 5rem;">
+                    <div><app-spinner></app-spinner></div>
+                    <div class="tooltipp"><app-spinner3></app-spinner3><span class="tooltiptext">3 Deals with <b>$1,250</b> in pipeline</span></div>
+                    <div class="tooltipp"><app-spinner2></app-spinner2><span class="tooltiptext"><b>$17,500</b> as of <br><b>{{currentDate}}</b></span></div>
+                    <app-spinner1></app-spinner1>
+                    <!-- <div><app-spinner2></app-spinner2></div> -->
+                    <!-- <div><app-spinner3></app-spinner3></div> -->
+                </div>
+            </div>
+            <div class="ws-grid-card">
+                <div style="display: flex; justify-content: space-between; margin-bottom: -10px;">
+                    <p class="gridhead">All Tasks</p>
+                    <form class="d-flex" role="search">
+                        <div class="input-group d-flex"
+                            style="border-radius: 5px; border:solid 1px rgb(205, 194, 194); width:25rem; height: 30px;">
+                            <i class="fa-solid fa-magnifying-glass" style="font-size: 12px; margin:0 10px ;margin-top: 10px;"></i>
+                            <input class="form-control form-control-sm border border-0 pt-0 pb-0" type="search" placeholder="Search" aria-label="Search"
+                            style="font-size: 12px;">
+                        </div>
+                    </form>
+                    <form class="d-flex" role="search">
+                        <div class="input-group d-flex" style="border-radius: 5px; border:solid 1px rgb(204, 194, 194); width:25rem; height: 30px;">
+                            <button class="btn" type="submit" style="margin:0; height: 10px; font-size: 11px;">Sort by:</button>
+                            <select name="cars" id="cars" class="border border-0 pt-0 pb-0" style="font-size: 12px; width: 20.9rem;">
+                                <option value="volvo">Newest</option>
+                                <option value="saab">Oldest</option>
+                                <option value="opel">Latest</option>
+                                <option value="audi">Recent</option>
+                            </select>
+                        </div>
+                    </form>
+                </div>
+                <ag-grid-angular  style="width: 100%; height: 17.5rem; overflow: hidden;" class="ag-theme-alpine" [rowData]="rowData$"
+                    [columnDefs]="columnDefs" [defaultColDef]="gridOptions.defaultColDef" [rowHeight]="33" (cellClicked)="onCellClicked($event)">
+                </ag-grid-angular>
+                <img src="../../assets/logos/frame.png" style="width: 60rem; height: 1.2rem;
+                width: 60rem;
+                margin-top: 0.5rem;">
+            </div>
+        </div>
+    </div>
+</div>

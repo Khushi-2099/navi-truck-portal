@@ -1,0 +1,83 @@
+<div class="mainclass w-full">
+  <div class="childclass1">
+    <img class="logoimg"
+      src="../../assets/Aurionpro.png" style="height: 7rem;">
+    <div class="subchild1">
+      <h1>Building the Future...</h1>
+      <p>Lorem ipsum dolor sit amet,
+        consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+      <div class="slider">
+        <img src="../../assets/login_image/carousel-slider.svg">
+      </div>
+    </div>
+  </div>
+
+  <div class="childclass2">
+
+    <div class="header">
+      <h5 style="font-weight: bold; font-family: 'Verdana';">Forgot Password</h5>
+    </div>
+    <div (click)="redirect('user/login')" class="arow">
+      <img src="../../assets/arrow-circle-left.png">
+    </div>
+    <div class="form-group">
+
+      <label id="email" for="email">Enter Email Address to Request for OTP link</label>
+      <br>
+      <br>
+      <div class="container1">
+        <div class="did-floating-label-content label-input">
+
+          <input class="did-floating-input " type="text" placeholder="Email">
+
+          <label class="did-floating-label">Email</label>
+
+        </div>
+      </div>
+      <br>
+      <label id="signin"> Back to sign in</label>
+
+      <form (ngSubmit)="onSubmit()">
+        <div>
+          <button id="sendbutton" type="submit" class="started btn" style="font-family: 'Verdana' ;" (click)="onSubmit()">Send</button>
+        </div>
+
+        <div class="container">
+
+          <div class="row justify-content-center  ">
+
+            <div class="col-md-5">
+              <hr class="my-2">
+            </div>
+
+            <div class="col-auto" style="font-weight: 400;">
+              <p class="or-text" style="font-weight: bold;">Or</p>
+            </div>
+
+            <div class="col-md-5">
+              <hr class="my-2">
+            </div>
+
+          </div>
+
+        </div>
+        <!-- ../../assets/images/icons8-google.jpg -->
+        <button class="googlee btn btn-google mt-3 " style="font-family: 'Verdana';"><img
+            src="../../assets/login_image/google.png" alt="Google Logo" class="google-logo mr-2">Sign Up with
+          Google</button>
+
+        <button class="googlee btn btn-google " style="font-family: 'Verdana'"><img
+            src="../../assets/login_image/apple.jpg" alt="Apple Logo" class="google-logo mr-2">Sign Up with
+          Apple</button>
+
+        <div class="span">
+          <!-- routerLink='register' -->
+          <span style="font-weight: normal;">Don't Have an Account? <a class="fw-bold text-body"
+              (click)="redirect('registration')">LOGIN HERE</a></span>
+        </div>
+
+      </form>
+
+    </div>
+
+  </div>

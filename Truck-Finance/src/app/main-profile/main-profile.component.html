@@ -1,0 +1,55 @@
+
+ <app-navbar-after-home-page [navtheme]="'whitetheme'"></app-navbar-after-home-page>
+  
+ <nav class="nav">
+     <div class="div1">
+                  
+         <div class="nav-spacing">
+             <button type="button" class="btn btn-outline-light text-dark pro-btn" [style.background-color]="clicked1 ? '#ADD8E6':'white'" [style.background-color]="clicked1 ? '#ADD8E6':'white'" (click)="navigateToProfile()"><img
+                     src="..\assets\profile2.png" alt="Icon 1">Profile</button>
+             <button type="button" class="btn btn-outline-primary text-dark set-btn" 
+                 (click)="navigateToAccountSettings()"><img src="..\assets\Setting2.png" alt="Icon 1">Account Settings</button>
+           </div>
+           <!-- (click)="redirect('newPass')" -->
+         <a  href="newPass" class="a1" >Change Password</a>
+     </div>
+     <div class="divs">
+         <div class="div2" [formGroup]="userForm" (ngSubmit)="onSubmit()" action="" >
+             <form >
+                 <div class="div4">
+                  
+                     <div class="container">
+                         <div class="did-floating-label-content label-input">
+                           <input class="did-floating-input " type="text" placeholder="User Name">
+                           <label class="did-floating-label">Name</label>
+                         </div>
+                         <div class="did-floating-label-content label-input">
+                             <input class="did-floating-input" type="text" placeholder="xyz123@gmail.com">
+                             <label class="did-floating-label">Email</label>
+                           </div>
+                           <div class="did-floating-label-content label-input">
+                             <input class="did-floating-input" type="text" placeholder="(908) 234-1611">
+                             <label class="did-floating-label">Phone Number</label>
+                           </div>
+                           <div class="did-floating-label-content label-input">
+                             <input class="did-floating-input" type="text" placeholder="St Bernards Rd Gladstone New Mexico 07934">
+                             <label class="did-floating-label">Address</label>
+                           </div>     
+                     </div>
+                 </div>
+             </form>
+ 
+             <div class="div3">
+                 <img class="img2" src="..\assets\Group.png" alt="img"><br>
+ 
+                 <img class="img1" src="../../assets/BOY 200.png" alt="img">
+                
+             </div>
+             <button type="button" class="btn1 btn  " (click)="navigateToEditProfile() "><img class="img4"
+                     src="..\assets\edit-200.png" alt="Icon 1" >Edit Profile</button>
+             <!-- routerlink="edit-sahil" -->
+         </div>
+     </div>
+ 
+ 
+ </nav>

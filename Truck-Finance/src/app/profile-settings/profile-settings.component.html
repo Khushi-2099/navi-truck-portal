@@ -1,0 +1,45 @@
+
+<app-navbar-after-home-page [navtheme]="'whitetheme'"></app-navbar-after-home-page>
+
+<div >
+<nav>
+    <div class="div1"> 
+      <!-- <h5><img src="..\assets\Setting2.png" alt="Icon 1" style="width:20px;height:18px; margin-bottom: 3px; margin-right: 7px;">  Account Settings</h5> -->
+      <!-- #db232359 -->
+      <div class="nav-spacing">
+        <button type="button" class="btn btn-outline-light text-dark pro-btn" (click)="navigateToProfile()"><img src="..\assets\profile2.png" alt="Icon 1" >Profile</button>
+        <button type="button" class="btn btn-outline-light text-dark set-btn" [style.background-color]="clicked1 ? '#ADD8E6':'white'" (click)="navigateToAccountSettings()" ><img src="..\assets\Setting2.png" alt="Icon 1">Account Settings</button>
+        </div>
+        <a  href="newPass"class="a1">Change Password</a> 
+    </div>
+</nav>
+<div class="main">
+    <div class="divs">
+        <div class="div2">
+            <div class="div3">
+                <h4>Phone Number:</h4>
+                <p>Phone numbers can be used as second factor of verification in two-factor authentication. See this ARTICLE for details setting up this ASP.NET application to support two factor authentication to SMS</p>
+                
+                  <!-- <p>(206-555-1234) <a href="#"style="color:red; text-decoration: underline;">Change</a> <a href="#"style="color:black;text-decoration: underline;">Remove</a></p>   -->
+                 <input id="number" placeholder="(206-555-1234) "> <a class="anchor" id="link1" [style.color]="clicked5 ? 'black':'blue'"(click)="changeclick()">Change</a> <a class="anchor" id="link2" [style.color]="clicked6 ? 'black':'blue'"(click)="removeclick()">Remove</a>
+                 <!-- href="../profile-settings" -->
+                 <br><br><br>
+                <h4>Two Factor Authentication:</h4>
+                <!-- <a class="anchor" href="../profile-settings">Enable</a>
+                <a  class="anchor" href="../profile-settings">Disable</a> -->
+                <a class="anchor" [style.color]="clicked3 ? 'black':'blue'"(click)="enableclick()">Enable</a>
+                <a  class="anchor"[style.color]="clicked4 ? 'black':'blue'"(click)="disableclick()">Disable</a>
+
+            </div>
+                <!-- btn-danger -->
+                <button type="button" class="btn1 btn btn-outline-dark " (click)="showBottomCenter()">Save</button>
+                <div id="alertContainer" class="top-center-alert"></div>
+
+                <button type="button" class="btn2 btn btn-outline-dark " (click)="navigateToProfile()">Cancel</button>
+                <!-- <button type="button" class="btn btn-outline-danger">Danger</button> -->
+            </div>
+           </div>
+ </div>
+</div>
+
+<router-outlet></router-outlet>

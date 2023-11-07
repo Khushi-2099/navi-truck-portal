@@ -1,0 +1,219 @@
+<app-navbar-after-home-page [navtheme]="'whitetheme'"></app-navbar-after-home-page>
+
+<div class="an-pending">
+
+    <div class="card left-card border border-2">
+        <!-- (click)="redirect('car-sub')"  -->
+        <!-- <div class="car-card">
+                <img src={{techDetailsParameter.pramData.image}}>
+            </div> -->
+        <h5 class="card-title" style="font-family: 'Verdana'; text-align: center; color:#0381BA; font-size: 15px;">
+            <b>Application ID: {{techDetailsParameter.pramData.applicationId}}</b>
+        </h5>
+        <div *ngFor="let truck of techDetailsParameter.truckList; let i = index">
+            <div class="car-card-detail1">
+              <div class="car-name" (click)="toggleCarCardVisibility(i)">
+                <div class="d-flex" style="gap:20px; align-items: center;">
+                  <div class="car-profile-pic">
+                    <img [src]="truck.imgUrl">
+                  </div>
+                  <p class="mt-3"><b>{{truck.name}}</b> </p>
+                </div>
+                <i class="fa-solid cardangle" id="icon1" [class.fa-angle-down]="!isCarCardVisible[i]" [class.fa-angle-up]="isCarCardVisible[i]"></i>
+              </div>
+              <div [style.display]="isCarCardVisible[i] ? 'inherit' : 'none'" [style.height]="isCarCardVisible[i] ? 'fit-content' : '0'">
+                <div class="d-flex" style="justify-content: space-between;">
+                  <div class="package-details">
+                    <p><b>Variant: {{techDetailsParameter.detailsList[i].variant[0]}}</b> </p>
+                    <p><b>No.of Units: {{techDetailsParameter.detailsList[i].quantityy}}</b> </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        <div class="d-flex" style="justify-content: space-between;" *ngFor="let car of carDetails">
+            <div class="package-details">
+                <p><b>Your Chosen Package:</b></p>
+                <p style="color: #0381BA;"><b>Your current installment is:</b></p>
+                <p><b>Your Total Amount of Finance</b></p>
+                <p>Balloon Payment</p>
+                <p>Fees & Charges</p>
+                <p>Repayment Frequency </p>
+                <p>APR of</p>
+                <p>Add on (installment)</p>
+               
+                <p><b>Your first payment is</b></p>
+            </div>
+            <div class="package-details">
+                
+               <p><b>{{package}}</b> </p>
+                <p style="color: #0381BA;">
+                    <b>${{numberWithCommas(techDetailsParameter.pramData.leftcard.currentInstallment)}}/month</b>
+                </p>
+                <p><b>{{(techDetailsParameter.tableData.financing)}}</b></p>
+                <p>{{techDetailsParameter.pramData.leftcard.downpayment}}</p>
+                <p>$20,667.82</p>
+                <p>{{techDetailsParameter.pramData.leftcard.repaymentfrequency}} </p>
+                <p>5.24%</p>
+                <p>{{techDetailsParameter.pramData.leftcard.addonInstallment}}</p>
+                
+                <p><b>${{numberWithCommas(techDetailsParameter.pramData.leftcard.currentInstallment)}}</b></p> 
+            </div>
+
+        </div>
+        <div class="package-details mt-1">
+            <p style="font-weight: 700; color: #0381BA;">Your monthly repayment starts from November 2023, every 1st of
+                the month</p>
+        </div>
+        <div class="package-details mt-1" style="color: #0381BA;">
+            <input type="checkbox" style="vertical-align: middle; margin-right: 5px;">
+            <label style="font-size: 14px; vertical-align: middle; font-family: Verdana;">Acceptance of Terms &
+                Conditions</label>
+        </div>
+        <div class="Lorem" style="margin-top: 1rem; margin-right: 3rem; ">
+            <P style="font-size: 12px;">By ticking this checkbox, you agree to our Terms & Conditions & Privacy Policy
+            </P>
+        </div>
+    </div>
+    <div>
+        <div class="mt-2 status">
+            <p>Application Status :<span
+                    style="background-color: #FFF069; border-radius: 10px; padding: 5px 10px; margin-left: 10px;">Pending</span>
+            </p>
+        </div>
+
+        <div class="card right-side">
+            <p class="an-head" style="font-family: Verdana;">ADDITIONAL APPROVAL CONDITION:</p>
+            <!-- <div class="an-body">
+                    <p><b>Condition :</b> 3 Months Bank Statement Required</p>
+                    <p><b>Due By :</b> 15/10/2023</p>
+                </div> -->
+            <div class="an-body approval mb-4" style="align-items: center;">
+                <input type="radio" name="appcondition" [(ngModel)]="selectedApproval"
+                    (change)="changeApproval('bankStatement')" value="bankStatement">
+                <label>3 Months Bank Statement:</label>
+                <span [class.comp]="bankStatus == 'Completed'">{{bankStatus}}</span>
+                <input type="text" class="an-drop" placeholder="Notes" value={{banknote}}>
+                <i class="fa-solid fa-file-circle-check"
+                    [style.display]="bankStatus=='Pending' ? 'none' : 'inherit'"></i>
+            </div>
+            <div class="an-body approval mb-4" style="align-items: center;">
+                <input type="radio" name="appcondition" [(ngModel)]="selectedApproval" value="creditCard"
+                    (change)="changeApproval('creditCard')">
+                <label>Financial Statement:</label>
+                <span [class.comp]="cardStatus == 'Completed'">{{cardStatus}}</span>
+                <input type="text" class="an-drop" placeholder="Notes" value={{cardnote}}>
+                <i class="fa-solid fa-file-circle-check"
+                    [style.display]="cardStatus=='Pending' ? 'none' : 'inherit'"></i>
+            </div>
+            <div class="an-body approval mb-4" style="align-items: center;">
+                <input type="radio" name="appcondition" [(ngModel)]="selectedApproval" value="regisCopy"
+                    (change)="changeApproval('regisCopy')">
+                <label>Registration Copy:</label>
+                <span [class.comp]="regisStatus == 'Completed'">{{regisStatus}}</span>
+                <input type="text" class="an-drop" placeholder="Notes" value={{regisnote}}>
+                <i class="fa-solid fa-file-circle-check"
+                    [style.display]="regisStatus=='Pending' ? 'none' : 'inherit'"></i>
+            </div>
+        </div>
+        <div class="card right-side">
+            <p class="an-head">ADD NOTE:</p>
+            <div class="an-body mb-3">
+                <input class="form-control border border-1 border-secondary addinp" #box>
+                <button class="btn addbtn" (click)="onAddNote(box.value)">Add</button>
+            </div>
+        </div>
+        <div class="card right-side">
+            <p class="an-sub-head">Upload Document</p>
+            <div class="an-body dealership mb-3" style="align-items: center;">
+                <label style="margin-right: 20px;"><b>Document Type:</b></label>
+                <select name="cars" id="cars" class="an-drop">
+                    <option value="">Choose</option>
+                    <option value="saab">Identity Proof</option>
+                    <option value="opel">Bank Statement</option>
+                    <option value="audi">Paystub</option>
+                    <option value="audi">Tax Return</option>
+                </select>
+            </div>
+            <div class="an-drag">
+                <p-toast></p-toast>
+                <p-fileUpload name="files[]" url="https://www.primefaces.org/cdn/api/upload.php"
+                    chooseLabel="Drag Your Files Here" (onUpload)="onUpload($event)" [multiple]="true"
+                    [showCancelButton]="false"  [maxFileSize]="1000000">
+                    <ul *ngIf="uploadedFiles.length">
+                        <li *ngFor="let file of uploadedFiles">{{ file.name }} - {{ file.size }} bytes</li>
+                    </ul>
+                </p-fileUpload>
+                <!-- <p class="drag-file-text">Drag your files here</p> -->
+
+            </div>
+            <p style="font-size: 11px; color: grey; font-family: Verdana; font-weight: bold;">Max file is 10MB.
+                Supported file format are JPG, PNG, PDF.</p>
+        </div>
+
+        <div class="d-flex" style="gap:15px">
+            <div class="card loanDeal">
+                <p class="an-head">LOAN CONTRACT:</p>
+                <div class="an-body">
+                    <p><u>Your Loan Contract will be mailed to <span
+                                style="color: #0381BA; "><u>johnsmith@hotmail.com.</u></span> Please confirm your email
+                            and submit the esign button.</u></p>
+                </div>
+                <div class="an-body" style="justify-content: end;">
+                    <button class="btn signbtn">+ eSign</button>
+                </div>
+            </div>
+            <div class="card loanDeal">
+                <p class="an-head">DEALERSHIP DETAILS:</p>
+                <div class="an-body dealership">
+                    <p>Delivery | Self Pick-up: 4PM on {{currentDate}}</p>
+                </div>
+                <div class="an-body dealership">
+                    <p style="color: #0381BA; margin-bottom: 5px;">Delivery Details:</p>
+                </div>
+                <div class="an-body dealership">
+                    <p class="deal">Street: 64 Canterbury Rd</p>
+                    <p class="deal1">City: Bayswater North VIC</p>
+                </div>
+                <div class="an-body dealership">
+                    <p class="deal">State/Province/Area: Victoria</p>
+                    <p class="deal1">Zip Code: 3153</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>
+<div class="car-subs-footer">
+    <div>
+        <button class="btn" style="font-family: 'Verdana'; color: rgb(255, 255, 255);"
+            (click)="redirect('work-space')"><b>CANCEL</b></button>
+    </div>
+    <div class="cs-footer-com">
+        <button class="btn" style="font-family: Verdana; font-weight: 600;" (click)="onSubmit()">SUBMIT</button>
+    </div>
+</div>
+
+<div *ngIf="!showCredit" class="popup-container" (click)="onCancel()">
+    <div class="popup-box">
+        <div class="popup-header">
+            <button (click)="onCancel()"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                    viewBox="0 0 24 24" fill="none">
+                    <path d="M9.17004 14.8299L14.83 9.16992" stroke="white" stroke-width="1.5" stroke-linecap="round"
+                        stroke-linejoin="round" />
+                    <path d="M14.83 14.8299L9.17004 9.16992" stroke="white" stroke-width="1.5" stroke-linecap="round"
+                        stroke-linejoin="round" />
+                    <path d="M9 22H15C20 22 22 20 22 15V9C22 4 20 2 15 2H9C4 2 2 4 2 9V15C2 20 4 22 9 22Z"
+                        stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                </svg></button>
+        </div>
+        <h1 class="text-uppercase popup-title">Success!</h1>
+        <div class="popup-message" style="font-family: Verdana;">
+            <p>Thank you your Application has been saved and you can view it on your Dashboard/My Workspace.</p>
+        </div>
+        <div>
+            <button (click)="onOk()" class="confirm-btn">OK</button>
+        </div>
+    </div>
+</div>

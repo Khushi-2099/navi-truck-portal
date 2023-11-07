@@ -1,0 +1,251 @@
+<div class="navbar">
+     <app-navbar-after-home-page [navtheme]="'whitetheme'"></app-navbar-after-home-page>
+</div>
+<div *ngIf="showCredit">
+    </div> 
+    <div style="margin-top: 5rem; margin-bottom: 1rem;">
+        <app-stepper [firstBg]="'#0381BA'" [ani]="'third'" [secondBg]="'#B0D7E9'" [first]="'white'" [date1]="techDetailsParameter.datee"></app-stepper>
+    </div>
+    <div class="cs-cred-info-main-screen">
+        <div class="cs-cred-info-left-sec">
+       
+            <h5 class="card-title" style="font-family: Verdana;"><b>Application
+                    ID:{{techDetailsParameter.applicationId}}
+                </b></h5>
+                <div *ngFor="let truck of techDetailsParameter.truckList; let i = index">
+                    <div class="car-card-detail1">
+                      <div class="car-name" (click)="toggleCarCardVisibility(i)">
+                        <div class="d-flex" style="gap:20px; align-items: center;">
+                          <div class="car-profile-pic">
+                            <img [src]="truck.imgUrl">
+                          </div>
+                          <p class="mt-3"><b>{{truck.name}}</b> </p>
+                        </div>
+                        <i class="fa-solid cardangle" id="icon1" [class.fa-angle-down]="!isCarCardVisible[i]" [class.fa-angle-up]="isCarCardVisible[i]"></i>
+                      </div>
+                      <div [style.display]="isCarCardVisible[i] ? 'inherit' : 'none'" [style.height]="isCarCardVisible[i] ? 'fit-content' : '0'">
+                        <div class="d-flex" style="justify-content: space-between;">
+                          <div class="package-details">
+                            <p><b>Variant: {{techDetailsParameter.detailsList[i].variant[0]}}</b> </p>
+                            <p><b>No.of Units: {{techDetailsParameter.detailsList[i].quantityy}}</b> </p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+            <div style="display: flex; justify-content: space-between; padding-right: 5px;">
+                <div class="package-details" style="min-width: 8rem;">
+                    <p style="font-family: Verdana;"><b>Your chosen package:</b></p>
+                    <p style="font-family: Verdana; color: #0381BA;"><b>Your current installment is: </b></p>
+                    <p style="font-family: Verdana; font-family: Verdana;"><b>Your Total Amount of Finance</b></p>
+                    <p style="font-family: Verdana">Balloon Payment</p>
+                    <p>Fees & Charges</p>
+                    <p style="font-family: Verdana;">Repayment Frequency</p>
+                    <p style="font-family: Verdana;">APR of</p>
+                    <p style="font-family: Verdana;">Add on (installment)</p>
+                    <p>Upfront Taxes</p>
+                    <p style="font-family: Verdana;"><b>Your first payment is</b></p>
+                </div>
+                <div class="package-details">
+                    <p style="font-family: Verdana;"><b>{{package}}</b></p>
+                    <p style="font-family: Verdana; color: #0381BA;"><b>${{numberWithCommas(techDetailsParameter.leftcard.currentInstallment)}}/month</b></p>
+                    <p style="font-family: Verdana; font-family: Verdana;"><b>${{numberWithCommas(techDetailsParameter.price)}}0</b></p>
+                    <p style="font-family: Verdana">{{leftcard.downpayment}}</p>
+                    <p>$20,667.82</p>
+                    <p style="font-family: Verdana;">{{techDetailsParameter.leftcard.repaymentfrequency}}</p>
+                    <p style="font-family: Verdana;">{{techDetailsParameter.leftcard.APR}}</p>
+                    <p style="font-family: Verdana;">{{techDetailsParameter.leftcard.addonInstallment}}</p>
+                    <p>$ {{numberWithCommas(taxes)}}</p>
+                    <p style="font-family: Verdana;"><b>${{numberWithCommas(techDetailsParameter.leftcard.currentInstallment)}}</b></p>
+
+                </div>
+            </div>
+
+                <p style="font-size:15px;color:#0381BA; font-family: 'Verdana'; padding: 0 8px;"><b>Your monthly repayment starts from<br>November 2023, every 1st of the month</b>
+
+                </p>
+
+
+
+            
+
+
+
+        </div>
+
+        <div class="cs-cred-info-right-sec">
+
+
+
+            <div class="cs-step-one">
+
+                <div class="header">
+
+                    <h5 class="header-one">Credit Information</h5>
+
+
+                </div>
+
+             
+
+                <div class="drop-one d-flex">
+                    <div>
+                        <div class="asset">
+                            <h6 class="sub-header-three"> Total Assets:</h6>
+                            <span class="input-group-text" id="basic-addon1">$</span>
+                            <input type="text" [(ngModel)]="asset" class="input-group-text"   id="values" >
+                            <!-- <input type="number" [ngModel]="asset"  class="AssetInput" placeholder="$"> -->
+                           </div>
+                           <div class="asset">
+                            <h6 class="sub-header-three"> Total Liabilities:</h6>
+                            <span class="input-group-text" id="basic-addon1">$</span>
+                            <input type="text" [(ngModel)]="liabilities" class="input-group-text"   id="values">
+                            <!-- <input type="number" [ngModel]="liabilities"  class="AssetInput" placeholder="$"> -->
+                           </div>
+                           <div class="asset">
+                            <h6 class="sub-header-three"> Annual Operating Income  :</h6>
+                            <span class="input-group-text" id="basic-addon1">$</span>
+                            <input type="text" [(ngModel)]="yearly" class="input-group-text"   id="values" >
+                            <!-- <input type="number" [(ngModel)]="yearly" class="AssetInput" placeholder="$"> -->
+                            <!-- <p>{{yearly}}</p> -->
+                           </div>
+                    </div>
+                    <div>
+                        <div class="asset">
+                            <h6 class="sub-header-two">  Annual Operating Expenses:</h6>
+                            <span class="input-group-text" id="basic-addon1">$</span>
+                            <input type="number" [(ngModel)]="optcost" class="input-group-text"    id="values"   (blur)="calcnetcost()"  >
+                            <!-- <input type="number" [(ngModel)]="optcost"  class="AssetInput" placeholder="$" (blur)="calcnetcost()" > -->
+                            
+                           </div>
+                           <div class="asset">
+                            <h6 class="sub-header-two"> Annual Net Operating Income:</h6>
+                            <span class="input-group-text" id="basic-addon1">$</span>
+                            <label type="number"  class="input-group-text"    id="value1" >{{netcost}}</label>
+                            <!-- <label      id="lbl" class="AssetInput"   placeholder="$" > {{netcost1}}</label> -->
+                            <!-- <input type="number"   #id  class="AssetInput"  placeholder="$" {{netcost}} > -->
+                           </div>
+                           <div class="asset">
+                            <h6 class="sub-header-two"> Total Debt Service Cost:</h6>
+                            <span class="input-group-text" id="basic-addon1">$</span>
+                            <input type="number" [(ngModel)]="debt" class="input-group-text"    id="values"  (blur)="calDsr()">
+                            <!-- <input type="number" [(ngModel)]="debt"  class="AssetInput"  placeholder="$" (blur)="calDsr()"> -->
+                           </div>
+                    </div>
+                </div>
+
+            
+                
+            
+
+            </div>
+
+
+
+
+          
+
+            <div class="cs-step-five d-flex align-items-center">
+
+                <div class="d-flex align-items-center">
+
+                    <div class="header">
+
+                        <h5 class="header-one mb-3">&nbsp;&nbsp;&nbsp;Ratio’s</h5>
+
+                    </div>
+
+                    <span class="mt-2.95 mx-4 my-2" style="font-weight:bold">DSCR:<span
+                            class="cs-percentage mx-5">{{dsr}}</span></span>
+
+                </div>
+
+            </div>
+
+            <div class="cs-step-six">
+
+                <div class="header">
+
+                    <input type="checkbox" class=" mx-3" />
+
+                    <h5 class="header-one mt-2 mx-0">Consent for Credit Score</h5>
+
+                
+
+                </div>
+
+                <div class="cs-run-cred-score d-flex justify-content-end mx-3">
+
+                    <button class="retrieve-btn-credit">Run Business Credit</button>
+
+                </div>
+
+
+
+            </div>
+         
+
+          
+        </div>
+    </div>
+    <div class="car-subs-footer">
+        <div class="cs-footer-left">
+            <button class="redtxt" style="margin-left: -2rem; cursor:pointer; color: grey; font-weight: 700; font-family: 'Verdana';" (click)="redirectToApplyNow()">Back</button>
+        </div>
+
+        <div class="cs-footer-right">
+            <button class="btn savebtn">SAVE AS DRAFT</button>
+            <button class="btn submitbtn" style="font-weight: 600; font-family: Verdana;" (click)="onSubmit()">Submit</button>
+
+        </div>
+
+    </div>
+
+<div *ngIf="submitPopup" class="popup-container" (click)="onCancel()">
+
+    <div class="popup-box">
+
+        <div class="popup-header">
+            <button (click)="onCancel()"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                    viewBox="0 0 24 24" fill="none">
+                    <path d="M9.17004 14.8299L14.83 9.16992" stroke="white" stroke-width="1.5" stroke-linecap="round"
+                        stroke-linejoin="round" />
+                    <path d="M14.83 14.8299L9.17004 9.16992" stroke="white" stroke-width="1.5" stroke-linecap="round"
+                        stroke-linejoin="round" />
+                    <path d="M9 22H15C20 22 22 20 22 15V9C22 4 20 2 15 2H9C4 2 2 4 2 9V15C2 20 4 22 9 22Z"
+                        stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                </svg></button>
+        </div>
+        <h1 class="text-uppercase popup-title" style="font-family: Verdana;">Success!</h1>
+        <div class="popup-message">
+            <p style="font-family: Verdana;">Thank you your Application ID : {{techDetailsParameter.applicationId}} has been saved and you can view it on your Dashboard/My Workspace.</p>
+        </div>
+        <div>
+            <button (click)="onOk()" class="confirm-btn">OK</button>
+        </div>
+    </div>
+</div>
+<div *ngIf="isShowInfoMsg" class="popup-container-one" (click)="onCancel1()">
+    <div class="popup-box">
+        <div class="popup-header">
+            <button (click)="onCancel1()"></button>
+        </div>
+        <h1 class="text-uppercase popup-title"></h1>
+        <div class="popup-message">
+            <!-- #ED5434; -->
+            <p>To start income verification process, we have sent you an email to
+            <p style="color: #0381BA;"> john.smith@gmail.com
+            <p> containing your unique link, which is valid for 24 hours</p>
+        </div>
+
+        <div>
+
+
+
+        </div>
+
+    </div>
+
+</div>
+

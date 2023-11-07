@@ -1,0 +1,160 @@
+<div class="car-collec-main">
+    <div class="container text-center">
+        <h1 style="font-weight: bolder; font-size: 2.1rem; font-family: Verdana;" class="py-3">Our Impressive Collection
+            of Trucks</h1>
+        <h6 style="font-family: Verdana;">Ranging from elegant sedans to powerful trucks, all carefully selected to
+            provide our customers with the ultimate driving experience.</h6>
+    </div>
+
+
+    <div class="car-collec-nav">
+        
+        <button class="btn btn-white car-type-btn">All Models (6)</button>
+        <button class="btn btn-white car-type-btn">On-Highway</button>
+        <button class="btn btn-white car-type-btn">Vocational</button>
+        <button class="btn btn-white car-type-btn">Medium Duty</button>
+        <button class="btn btn-white car-type-btn">Off Highway/Export</button>
+        <button class="btn btn-white car-type-btn">Electric/Zero Emissions</button>
+    </div>
+    <div class="home-card-sec">
+        <div class="long-card">
+            <div class="lc-top-card">
+                <p style="color: black;   font-family: Verdana; ">Payment Estimator</p>
+                <div class="card-top-text">
+                   
+                    <!-- Default checked radio -->
+                    <div class="form-check loan-radio" style="margin-left: 0.1%;">
+                        <input class="form-check-input" type="radio" name="flexRadioDefault" id="Red"
+                            checked />
+                        <label class="form-check-label" for="flexRadioDefault2">Lease</label>
+                    </div>
+                    <!-- Default radio -->
+                    <div class="form-check" style="margin-left: 25%;">
+                        <input class="form-check-input" type="radio" name="flexRadioDefault" id="Red"  />
+                        <label class="form-check-label" for="flexRadioDefault1">Hire Purchase</label>
+                    </div>
+                </div>
+            </div>
+
+            <div class="input-fields">
+                <div class="fields-align">
+                    <p style="font-family: Verdana;">Sale price:</p>
+                    <input type="text" placeholder="$ 0.00">
+                </div>
+                <div class="fields-align">
+                    <p style=" font-family: Verdana;">Down Payment:</p>
+                    <input type="text" placeholder="$ 0.00">
+                </div>
+                <div class="fields-align">
+                    <p >Interest Rate:</p>
+                    <input type="text" placeholder="7.9%">
+                </div>
+
+                <div class="fields-align loan-years">
+                    <p >Tenure (Months) :</p>
+                    <button class="btn-group">24</button>
+                    <button class="btn-group">36</button>
+                    <button class="btn-danger  calculate" style=" border-color :#0381BA; background-color: #0381BA0A;">48</button>
+                    <button class="btn-group">60</button>
+                    <button class="btn-group">72</button>
+                </div>
+
+                <div class="fields-align loan-years" id="specific-button">
+                    <p style=" font-family: Verdana;">Payment Frequency:</p>
+                    <button class="btn-group"  style="padding: 0.6rem; font-family: Verdana;">M</button>
+                    <button class="btn-group" style="padding: 0.6rem;  font-family: Verdana;">Q</button>
+                    <button class="btn-group" style="padding: 0.4rem;  font-family: Verdana;">SA</button>
+                    <button class="btn-group" style="padding: 0.6rem;  font-family: Verdana;"> A</button>
+                </div>
+
+                <div class="calculate-div">
+                    <button class="btnn calculate"  style="font-family: Verdana;" >Calculate Payment</button>
+                </div>
+            </div>
+
+            <hr>
+            <div class="div-below-hr">
+                <p style="font-family: Verdana;">Find My Truck</p>
+                <input type="text" class="search-box" placeholder="Search" style="font-family: Verdana;">
+            </div>
+
+            <div class="select-filters">
+                <p style=" font-family: Verdana;">Select Filters<span style=" font-family: Verdana;"> (2 selected)</span></p>
+                <img src="../../assets/Layer 2.png" alt="">
+            </div>
+
+            <div class="drop-menus">
+                <div class="drop-menu-options">
+                    <p  id ="cap">Condition</p>
+                    <i class="fa-solid fa-angle-down"></i>
+                </div>
+                <div class="drop-menu-options">
+                    <p  id ="cap">Capacity</p>
+                    <i class="fa-solid fa-angle-down"></i>
+                </div>
+            </div>
+
+            <div class="budget-range">
+                <p style=" font-family: Verdana;">Budget</p>
+                <input type="range" name="" id="">
+                <div style="display: flex; justify-content: space-between;">
+                    <p style=" font-family: Verdana;">$171,120</p>
+                    <p style=" font-family: Verdana;">$367,840</p>
+                </div>
+            </div>
+
+            <hr>
+
+            <div class="mileage-div">
+                <p style=" font-family: Verdana;">Mileage</p>
+                <div class="fields-align">
+                    <p style=" font-family: Verdana;">Distance:</p>
+                    <input type="text" placeholder="0.00 Km" style=" font-family: Verdana;">
+                </div>
+                <div class="fields-align">
+                    <p style=" font-family: Verdana;">Fuel Efficiency:</p>
+                    <input type="text" placeholder="0.00 Km/L" style=" font-family: Verdana;"> 
+                </div>
+            </div>
+
+            <div class="div-end-btn">
+                <button class="btnn reset" style=" font-family: Verdana;">Reset</button>
+                <button class="btnn show-res" style=" font-family: Verdana;">Show Results</button>
+            </div>
+
+        </div>
+        <div class="collec-cards">
+            <div class="car-card" *ngFor="let car of carDetails">
+                <div class="car-img">
+                    <img src={{car.imgUrl}}>
+                </div>
+                <div class="container">
+                    <p style="font-weight: bold; font-size: 15px; margin-bottom: 6px; font-family: Verdana;">{{car.name}}</p>
+                    <h4 style="font-family: Verdana; font-weight:bold; color: #0381BA;font-family: Verdana;"> {{car.price}}</h4>
+                    <div class="smallblock">
+                        <div class="smallsubblock text-center">
+                            <img src="../../../assets/engine.png" style=" font-family: Verdana;height: 15px; width: auto; margin-bottom: 0;">
+                            <p>{{car.speed}}</p>
+                        </div>
+                        <div class="smallsubblock text-center">
+                            <img src="../../../assets/TorqueEngine.svg" style=" font-family: Verdana;height: 15px; width: auto; margin-bottom: 0;">
+                            <p>{{car.gear}}</p>
+                        </div>
+                        <div class="smallsubblock text-center">
+                            <img src="../../../assets/gas-station.png" style="font-family: Verdana;height: 15px; width: auto; margin-bottom: 0;">
+                            <p>{{car.capacity}} Gallons</p>
+                        </div>
+                        <div class="smallsubblock text-center">
+                            <img src="../../../assets/horsepower.svg" style= " font-family: Verdana;height: 15px; width: auto; margin-bottom: 0;">
+                            <p>{{car.type}}</p>
+                        </div>
+                    </div>
+                    <button (click)="redirect('user/login')" class="btn btn-white"
+                        style="font-weight: bold;  border: solid black 1px; border-radius: 20px; margin-top: 10px; font-size:
+                         12px; width: 100%; margin-bottom: 20px; font-family: Verdana;">Select</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>

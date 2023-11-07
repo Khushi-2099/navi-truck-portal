@@ -1,0 +1,326 @@
+
+.top-center-alert {
+    position: fixed;
+    top: 0%;
+    left: 48%;
+    width: 18rem;
+    font-size: small;
+    transform: translateX(-50%);
+    z-index: 9999;
+    text-align: center;
+    // padding-left: 5rem;
+  }
+.div1{
+    padding-top: 7%;
+    
+    //display: inline;
+   //border-style: groove;
+    //border: solid rgb(236, 234, 234);
+    margin-left: 250px;
+    margin-right: 90px;
+    display:flex;
+
+}
+:host ::ng-deep .p-toast {
+    background-color: #6eca85 ;
+    color:#090808; 
+    // border-radius: 0.5rem;
+    width: 20rem;
+  
+  }
+//  .border{
+//     margin-top:25px;
+// //     border-color: white;
+//  }
+.ul1{
+    margin-top: 115px;
+    list-style: none;
+    position: absolute;
+}
+h5{
+    margin-left: 50px;
+    display: inline;
+    color: black;
+    font-size: 20px;
+    //font-family: Verdana;
+    font-weight: 600;
+    word-wrap: break-word;
+}
+h4{
+    color: black;
+font-size: 22px;
+//font-family: Verdana;
+font-weight: 500;
+line-height: 30.56px;
+word-wrap: break-word
+}
+
+.a1{
+    // margin-left: 700px;
+    margin-left: 400px;
+    color:#0381BA;/*red*/;
+    text-decoration: none;
+    font-family:  'Verdana'  ;
+}
+.pro-btn{
+    margin-right: 10px;
+    width: 170px;
+    border: solid #D9D9D9;
+    border-width: 1px;
+    margin-top:2px;
+    margin-left: 47px;
+        // transition-duration: 0.4s;
+    font-family: 'Verdana';
+    
+}
+.pro-btn img{
+    width:20px;
+    height:15px; 
+    margin-bottom: 3px; 
+    margin-right: 7px;
+  }
+.pro-btn:hover {
+    border:solid #0381BA;/*red; /* Green */
+    //background: #db232359;
+    background: #ADD8E6;
+    color: white;
+    border-width: 1px;
+    margin-left: 47px;
+    font-family: 'Verdana';
+    
+
+  }
+  .pro-btn:focus {
+    border:solid #0381BA;/*red; /* Green */
+   // background: #db232359;
+   background: #ADD8E6;
+    color: white;
+    border-width: 1px;
+    margin-left: 47px;
+    font-family: 'Verdana';
+
+  }
+  .set-btn{
+  //  margin-right: 10px;
+    //width: 170px;
+    border: solid #D9D9D9;
+    border-width: 1px;
+    margin-top:2px;
+    margin-left:15px;
+    font-family: 'Verdana';
+  }
+  .set-btn img{
+    width:20px;
+    height:15px; 
+    margin-bottom: 3px; 
+    margin-right: 7px;
+  }
+  .set-btn:hover {
+    border:solid #0381BA;/*red; /* Green */
+    //background: #db232359;
+    background: #ADD8E6;
+    color: white;
+    border-width: 1px;
+    margin-left:15px;
+    font-family: 'Verdana';
+  }
+  .set-btn:focus {
+    border:solid #0381BA;/*red; /* Green */
+    //background: #db232359;
+    background: #ADD8E6;
+    color: white;
+    border-width: 1px;
+    margin-left:15px;
+    font-family: 'Verdana';
+  }
+
+// .img1{
+//     margin-top: 130px ;
+//     margin-left:400px;
+// }
+// .img2{
+//     margin-top: 130px ;
+//     margin-left:400px;
+// }
+// .img1{
+//     margin-top: 10px ;
+//     margin-left:430px;
+// }
+p{
+    //width:100%;
+    margin-right: 80px;
+    color: black;
+//font-size: 22px;
+//font-family: Verdana;
+//font-weight: 500;
+//line-height: 30.56px;
+word-wrap: break-word
+}
+.div2{
+    //border-style: inset;
+    border: solid 1px rgb(236, 234, 234);
+    //margin-top: 40px;
+    margin-top: 20px;
+    margin-left: 300px;
+    margin-right: 90px;
+    padding-bottom: 80px;
+}
+.div3{
+    //border-style: inset;
+    margin-top: 80px;
+    margin-left: 100px;
+   
+    //background-color: rgb(245, 244, 244);
+}
+.div3 h4{
+    font-family: 'Verdana';
+}
+.div3 p{
+    font-family: 'Verdana';
+}
+
+//p.inset {border-style: inset;}
+.btn1{
+    margin-top: 30px;
+    margin-left: 100px;
+    //display: block;
+    width: 12%;
+    font-family: 'Verdana';  
+    color:black;
+}
+.btn1:hover{
+    background-color: #B7C301;
+    margin-top: 30px;
+    margin-left: 100px;
+    //display: block;
+    width: 12%;
+    font-family: 'Verdana';  
+}
+.btn1:focus{
+    background-color: #B7C301;
+    margin-top: 30px;
+    margin-left: 100px;
+    //display: block;
+    width: 12%;
+    font-family: 'Verdana';  
+}
+.btn1:active{
+    background-color: #B7C301;
+    margin-top: 30px;
+    margin-left: 100px;
+    //display: block;
+    width: 12%;
+    font-family: 'Verdana';  
+}
+// .divs{
+//     display: flex;
+// }
+.div4{
+    margin-top: 100px ;
+    margin-right:200px;
+    float: right;    
+}
+.btn2{
+    //float: right;
+    margin-top: 30px;
+    width: 12%;
+    margin-left: 30px;
+    // margin-bottom: 200px;
+    font-family: 'Verdana';
+    color:black;
+}
+.btn2:hover{
+    background-color: #B7C301;
+    //float: right;
+    margin-top: 30px;
+    width: 12%;
+    margin-left: 30px;
+    // margin-bottom: 200px;
+    font-family: 'Verdana';
+}
+.btn2:focus{
+    background-color: #B7C301;
+    //float: right;
+    margin-top: 30px;
+    width: 12%;
+    margin-left: 30px;
+    // margin-bottom: 200px;
+    font-family: 'Verdana';
+}
+.btn2:active{
+    background-color: #B7C301;
+    //float: right;
+    margin-top: 30px;
+    width: 12%;
+    margin-left: 30px;
+    // margin-bottom: 200px;
+    font-family: 'Verdana';
+}
+.form-control{
+    margin-left: 30px;
+    height: 80%;
+    width: 130%;
+}
+a{
+   
+    padding: 10px;
+    text-decoration: none;
+    color: white;
+    
+}
+.sidebar{
+    display: flex;
+    position: absolute;
+    background-color: black;
+    width: 15%;
+    height: 90%;
+    margin-top: 10px;
+   // margin-left: -500px;
+}
+.main{
+    display: flex;
+}
+.img3{
+   // width: 100%;
+   margin-left: 10px;
+   margin-top: 50px;
+}
+.ul1{
+    margin-top: 60px;
+    //margin-top: 80px;
+    list-style: none;
+    position: absolute;
+   
+}
+::placeholder{
+    color:black;
+}
+.anchor:hover{
+    cursor: poVerdana;
+    color:#ADD8E6;
+    //color:red;
+    font-family: 'Verdana';
+}
+.anchor:focus{
+    //color:red;
+    color:#ADD8E6;
+    font-family: 'Verdana';
+}
+// a:hover{
+//     color:red;
+// }
+.anchor{
+    color:black; 
+    text-decoration: underline;
+    font-family: 'Verdana';
+}
+ #link1:active{
+    //color:red;
+    color:#ADD8E6;
+ }
+ #number{
+    font-family: 'Verdana';
+    border:none; 
+    width:135px ;
+ }
+ 

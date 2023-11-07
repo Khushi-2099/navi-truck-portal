@@ -1,0 +1,72 @@
+
+<app-navbar-after-home-page [navtheme]="'whitetheme'"></app-navbar-after-home-page>
+
+<nav>
+  <div class="div1">
+    <!-- <h5><img src="..\assets\profile2.png" alt="Icon 1" style="width:20px;height:15px; margin-bottom: 3px; margin-right: 7px;"> Profile</h5><a href="#"class="a1">Change Password</a> -->
+    <!-- #db232359 -->
+    <div class="nav-spacing">
+      <button type="button" class="btn btn-outline-light text-dark pro-btn"[style.background-color]="clicked1 ? '#ADD8E6':'white'" [style.background-color]="clicked1 ? '#ADD8E6':'white'"  (click)="navigateToProfile()"><img
+          src="..\assets\profile2.png" alt="Icon 1"
+          >Profile</button>
+      <button type="button" class="btn btn-outline-light text-dark set-btn" (click)="navigateToAccountSettings()"><img
+          src="..\assets\Setting2.png" alt="Icon 1"
+          >Account Settings</button>
+    </div>
+    <a  href="newPass" class="a1" >Change Password</a>
+  </div>
+  <div class="divs">
+    <div class="div2" [formGroup]="userForm" (ngSubmit)="onSubmit()">
+      <form>
+      <div class="div4" >
+        
+          <div class="form-group row label-input">
+            <label for="staticEmail"  class="col-sm-2 col-form-label">Name:</label>
+            <div class="col-sm-10">
+              <input #name type="text" class="form-control userinputfield"  placeholder="User Name" >
+            </div>
+          </div>
+          <br><br>
+          <div class="form-group row label-input">
+            <label for="inputPassword" class="col-sm-2 col-form-label">Email:</label>
+            <div class="col-sm-10">
+              <input #email type="text" class="form-control userinputfield"  placeholder="xyz123@gmail.com" >
+            </div>
+          </div>
+          <br><br>
+          <div class="form-group row label-input">
+            <label for="inputPassword" class="col-sm-2 col-form-label">Phone<br> Number:</label>
+            <div class="col-sm-10">
+              <input #phoneNumber type="text" class="form-control userphoneinput"  placeholder="(908) 234-1611" >
+            </div>
+          </div>
+          <br><br>
+          <div class="form-group row label-input2">
+            <label for="inputPassword" class="col-sm-2 col-form-label">Address:</label>
+            <div class="col-sm-10">
+              <input #address type="text" class="form-control userinputfield" 
+                placeholder="St Bernards Rd Gladstone New Mexico 07934" >
+            </div>
+          </div>
+        
+      </div>
+
+      <div class="div3">
+        <img class="img2" src="..\assets\Group.png" alt="img"><br>
+
+        <img class="img1" src="../../assets/BOY 200.png" alt="img">
+        <!-- <img src = "..\assets\Group 1000006833.png" alt="img"> -->
+      </div>
+      <!-- btn-outline-danger -->
+      <button  type="submit" (click)="showBottomCenter(name.value,email.value,address.value,phoneNumber.value)" label="Show" class="btn1 btn btn-outline-dark ">Save</button>
+      <div id="alertContainer" class="top-center-alert"></div>
+      
+      <button type="button" (click)="resetForm()" class="btn2 btn btn-outline-dark">Cancel</button>
+      <!-- <button type="button" class="btn btn-outline-danger">Danger</button> -->
+    </form>
+
+    </div>
+
+  </div>
+
+</nav>

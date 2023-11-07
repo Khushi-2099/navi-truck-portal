@@ -1,0 +1,82 @@
+
+<div class="mainclass w-full">
+  <div class="childclass1">
+    <img class="logoimg"
+      src="../../assets/Aurionpro.png" style="height: 7rem;">
+    <div class="subchild1">
+      <h1>Building the Future...</h1>
+      <p>Lorem ipsum dolor sit amet,
+        consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+      <div class="slider">
+        <img src="../../assets/login_image/carousel-slider.svg">
+      </div>
+    </div>
+  </div>
+
+  <div class="childclass2 w-full">
+    <p>LET'S GET YOU STARTED</p>
+    <h5 style="font-weight: bold; font-family: 'Verdana';">Sign In</h5>
+
+
+    <form [formGroup]="login" (ngSubmit)="onSubmit()">
+
+      <div class="form-group container1 w-full">
+        <div class="did-floating-label-content label-input w-full">
+          <input class="did-floating-input " formControlName="email" type="text" placeholder="Email">
+          <label class="did-floating-label" style="font-size: -0.3rem;">Email</label>
+        </div>  
+
+        <div class="did-floating-label-content label-input w-full">
+          <input class="did-floating-input" type="password" formControlName="password" placeholder="*********">
+          <label class="did-floating-label " style="font-size: -0.3rem;">Password</label>
+        </div>
+      </div>
+
+      <div style="cursor: poVerdana;" class="w-full">
+        <!-- href="#!"routerLink="forgot" -->
+        <a (click)="redirect('forget')" style=" color:#0381BA; font-family: Verdana; font-size: 0.7rem; font-weight:500">Forgot
+          Password?</a>
+
+      </div>
+
+      <!-- <button type="submit " class="started btn"  >Login</button> -->
+
+      <button type="submit" class="started btn w-full" style="font-family: Verdana" (click)="onSubmit()" >Login</button>
+
+
+
+      <div class="container w-full">
+        <div class="row justify-content-center">
+          <div class="col-md-5">
+            <hr class="my-4" style="margin-left: -8.9%;">
+          </div>
+          <div class="col-2">
+            <p class="or-text mt-3"
+              style="margin-left: -30%; margin-right: -30%; text-align: center; font-family: Verdana">Or</p>
+          </div>
+
+          <div class="col-md-5">
+            <hr class="my-4" style="margin-right: -8.9%;">
+          </div>
+        </div>
+      </div>
+      <button class="googlee btn btn-google mt-3 " style="font-family: 'Verdana';"><img
+          src="../../assets/login_image/google.png" alt="Google Logo" class="google-logo mr-2">Sign Up with
+        Google</button>
+
+      <button class="googlee btn btn-google " style="font-family: 'Verdana'"><img src="../../assets/login_image/apple.jpg"
+          alt="Apple Logo" class="google-logo mr-2">Sign Up with Apple</button>
+
+      <div class="span dont-register" style=" font-family: Verdana">
+        <span>Don't Have an Account?</span> &nbsp; <span> <a class="fw-bold text-body" style="   font-family: Verdana"
+            (click)="redirect('registration')">Register Here</a></span>
+
+
+
+      </div>
+
+    </form>
+
+  </div>
+
+</div>

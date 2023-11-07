@@ -1,0 +1,176 @@
+#car-subs-nav {
+    // margin-left: 65px;
+    // margin-right: 65px;
+    //position: fixed;
+    width: 91%;
+    padding-left: 5px;;
+    //padding-right: 65px;;
+    margin-right: -1rem;
+    left: 50%;   // align items at center in fixed position
+    transform: translate(-50%, 0%); // align items at center in fixed position
+    z-index: 10;
+    color: white;
+    background-color: aqua;
+    background-color: white;
+    border-bottom: solid 1px rgb(196, 192, 192);
+    font-size: 17px;
+    font-family: "Verdana";
+}
+.a1{
+    font-size: 15px;
+    font-family: "Verdana";
+}
+.notibar, .profilebar{
+    display: flex;
+    position: absolute;
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+    background-color: rgb(255, 255, 255);
+    border-radius: 2px;
+    border: solid 1px rgb(224, 220, 220);
+    color: black;
+    height: fit-content;
+    font-size: 15px;
+    padding: 10px 0;
+    z-index: 1;
+}
+
+.drop{
+    list-style-type: none;
+    margin-left: -10px;
+}
+
+.drop i{
+    padding-right: 10px;
+}
+
+.drop li{
+    padding-bottom: 10px;
+}
+
+.notibar{
+    margin-top: 25px;
+    margin-left: -9rem;
+    width: 15rem;
+}
+.notibar p{
+    width: 14rem;
+    font-size: 0.8rem !important;
+}
+
+.notification-text{
+margin-left: 1.5rem;
+}
+
+.user-names{
+    text-decoration: none;
+    color: black;
+    font-size: 0.8rem;
+}
+
+.time-ago{
+    // text-align: right;
+    float: right;
+    text-decoration: none;
+    color: black;
+    font-size: 0.6rem;
+    padding-right: 1rem;
+    margin-top: 0.3rem;
+}
+
+.profilebar{
+    margin-top: 25px;
+    margin-left: 0rem;
+    width: 12rem;
+}
+
+
+
+
+.sidebar{
+    display: flex;
+    position: absolute;
+    background-color: black;
+    width: 15%;
+    height: 33rem;
+    //margin-top: 80px;
+    //margin-left:70px;
+    margin-top: 50px;
+   // margin-left: 47px;
+    z-index: 1;
+}
+
+.anchor{
+
+    text-decoration: none;
+
+    color:white;
+
+    margin-left:10px;
+
+}
+
+.ul1{
+
+    //margin-top:-30px;
+
+    padding-bottom:80px;
+
+    list-style-type: none;
+
+}
+
+//  .nav-brand{
+//     margin-left:50px;
+//  }
+
+.nav-item{
+
+    margin-left: 15px;
+
+    margin-right: 15px;
+
+}
+
+ 
+
+.car-subs-logogroup img {
+
+    max-width: 3.5rem;
+
+    max-height: 2.2rem;
+
+}
+
+ 
+
+.nav-link{
+
+    color: rgb(255, 255, 255);
+
+}
+
+ 
+
+.loginBtn{
+
+    width: 180px;
+
+}
+
+ 
+
+.imgg {
+
+    height: 2.5rem;
+
+    margin-left:30px;
+
+}
+
+li {
+    cursor: poVerdana;
+}
+
+.expand{
+    cursor: poVerdana;
+}

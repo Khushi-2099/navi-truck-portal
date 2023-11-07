@@ -1,0 +1,97 @@
+<div class="mainclass w-full">
+    <div class="childclass1">
+        <img class="logoimg"
+          src="../../assets/Aurionpro.png" style="height: 7rem;">
+        <div class="subchild1">
+          <h1>Building the Future...</h1>
+          <p>Lorem ipsum dolor sit amet,
+            consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+          <div class="slider">
+            <img src="../../assets/login_image/carousel-slider.svg">
+          </div>
+        </div>
+      </div>
+    <div class="childclass2">
+        <div class="heading ">
+            <p>Verification</p>
+        </div>
+        <div class="heading2">
+            <p>Enter Verification Code</p>
+        </div>
+        <form (ngSubmit)="onSubmit()">
+            <div class="userInput">
+                <input class="otp-input-field" type="text" id='first' maxlength="1" onkeyup="clickEvent(this,'sec')">
+
+                <input class="otp-input-field" type="text" id="sec" maxlength="1" onkeyup="clickEvent(this,'third')">
+
+                <input class="otp-input-field" type="text" id="third" maxlength="1" onkeyup="clickEvent(this,'fourth')">
+
+                <input class="otp-input-field" type="text" id="fourth" maxlength="1" onkeyup="clickEvent(this,'fifth')">
+
+            </div>
+
+            <div class="resend-otp">
+
+                <p>If you didn't receive a code, <span><a class="resend-text" href="">Resend</a></span></p>
+
+            </div>
+            
+            <button type="button" (click)="onSubmit()"  class="started btn ">Verify</button>
+
+            <div class="container">
+
+                <div class="row justify-content-center">
+
+                    <div class="col-md-5">
+
+                        <hr class="my-2">
+
+                    </div>
+
+                    <div class="col-auto">
+
+                        <p class="or-text">Or</p>
+
+                    </div>
+
+                    <div class="col-md-5">
+
+                        <hr class="my-2">
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+
+            <button class="googlee btn btn-google">
+                <div class="login-btns">
+                    <img src="../../assets/login_image/google.png" alt="Google Logo" class="google-logo mr-2">Sign Up
+                    with Google
+                </div>
+            </button>
+
+            <button class="googlee btn btn-google">
+                <div class="login-btns">
+                    <img src="../../assets/login_image/apple.jpg" alt="Apple Logo" class="google-logo mr-2">Sign Up with
+                    Apple
+                </div>
+            </button>
+
+            <div class="span">
+
+                <span>Don't Have an Account? <a1 class="fw-bold text-body" routerLink='register'>Register Here</a1>
+
+                </span>
+
+            </div>
+
+        </form>
+
+    </div>
+
+
+
+</div>
