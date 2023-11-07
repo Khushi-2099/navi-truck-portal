@@ -31,7 +31,7 @@ export class ApplyNowPendingComponent implements OnInit{
         const navigation = this.router.getCurrentNavigation();
         if (navigation?.extras.state) {
           this.techDetailsParameter = navigation.extras.state;
-          console.log("apply now pending ", this.techDetailsParameter.tableData)
+          console.log("apply now pending ", this.techDetailsParameter)
 
         }
       }

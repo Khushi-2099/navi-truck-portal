@@ -738,7 +738,8 @@ export class CarSubRedesignComponent implements OnInit {
       price: this.totalonroadprice,
       emi: this.totalemiprice,
       option: this.service_package,
-      datee: now.toLocaleString()
+      datee: now.toLocaleString(),
+      balloon: this.downpayment1
     };
 
     console.log('data->', data);

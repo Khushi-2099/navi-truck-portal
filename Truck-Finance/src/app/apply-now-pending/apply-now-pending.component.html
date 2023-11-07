@@ -52,7 +52,7 @@
                     <b>${{numberWithCommas(techDetailsParameter.pramData.leftcard.currentInstallment)}}/month</b>
                 </p>
                 <p><b>{{(techDetailsParameter.tableData.financing)}}</b></p>
-                <p>{{techDetailsParameter.pramData.leftcard.downpayment}}</p>
+                <p>${{techDetailsParameter.pramData.balloon ? techDetailsParameter.pramData.balloon : '0'}}</p>
                 <p>$20,667.82</p>
                 <p>{{techDetailsParameter.pramData.leftcard.repaymentfrequency}} </p>
                 <p>5.24%</p>
