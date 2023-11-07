@@ -787,14 +787,15 @@
     
             <!-- <button href="car-sub-submit" class=" roadprice">On-road price</button> -->
     
-            <h6 class="price">On Road Price: ${{numberWithCommas(totalonroadprice)}}0</h6>
+            <h6 class="price">On Road Price: {{this.formatter.format(totalonroadprice)}}</h6>
+            
     
         </div>
     
         <div class="cs-footer-com" style="padding-top: 5px;">
     
             <!-- <h6 class="price" style="font-size: 15px;">Monthly Payment from: ${{numberWithCommas(showEmi(calculateEMI(techDetailsParameter.price)))}}/m </h6> -->
-            <h6 class="price" style="font-size: 15px;">Monthly Payment from: ${{numberWithCommas(totalemiprice)}}.96/m
+            <h6 class="price" style="font-size: 15px;">Monthly Payment from: {{this.formatter.format(totalemiprice)}}/m
             </h6>
     
             <div>

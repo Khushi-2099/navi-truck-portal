@@ -6,7 +6,7 @@ import { saveAs } from 'file-saver';
 import { Router, NavigationEnd } from '@angular/router';
 import { ElementRef } from '@angular/core';
 
-import { flatMap, partition } from 'rxjs';
+import { flatMap, partition, single } from 'rxjs';
 import { GridOptions, ColDef } from 'ag-grid-community';
 import { Observable } from 'rxjs';
 import { HttpClient } from '@angular/common/http';
@@ -51,12 +51,11 @@ export class CarSubRedesignComponent implements OnInit {
 
   totalonroadprice: number = 0;
   totalemiprice: number = 0;
+  rateOfInterestMonthly = 1;
 
   
 
   setCarData(listt: { id: number, roadprice: any, emi: any, quantityy: number, variant:[any, any], service:[any, any], tenure:any }) {
-    // console.log("before", this.incomingData);
-    console.log("Listt", listt);
     if (typeof listt.roadprice == 'string'){
       this.incomingData[listt.id].roadprice = Number(listt.roadprice.replace(/,/g, ''));
     }else{
@@ -69,11 +68,45 @@ export class CarSubRedesignComponent implements OnInit {
     this.incomingData[listt.id].service = listt.service
     this.incomingData[listt.id].tenure = listt.tenure
     this.calculateTotalPrice();
-    console.log("Listt", this.incomingData);
+    
+    this.calculateNewEMI(this.rateOfInterestMonthly, Number(listt.tenure));
+    // this.calculateTotalAmount()
     // this.incomingData.forEach((a: { roadprice: number; }) => sum += a.roadprice);
 
   }
   ORC :number = 8173.90;
+
+
+  //Todo: after receiving actual formulas
+  calculateNewEMI(rateOfInterestMonthly: number, timeInMonths: number) {
+    // note that: principal is amount that is addition of all -> 1.price tax variant service-packages and accesories // todo: Accessories, tax and OCR not added for now
+    // note that: rateOfInterest is hardcoded-value ++ to be stored in service
+    // note that : timeInMonths is tenure to be taken from incoming
+    // ToDo: OCR is not included
+    const principal = this.calculateTotalAmount();
+    const monthlyInterestRate = rateOfInterestMonthly;
+
+    // todo: Actual formula 
+    // const emi = principal * monthlyInterestRate * ((Math.pow(1+rateOfInterestMonthly, timeInMonths))/(Math.pow(1+rateOfInterestMonthly, timeInMonths) - 1));
+
+    const emi = principal/timeInMonths;
+    this.totalemiprice = emi;
+  }
+
+  calculateTotalAmount() {
+    // note that: accessories is not available, tax is not available
+    let finalPrice = 0;
+    for (let i = 0; i < this.incomingData.length; i++) {
+      const singleUnitPrice = this.checkAvailability(this.incomingData[i].roadprice) + this.checkAvailability(this.incomingData[i].variant[1]) + this.checkAvailability(this.incomingData[i].service[1]) + this.checkAvailability(this.incomingData[i].accesories) + this.checkAvailability(this.incomingData[i].tax)
+      const totalPrice = singleUnitPrice * this.incomingData[i].quantityy
+      finalPrice += totalPrice;
+    } 
+    return finalPrice;
+  }
+
+  checkAvailability(n: number) {
+    return n ?? 0;
+  }
 
   calculateTotalPrice() {
     this.totalonroadprice = 0
@@ -81,7 +114,6 @@ export class CarSubRedesignComponent implements OnInit {
     for (let i = 0; i < this.incomingData.length; i++) {
       this.totalonroadprice += (this.incomingData[i].roadprice + ((this.ORC +0.6) /2)  ) * this.incomingData[i].quantityy
       this.totalemiprice += ((this.incomingData[i].emi-1980)/2) * this.incomingData[i].quantityy
-      console.log(this.totalemiprice);
       
     } 
 
@@ -1003,6 +1035,11 @@ export class CarSubRedesignComponent implements OnInit {
   //     // this.calculateTenureFromBorder(this.techDetailsParameter.price,"border");
   //   }
   // }
+
+  formatter = new Intl.NumberFormat('en-US', {
+    style: 'currency',
+    currency: 'USD'
+  })
 
   numberWithCommas(x: any) {
     return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ',');
