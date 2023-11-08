@@ -14,12 +14,12 @@
             <div *ngFor="let car of carDetails; let i = index">
                 <div class="car-card" *ngIf="!allowCars(i)">
                     <input type="checkbox" class="checkbox" [checked]="isChecked[i]" id="checkbox">
-                    <div class="car-img">
+                    <div class="car-img" [ngStyle]="">
                         <img src={{car.imgUrl}}>
                     </div>
                     <div class="container">
                         <div class="cardhead">
-                            <p>{{car.name}}</p>
+                            <p>{{car.name}} </p>
                             <img (click)="turnRed()" src={{heartURL}}>
                         </div>
                         <h4 style="font-family: Verdana; font-weight:bold; color: #0381BA;"> {{car.price}}</h4>
@@ -37,7 +37,7 @@
                             <div class="smallsubblock text-center">
                                 <img src="../../../assets/gas-station.png"
                                     style="height: 15px; width: auto; margin-bottom: 0;">
-                                <p>{{car.maxTorque}}Gallons </p>
+                                <p>{{car.maxTorque}} </p>
                             </div>
                             <div class="smallsubblock text-center">
                                 <img src="../../../assets/horsepower.svg"
@@ -60,7 +60,7 @@
                             <p>{{car.name}}</p>
                             <img (click)="turnRed()" src={{heartURL}}>
                         </div>
-                        <h4 style="font-family: Verdana; font-weight:bold; color: #0381BA;">$ {{car.price}}</h4>
+                        <h4 style="font-family: Verdana; font-weight:bold; color: #0381BA;"> {{car.price}}</h4>
                         <div class="smallblock">
                             <div class="smallsubblock text-center">
                                 <img src="../../../assets/engine.png"
@@ -75,7 +75,7 @@
                             <div class="smallsubblock text-center">
                                 <img src="../../../assets/gas-station.png"
                                     style="height: 15px; width: auto; margin-bottom: 0;">
-                                <p>{{car.maxTorque}} Gallons</p>
+                                <p>{{car.maxTorque}} </p>
                             </div>
                             <div class="smallsubblock text-center">
                                 <img src="../../../assets/horsepower.svg"
