@@ -410,7 +410,7 @@ export class CarSubsCardComponent implements OnInit {
     console.log("car details", this.carDetails)
     this.currentCarDetails=this.carDetails.filter((car)=> {return car.name === this.techDetailsParameter.name});
     console.log("Current Car:", this.currentCarDetails);
-    this.variantName=this.currentCarDetails[0].select_variant;
+    this.variantName=this.currentCarDetails[0].select_variant[0];
 
     labels.forEach((label) => {
       this.renderer.listen(label, 'click', () => {

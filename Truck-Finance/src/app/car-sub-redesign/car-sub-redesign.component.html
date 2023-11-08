@@ -614,7 +614,7 @@
     
                         <div class="qoute-head2">
                             <label>Total Amount of Finance:</label>
-                            <label>$ {{numberWithCommas(totalonroadprice - downpayment1)}}</label>
+                            <label>{{this.formatter.format(totalonroadprice - downpayment1)}}</label>
                         </div>
     
                         <div class="head2-body">
@@ -633,7 +633,7 @@
                         </div>
                         <div class="head2-body">
                             <label>Upfront Taxes</label>
-                            <label>$ {{numberWithCommas(totalonroadprice * 0.11)}}</label>
+                            <label>{{this.formatter.format(totalonroadprice * 0.11)}}</label>
                         </div>
                         <!-- <div class="head2-body">
                             <label>Applying as: </label>
@@ -641,7 +641,8 @@
                         </div> -->
                         <div class="qoute-head2">
                             <label>YOUR MONTHLY INSTALLMENT IS</label>
-                            <label>$ {{numberWithCommas(totalemiprice)}}</label>
+                            <label>{{this.formatter.format(totalemiprice)}}</label>
+
                         </div>
                         <div class="qoute-head2">
                             <label>REPAYMENT SCHEDULE </label>
