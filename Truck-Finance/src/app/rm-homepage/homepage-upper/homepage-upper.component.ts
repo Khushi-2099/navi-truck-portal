@@ -2,6 +2,7 @@ import { Component, EventEmitter, Output, ViewChild } from '@angular/core';
 import { Subject } from 'rxjs';
 // import { Subscription } from 'rxjs';
 import { NavbarAfterHomePageComponent } from 'src/app/navbar-after-home-page/navbar-after-home-page.component';
+import { DataHandlerService } from 'src/services/data-handler.service';
 
 
 @Component({
@@ -15,10 +16,14 @@ export class HomepageUpperComponent {
   clicked1=false;
   clicked2=true;
 
+  vehicleOptions: string[] = [];
+
   // _isVisible: boolean = false;
   // dropdownControllerSubject: Subject<boolean> | undefined ;
-  constructor(){
+  constructor(private dataHandlerService: DataHandlerService){
+    this.vehicleOptions = this.dataHandlerService.getVehicleList();
     
+    this.vehicleOptions.splice(0, 0, 'Select Vehicle');
   }
   switchCSS(){
     // this.box.style

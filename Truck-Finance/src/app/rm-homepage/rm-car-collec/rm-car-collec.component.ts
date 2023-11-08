@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { FormBuilder } from '@angular/forms';
 import { Router } from '@angular/router';
+import { DataHandlerService } from 'src/services/data-handler.service';
 import { RedirectMenuService } from 'src/services/redirect-menu.service';
 
 @Component({
@@ -15,172 +16,175 @@ export class RmCarCollecComponent {
 
   constructor(private router:Router,private fb: FormBuilder,
     private redirectMenu : RedirectMenuService,
+    private dataHandler: DataHandlerService
      ) {}
-  carDetails=[
-    {
-      name:"W990",
+  // carDetails=[
+  //   {
+  //     name:"W990",
 
-      price: "231,595",
+  //     price: "231,595",
 
-      imgUrl: "../../assets/trailer.png",
+  //     imgUrl: "../../assets/trailer.png",
 
-      speed: 'MX-13',
+  //     speed: 'MX-13',
 
-      gear:"1,850lb",
+  //     gear:"1,850lb",
 
-      capacity:300,
+  //     capacity:300,
 
-      type:"510 HP"
+  //     type:"510 HP"
 
       
 
-    },
+  //   },
 
-    {
+  //   {
 
-      name:"T680",
+  //     name:"T680",
 
-      price: "190,233",
+  //     price: "190,233",
 
-      imgUrl: "../../assets/Truck2.png",
+  //     imgUrl: "../../assets/Truck2.png",
 
-      speed: 'MX-13',
+  //     speed: 'MX-13',
 
-      gear:"1,850lb",
+  //     gear:"1,850lb",
 
-      capacity:120,
+  //     capacity:120,
 
-      type:"455 HP"
+  //     type:"455 HP"
 
-    },
+  //   },
 
-    {
+  //   {
 
-      name:"T880",
+  //     name:"T880",
 
-      price: "367,840",
-      imgUrl: "../../assets/Truck3.png",
+  //     price: "367,840",
+  //     imgUrl: "../../assets/Truck3.png",
 
-      speed: 'MX-13',
+  //     speed: 'MX-13',
 
-      gear:"1,850 lb",
+  //     gear:"1,850 lb",
 
-      capacity:150,
+  //     capacity:150,
 
-      type:"510 HP"
+  //     type:"510 HP"
 
-    },
+  //   },
 
-    {
+  //   {
 
-      name:"T280",
+  //     name:"T280",
 
-      price: "$271,840",
+  //     price: "$271,840",
 
-      imgUrl: "../../assets/Truck4.png",
+  //     imgUrl: "../../assets/Truck4.png",
 
-      speed: 'PX-9',
+  //     speed: 'PX-9',
 
-      gear:"860–1,250lb",
+  //     gear:"860–1,250lb",
 
-      capacity:12.9 ,
+  //     capacity:12.9 ,
 
-      type:"260-450 HP"
+  //     type:"260-450 HP"
 
-    },
+  //   },
 
-    {
+  //   {
 
 
-      name:"W900",
+  //     name:"W900",
 
-      price: "$284,640",
+  //     price: "$284,640",
 
-      imgUrl : "../../assets/W900.png", 
+  //     imgUrl : "../../assets/W900.png", 
 
-      speed: 'MX-13',
+  //     speed: 'MX-13',
 
-      gear:"1,550-1,850 lb",
+  //     gear:"1,550-1,850 lb",
 
-      capacity:300,
+  //     capacity:300,
 
-      type:"625 HP"
+  //     type:"625 HP"
 
-    },
+  //   },
 
-    {
+  //   {
 
-      name:"T380",
+  //     name:"T380",
 
-      price: "$171,120",
+  //     price: "$171,120",
 
-      imgUrl: "../../assets/Truck6.png",
+  //     imgUrl: "../../assets/Truck6.png",
 
-      speed: 'PX-9',
+  //     speed: 'PX-9',
 
-      gear:"860–1,250 lb",
+  //     gear:"860–1,250 lb",
 
-      capacity:12.5,
+  //     capacity:12.5,
 
-      type:"260-450 HP"
+  //     type:"260-450 HP"
 
-    },
+  //   },
 
-    // {
+  //   // {
 
-    //   name:"LF 260",
+  //   //   name:"LF 260",
 
-    //   price: "$47,390",
+  //   //   price: "$47,390",
 
-    //   imgUrl: "../../assets/CamryModelImage 2.png",
+  //   //   imgUrl: "../../assets/CamryModelImage 2.png",
 
-    //   speed: 'PX-7',
+  //   //   speed: 'PX-7',
 
-    //   gear:"6 cylinder",
+  //   //   gear:"6 cylinder",
 
-    //   capacity:6.7,
+  //   //   capacity:6.7,
 
-    //   type:"264HP"
+  //   //   type:"264HP"
 
-    // },
+  //   // },
 
-    // {
+  //   // {
 
-    //   name:"LF 290",
+  //   //   name:"LF 290",
 
-    //   price: "$47,390",
+  //   //   price: "$47,390",
 
-    //   imgUrl: "../../assets/CamryModelImage 2.png",
+  //   //   imgUrl: "../../assets/CamryModelImage 2.png",
 
-    //   speed: 'PX-7',
+  //   //   speed: 'PX-7',
 
-    //   gear:"6 cylinder",
+  //   //   gear:"6 cylinder",
 
-    //   capacity:6.7,
+  //   //   capacity:6.7,
 
-    //   type:"295HP"
+  //   //   type:"295HP"
 
-    // },
+  //   // },
 
-    // {
+  //   // {
 
-    //   name:"XF FTT",
+  //   //   name:"XF FTT",
 
-    //   price: "$47,390",
+  //   //   price: "$47,390",
 
-    //   imgUrl: "../../assets/CamryModelImage 2.png",
+  //   //   imgUrl: "../../assets/CamryModelImage 2.png",
 
-    //   speed: 'MX-13',
+  //   //   speed: 'MX-13',
 
-    //   gear:"Automatic",
+  //   //   gear:"Automatic",
 
-    //   capacity:12.9,
+  //   //   capacity:12.9,
 
-    //   type:"530HP/2,600 Nm"
+  //   //   type:"530HP/2,600 Nm"
 
-    // },
+  //   // },
     
-  ]
+  // ]
+
+  carDetails = this.dataHandler.vehicleDetails;
 
   white="../../../assets/logos/heart.png";
   red="../../../assets/logos/heartred.png"

@@ -1,9 +1,12 @@
 <div class="car-collec-main">
     <div class="car-collec-nav">
-        <button class="active">Popular</button>
-        <button>Large Truck</button>
-        <button>Small Truck</button>
-        <button>Exclusive Truck</button>
+        <button class="active">All Models</button>
+        <button>Light</button>
+        <button>Medium</button>
+        <button>Heavy</button>
+        <button>Severe</button>
+        <button class="text-no-wrap">Electric/Zero Emissions</button>
+
     </div>
 
     <div class="home-card-sec">
@@ -11,12 +14,12 @@
             <div *ngFor="let car of carDetails; let i = index">
                 <div class="car-card" *ngIf="!allowCars(i)">
                     <input type="checkbox" class="checkbox" [checked]="isChecked[i]" id="checkbox">
-                    <div class="car-img">
+                    <div class="car-img" [ngStyle]="">
                         <img src={{car.imgUrl}}>
                     </div>
                     <div class="container">
                         <div class="cardhead">
-                            <p>{{car.name}}</p>
+                            <p>{{car.name}} </p>
                             <img (click)="turnRed()" src={{heartURL}}>
                         </div>
                         <h4 style="font-family: Verdana; font-weight:bold; color: #0381BA;"> {{car.price}}</h4>
@@ -24,22 +27,22 @@
                             <div class="smallsubblock text-center">
                                 <img src="../../../assets/engine.png"
                                     style="height: 15px; width: auto; margin-bottom: 0;">
-                                <p>{{car.speed}}</p>
+                                <p>{{car.engineType}}</p>
                             </div>
                             <div class="smallsubblock text-center">
                                 <img src="../../../assets/TorqueEngine.svg"
                                     style="height: 15px; width: auto; margin-bottom: 0;">
-                                <p>{{car.gear}}</p>
+                                <p>{{car.maxPower}}</p>
                             </div>
                             <div class="smallsubblock text-center">
                                 <img src="../../../assets/gas-station.png"
                                     style="height: 15px; width: auto; margin-bottom: 0;">
-                                <p>{{car.capacity}}Gallons </p>
+                                <p>{{car.maxTorque}} </p>
                             </div>
                             <div class="smallsubblock text-center">
                                 <img src="../../../assets/horsepower.svg"
                                     style="height: 15px; width: auto; margin-bottom: 0;">
-                                <p>{{car.type}}</p>
+                                <p>{{car.GVWR}}</p>
                             </div>
                         </div>
                         <button (click)="buyNow(i, $event)" class="buybtn btn btn-white"
@@ -57,27 +60,27 @@
                             <p>{{car.name}}</p>
                             <img (click)="turnRed()" src={{heartURL}}>
                         </div>
-                        <h4 style="font-family: Verdana; font-weight:bold; color: #0381BA;">$ {{car.price}}</h4>
+                        <h4 style="font-family: Verdana; font-weight:bold; color: #0381BA;"> {{car.price}}</h4>
                         <div class="smallblock">
                             <div class="smallsubblock text-center">
                                 <img src="../../../assets/engine.png"
                                     style="height: 15px; width: auto; margin-bottom: 0;">
-                                <p>{{car.speed}}</p>
+                                <p>{{car.engineType}}</p>
                             </div>
                             <div class="smallsubblock text-center">
                                 <img src="../../../assets/TorqueEngine.svg"
                                     style="height: 15px; width: auto; margin-bottom: 0;">
-                                <p>{{car.gear}}</p>
+                                <p>{{car.maxPower}}</p>
                             </div>
                             <div class="smallsubblock text-center">
                                 <img src="../../../assets/gas-station.png"
                                     style="height: 15px; width: auto; margin-bottom: 0;">
-                                <p>{{car.capacity}} Gallons</p>
+                                <p>{{car.maxTorque}} </p>
                             </div>
                             <div class="smallsubblock text-center">
                                 <img src="../../../assets/horsepower.svg"
                                     style="height: 15px; width: auto; margin-bottom: 0;">
-                                <p>{{car.type}}</p>
+                                <p>{{car.GVWR}}</p>
                             </div>
                         </div>
                         <button (click)="buyNow(i, $event)" class="buybtn btn btn-white"

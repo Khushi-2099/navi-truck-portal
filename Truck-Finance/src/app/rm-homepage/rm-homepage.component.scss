@@ -1190,13 +1190,10 @@ input[type="range"]::-webkit-slider-runnable-track {
 
 }
 
- 
-
- 
-
 .car-types {
 
   gap: 1rem;
+  margin-top: 1rem;
 
 }
 
@@ -1790,7 +1787,7 @@ width: 2rem;
 
 .car-row{
   max-width: 13.4rem;
-  min-width: 13.4rem;
+  min-width: 7.4rem; //todo Check all
 
   p{
       margin-top: 6px;
