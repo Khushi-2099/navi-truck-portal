@@ -1,9 +1,12 @@
 <div class="car-collec-main">
     <div class="car-collec-nav">
-        <button class="active">Popular</button>
-        <button>Large Truck</button>
-        <button>Small Truck</button>
-        <button>Exclusive Truck</button>
+        <button class="active">All Models</button>
+        <button>Light</button>
+        <button>Medium</button>
+        <button>Heavy</button>
+        <button>Severe</button>
+        <button class="text-no-wrap">Electric/Zero Emissions</button>
+
     </div>
 
     <div class="home-card-sec">
@@ -24,22 +27,22 @@
                             <div class="smallsubblock text-center">
                                 <img src="../../../assets/engine.png"
                                     style="height: 15px; width: auto; margin-bottom: 0;">
-                                <p>{{car.speed}}</p>
+                                <p>{{car.engineType}}</p>
                             </div>
                             <div class="smallsubblock text-center">
                                 <img src="../../../assets/TorqueEngine.svg"
                                     style="height: 15px; width: auto; margin-bottom: 0;">
-                                <p>{{car.gear}}</p>
+                                <p>{{car.maxPower}}</p>
                             </div>
                             <div class="smallsubblock text-center">
                                 <img src="../../../assets/gas-station.png"
                                     style="height: 15px; width: auto; margin-bottom: 0;">
-                                <p>{{car.capacity}}Gallons </p>
+                                <p>{{car.maxTorque}}Gallons </p>
                             </div>
                             <div class="smallsubblock text-center">
                                 <img src="../../../assets/horsepower.svg"
                                     style="height: 15px; width: auto; margin-bottom: 0;">
-                                <p>{{car.type}}</p>
+                                <p>{{car.GVWR}}</p>
                             </div>
                         </div>
                         <button (click)="buyNow(i, $event)" class="buybtn btn btn-white"
@@ -62,22 +65,22 @@
                             <div class="smallsubblock text-center">
                                 <img src="../../../assets/engine.png"
                                     style="height: 15px; width: auto; margin-bottom: 0;">
-                                <p>{{car.speed}}</p>
+                                <p>{{car.engineType}}</p>
                             </div>
                             <div class="smallsubblock text-center">
                                 <img src="../../../assets/TorqueEngine.svg"
                                     style="height: 15px; width: auto; margin-bottom: 0;">
-                                <p>{{car.gear}}</p>
+                                <p>{{car.maxPower}}</p>
                             </div>
                             <div class="smallsubblock text-center">
                                 <img src="../../../assets/gas-station.png"
                                     style="height: 15px; width: auto; margin-bottom: 0;">
-                                <p>{{car.capacity}} Gallons</p>
+                                <p>{{car.maxTorque}} Gallons</p>
                             </div>
                             <div class="smallsubblock text-center">
                                 <img src="../../../assets/horsepower.svg"
                                     style="height: 15px; width: auto; margin-bottom: 0;">
-                                <p>{{car.type}}</p>
+                                <p>{{car.GVWR}}</p>
                             </div>
                         </div>
                         <button (click)="buyNow(i, $event)" class="buybtn btn btn-white"

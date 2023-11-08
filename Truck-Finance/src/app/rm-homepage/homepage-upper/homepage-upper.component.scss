@@ -1,12 +1,20 @@
 .backgroundImage {
     //background-image: url("../../../assets/home_page_bacground.png");
-    background-image: url("../../../assets/truck-background.png");
+    background-image: url("../../../assets/NaviStar/background-image1.png");
     background-size: cover;
     background-repeat: no-repeat;
+    // background-color: black;
     height: 47rem;
     width: 100%;
-    // position: absolute;
+    position: absolute;
 }
+
+//todo to be kept until approved
+// .image-div {
+//     background-color: black;
+//     height: 47rem;
+//     width: 100%;
+// }
 
 
 .find-your-car-heading {

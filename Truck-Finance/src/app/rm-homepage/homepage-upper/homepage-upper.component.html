@@ -2,161 +2,75 @@
 
 <div (click)="close()">
 
-    <div class="backgroundImage" (click)="close()">
-
-        <div style="padding-top: 50px; ">
-
-            <div>
-
-                <h1 class="brandNameText">PACCAR</h1>
-
-            </div>
-
-            <div class="card find-your-car" style="position: absolute;">
-
-                <div class="card-body card-headers">
-
-                    <h1 class="find-your-car-heading">Find your truck</h1>
-
-                    <p >Better utility and more performance guarantee.</p>
-
+    <div class="image-div">
+        <div class="backgroundImage" (click)="close()">
+            <div style="padding-top: 50px; ">
+                <div>
+                    <h1 class="brandNameText">NAVISTAR</h1>
                 </div>
-
-           
-
-                <div class="card widget-find-car">
-
-                    <div class="card-body">
-
-                        <!-- <h1>hello</h1> -->
-
-                        <div class="find-car-btn">
-
-                            <button class="btn btn-danger find-card-btn" [style.background-color]="clicked1 ? ' rgba(253, 253, 253, 0)':'#B7C301'" style="color: black;" (click)="switchCSS()">New Truck</button>
-
-                            <button class="btn btn-danger find-card-btn" [style.background-color]="clicked2 ? 'rgba(253, 253, 253, 0)':'#B7C301'" style="color: black;"  (click)="switchCSS1()">Used Truck</button>
-
-                        </div>
-
-                        <div>
-
-                            <div class="form-check radio-btn">
-
-                                <div>
-
-                                    <div class="d-flex">
-
-                                        <input class="radio-btn1" type="radio" name="flexRadioDefault" id="specifyColor" checked="checked">
-
-                                        <label class="form-check-label1" for="flexRadioDefault1">By Budget</label>
-
-                                    </div>
-
-                                </div>
-
-                                <div>
-
-                                    <div class="d-flex">
-
-                                        <input class="radio-btn2" type="radio" name="flexRadioDefault" id="specifyColor">
-
-                                        <label class="form-check-label2" for="flexRadioDefault1">By Brand</label>
-
-                                    </div>
-
-                                </div>
-
-                            </div>
-
-                        </div>
-
-                        <div class="select-area">
-
-                            <select class="form-select" style="font-family: 'Verdana';" aria-label="Default select example">
-
-                                <option selected>Select Budget</option>
-
-                                <option value="1">$30000</option>
-
-                                <option value="2">$80000</option>
-
-                                <option value="3">$150000</option>
-
-                              </select>
-
-           
-
-                              <select class="form-select" aria-label="Default select example">
-
-                                <option selected>Select Vehicle</option>
-
-                                <option value="1">T680 Next Gen</option>
-
-                                <option value="2">T680 Signature Edition</option>
-
-                                <option value="3">T880</option>
-
-                                <option value="3">T280</option>
-
-                                <option value="3">W990</option>
-
-                                <option value="3">T380</option>
-
-                                <option value="3">W900</option>
-
-                                <option value="3">LF 260</option>
-
-                                <option value="3">LF 290</option>
-
-                                <option value="3">CF FT</option>
-
-                                <option value="3">XF FTT</option>
-
-                              </select>
-
-                        </div>
-
-                        <div>
-
-                            <button class="btn btn-lg btn-danger card-search-btn"  id="search" >SEARCH</button>
-
-                        </div>
-
+                <div class="card find-your-car" style="position: absolute;">
+                    <div class="card-body card-headers">
+                        <h1 class="find-your-car-heading">Find your truck</h1>
+                        <p >Better utility and more performance guarantee.</p>
                     </div>
-
+        
+                    <div class="card widget-find-car">
+                        <div class="card-body">
+                            <!-- <h1>hello</h1> -->
+                            <div class="find-car-btn">
+                                <button class="btn btn-danger find-card-btn" [style.background-color]="clicked1 ? ' rgba(253, 253, 253, 0)':'#B7C301'" style="color: black;" (click)="switchCSS()">New Truck</button>
+                                <button class="btn btn-danger find-card-btn" [style.background-color]="clicked2 ? 'rgba(253, 253, 253, 0)':'#B7C301'" style="color: black;"  (click)="switchCSS1()">Used Truck</button>
+                            </div>
+                            <div>
+                                <div class="form-check radio-btn">
+                                    <div>
+                                        <div class="d-flex">
+                                            <input class="radio-btn1" type="radio" name="flexRadioDefault" id="specifyColor" checked="checked">
+                                            <label class="form-check-label1" for="flexRadioDefault1">By Budget</label>
+                                        </div>
+                                    </div>
+                                    <div>
+                                        <div class="d-flex">
+                                            <input class="radio-btn2" type="radio" name="flexRadioDefault" id="specifyColor">
+                                            <label class="form-check-label2" for="flexRadioDefault1">By Brand</label>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="select-area">
+                                <select class="form-select" style="font-family: 'Verdana';" aria-label="Default select example">
+                                    <option selected>Select Budget</option>
+                                    <option value="1">$30000</option>
+                                    <option value="2">$80000</option>
+                                    <option value="3">$150000</option>
+                                  </select>
+        
+                                  <select class="form-select" aria-label="Default select example"
+                                    >
+                                    <!-- <option selected>Select Vehicle</option> -->
+                                    <option *ngFor="let vehicle of vehicleOptions; index as i">{{vehicle}}</option>
+        
+                                  </select>
+                            </div>
+                            <div>
+                                <button class="btn btn-lg btn-danger card-search-btn"  id="search" >SEARCH</button>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-
+                <div class="">
+                    <ul class="list-group list-group-horizontal car-names-list">
+                        <li class="list-group-item car-names">T680 Signature Edition</li>
+                        <li class="list-group-item car-names">T680 Next Gen</li>
+                        <li class="list-group-item car-names">Renew Truck Insurance</li>
+                        <li class="list-group-item car-names">Personal Loan</li>
+                        <li class="list-group-item car-names">Door Step Service</li>
+                        <li class="list-group-item car-names">Smart Truck Security</li>
+                      </ul>
+                </div>
+                </div>
             </div>
-
-            <div class="">
-
-                <ul class="list-group list-group-horizontal car-names-list">
-
-                    <li class="list-group-item car-names">T680 Signature Edition</li>
-
-                    <li class="list-group-item car-names">T680 Next Gen</li>
-
-                    <li class="list-group-item car-names">Renew Truck Insurance</li>
-
-                    <li class="list-group-item car-names">Personal Loan</li>
-
-                    <li class="list-group-item car-names">Door Step Service</li>
-
-                    <li class="list-group-item car-names">Smart Truck Security</li>
-
-   
-
-   
-
-                  </ul>
-
-            </div>
-
-            </div>
-
-   
-
-        </div>
+    </div>
         
 
     </div>
