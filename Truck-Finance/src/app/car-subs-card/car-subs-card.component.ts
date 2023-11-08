@@ -294,7 +294,6 @@ export class CarSubsCardComponent implements OnInit {
     });
   }
 
-  
   carDetails = [
     {
       name: 'W990',
@@ -307,10 +306,9 @@ export class CarSubsCardComponent implements OnInit {
         blue: 'Blue',
         grey: 'Grey',
       },
-      category:'Trailers',
+      category: 'Trailers',
       emi: '811',
-      value: '--',
-      select_variant: ['Standard', 'Next Generation', 'Signature Edition'],
+      select_variant: ['W990', 'Next Generation', 'Signature Edition'],
     },
     {
       name: 'T680',
@@ -322,10 +320,9 @@ export class CarSubsCardComponent implements OnInit {
         black: 'Black',
         grey: 'Grey',
       },
-      category:'Trucks',
+      category: 'Trucks',
       emi: '2,778',
-      value: '134708',
-      select_variant: [ 'Signature Edition', 'Next Generation'],
+      select_variant: ['Next Generation', 'Signature Edition'],
     },
     {
       name: 'T880',
@@ -337,12 +334,59 @@ export class CarSubsCardComponent implements OnInit {
         black: 'Blue',
         blue: 'Grey',
       },
-      category:'Trailers',
+      category: 'Trailers',
       emi: '1,400',
-      value: '--',
-      select_variant: ['T680', 'Next Generation', 'Signature Edition'],
+      select_variant: ['T880', 'Next Generation', 'Signature Edition'],
+    },
+    {
+      name: 'T280',
+      engine_capacity: '3.5L/213',
+      transmmission_type: 'Manual',
+      Fuel_Type: 'Diesel',
+      color_options: {
+        white: 'White',
+        black: 'Black',
+        blue: 'Blue',
+        grey: 'Grey',
+      },
+      category: 'Trailers',
+      emi: '1,400',
+      select_variant: ['Next Generation', 'Signature Edition'],
+    },
+    {
+      name: 'W900',
+      engine_capacity: '3.5L/213',
+      transmmission_type: 'Manual',
+      Fuel_Type: 'Diesel',
+      color_options: {
+        white: 'White',
+        black: 'Black',
+        blue: 'Blue',
+        grey: 'Grey',
+      },
+      category: 'Trailers',
+      emi: '1,400',
+      select_variant: ['W900', 'Next Generation', 'Signature Edition'],
+    },
+    {
+      name: 'T380',
+      engine_capacity: '3.5L/213',
+      transmmission_type: 'Manual',
+      Fuel_Type: 'Diesel',
+      color_options: {
+        white: 'White',
+        black: 'Black',
+        blue: 'Blue',
+        grey: 'Grey',
+      },
+      category: 'Trailers',
+      emi: '1,400',
+      select_variant: ['T380', 'Next Generation', 'Signature Edition'],
     }
+
   ];
+
+ 
 
   ngOnInit() {
     const labels = document.querySelectorAll('label');
@@ -363,10 +407,10 @@ export class CarSubsCardComponent implements OnInit {
       variant:[this.variantName, this.variant * 10000], 
         service:[this.serviceName, this.service * 10000], 
         tenure:this.selectedRadio})
-    
+    console.log("car details", this.carDetails)
     this.currentCarDetails=this.carDetails.filter((car)=> {return car.name === this.techDetailsParameter.name});
     console.log("Current Car:", this.currentCarDetails);
-    this.variantName=this.currentCarDetails[0].select_variant[0];
+    this.variantName=this.currentCarDetails[0].select_variant;
 
     labels.forEach((label) => {
       this.renderer.listen(label, 'click', () => {
