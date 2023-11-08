@@ -460,7 +460,7 @@ export class CarSubRedesignComponent implements OnInit {
         blue: 'Blue',
         grey: 'Grey',
       },
-      category: 'Trailer',
+      category: 'Trailers',
       emi: '811',
       select_variant: ['W990', 'Next Generation', 'Signature Edition'],
     },
@@ -474,7 +474,7 @@ export class CarSubRedesignComponent implements OnInit {
         black: 'Black',
         grey: 'Grey',
       },
-      category: 'Truck',
+      category: 'Trucks',
       emi: '2,778',
       select_variant: ['Next Generation', 'Signature Edition'],
     },
@@ -488,36 +488,58 @@ export class CarSubRedesignComponent implements OnInit {
         black: 'Blue',
         blue: 'Grey',
       },
-      category: 'Trailer',
+      category: 'Trailers',
       emi: '1,400',
-      select_variant: ['T680', 'Next Generation', 'Signature Edition'],
+      select_variant: ['T880', 'Next Generation', 'Signature Edition'],
     },
-    // {
-    //   name: '2023 Toyota Glanza',
-    //   engine_capacity: '3.5L/213',
-    //   transmmission_type: 'Manual',
-    //   Fuel_Type: 'Diesel',
-    //   color_options: {
-    //     white: 'White',
-    //     black: 'Black',
-    //     blue: 'Blue',
-    //     grey: 'Grey',
-    //   },
-    // },
-    // {
-    //   name: '2023 Toyota Fortuner',
-    //   engine_capacity: '3.5L/213',
-    //   transmmission_type: 'Manual',
-    //   Fuel_Type: 'Diesel',
-    //   color_options: {
-    //     white: 'White',
-    //     black: 'Black',
-    //     blue: 'Blue',
-    //     grey: 'Grey',
-    //   },
-    // },
+    {
+      name: 'T280',
+      engine_capacity: '3.5L/213',
+      transmmission_type: 'Manual',
+      Fuel_Type: 'Diesel',
+      color_options: {
+        white: 'White',
+        black: 'Black',
+        blue: 'Blue',
+        grey: 'Grey',
+      },
+      category: 'Trailers',
+      emi: '1,400',
+      select_variant: ['Next Generation', 'Signature Edition'],
+    },
+    {
+      name: 'W900',
+      engine_capacity: '3.5L/213',
+      transmmission_type: 'Manual',
+      Fuel_Type: 'Diesel',
+      color_options: {
+        white: 'White',
+        black: 'Black',
+        blue: 'Blue',
+        grey: 'Grey',
+      },
+      category: 'Trailers',
+      emi: '1,400',
+      select_variant: ['W900', 'Next Generation', 'Signature Edition'],
+    },
+    {
+      name: 'T380',
+      engine_capacity: '3.5L/213',
+      transmmission_type: 'Manual',
+      Fuel_Type: 'Diesel',
+      color_options: {
+        white: 'White',
+        black: 'Black',
+        blue: 'Blue',
+        grey: 'Grey',
+      },
+      category: 'Trailers',
+      emi: '1,400',
+      select_variant: ['T380', 'Next Generation', 'Signature Edition'],
+    }
 
   ];
+
 
   //this.currentCar = this.carDetails.filter((car) => { return car.name === this.techDetailsParameter.name; })
 
