@@ -55,9 +55,9 @@
         <p style="font-family: 'Verdana';color: #0381BA;"><b>${{numberWithCommas(techDetailsParameter.emi)}}/month</b>
         </p>
 
-        <p style="font-family: 'Verdana'; font-family: 'Verdana';"><b>${{numberWithCommas(total_amt)}}0</b></p>
+        <p style="font-family: 'Verdana'; font-family: 'Verdana';"><b>${{numberWithCommas(total_amt)}}</b></p>
 
-        <p style="font-family: 'Verdana';">${{techDetailsParameter.balloon ? techDetailsParameter.balloon : '0'}}</p>
+        <p style="font-family: 'Verdana';">${{numberWithCommas(techDetailsParameter.balloon ? techDetailsParameter.balloon : '0')}}</p>
         <p>$20,667.82</p>
 
         <p style="font-family: 'Verdana';">{{leftcard.repaymentfrequency}}</p>
