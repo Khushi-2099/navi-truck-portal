@@ -487,9 +487,12 @@ export class CarSubsCardComponent implements OnInit {
       (key) => spec.color_options[key]
     );
 
-    let flattenedColor = [].concat(...colors);
-
+    /* note that: This code was adding all color to the list thus removed
+    let flattenedColor = [].concat(...colors);    
     this.colorList.push(...flattenedColor);
+    */
+
+    this.colorList = colors;
   }
 
   filterDetails() {

@@ -65,7 +65,6 @@ export class DataHandlerService {
         white: 'White',
         black: 'Black',
         blue: 'Blue',
-        grey: 'Grey',
       },
     },
     {
