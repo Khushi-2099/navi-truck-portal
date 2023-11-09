@@ -19,19 +19,19 @@ export class HomeCarCollecComponent {
   value: number = 50;
   carDetails=[
     {
-      name:"W990",
+      name:"2024 LoneStar",
 
-      price: "$366,267",
+      price: "$180,822",
 
       imgUrl: "../../assets/Truck5.png",
 
-      speed: 'MX-13',
+      speed: 'X-15',
 
-      gear:"1,850lb",
+      gear:"2,050lb",
 
-      capacity:300,
+      capacity:60.6,
 
-      type:"510 HP"
+      type:"605 HP"
 
       
 
