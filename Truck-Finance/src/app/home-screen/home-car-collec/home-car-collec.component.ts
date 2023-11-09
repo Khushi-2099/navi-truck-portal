@@ -39,91 +39,92 @@ export class HomeCarCollecComponent {
 
     {
 
-      name:"T680",
+      name:"2024 RH613",
 
-      price: "$172,784",
+      price: "$180,822",
 
       imgUrl: "../../assets/Truck2.png",
 
-      speed: 'MX-13',
+      speed: 'Int. A26',
 
       gear:"1,850lb",
 
-      capacity:120,
+      capacity:60,
 
-      type:"455 HP"
+      type:"515 HP"
 
     },
 
     {
 
-      name:"T880",
+      name:"2023 GV515",
 
-      price: "$367,840",
+      price: "$180,822",
+
       imgUrl: "../../assets/Truck3.png",
 
-      speed: 'MX-13',
+      speed: 'Int. 6.6',
 
-      gear:"1,850 lb",
+      gear:"700lb",
 
-      capacity:150,
+      capacity:19.5,
 
-      type:"510 HP"
+      type:"350 HP"
 
     },
 
     {
 
-      name:"T280",
+      name:"2024 MV607",
 
-      price: "$271,840",
+      price: "$180,822",
 
       imgUrl: "../../assets/Truck4.png",
 
-      speed: 'PX-9',
+      speed: 'L-9',
 
-      gear:"1,250lb",
+      gear:"1,150lb",
 
-      capacity:12.9 ,
+      capacity:54.6 ,
 
-      type:"450 HP"
+      type:"360 HP"
 
     },
 
     {
 
 
-      name:"W900",
+      name:"2024 HV513",
 
-      price: "$284,640",
+      price: "$180,822",
 
       imgUrl : "../../assets/W900.png", 
 
-      speed: 'MX-13',
+      speed: 'Int. A26',
 
-      gear:"1,850 lb",
+      gear:"1,850lb",
 
-      capacity:300,
+      capacity:74,
 
-      type:"625 HP"
+      type:"515 HP"
 
     },
 
     {
 
-      name:"T380",
+      name:"2024 HX620",
 
-      price: "$171,120",
+      price: "$180,822",
 
       imgUrl: "../../assets/Truck6.png",
 
-      speed: 'PX-9',
+      speed: 'X-15',
 
-      gear:"1,250lb",
+      gear:"2,050lb",
 
-      capacity:12.5,
+      capacity:74,
 
-      type:"450 HP"
+      type:"605 HP"
 
     },
 
