@@ -58,12 +58,12 @@ export class CarSubRedesignComponent implements OnInit {
   
 
   setCarData(listt: { id: number, roadprice: any, emi: any, quantityy: number, variant:[any, any], service:[any, any], tenure:any }) {
-    if (typeof listt.roadprice == 'string'){
-      this.incomingData[listt.id].roadprice = Number(listt.roadprice.replace(/,/g, ''));
+    if (typeof listt.roadprice == 'string'){    
+      let value = listt.roadprice.split("$");
+      this.incomingData[listt.id].roadprice = Number(value[1].replace(/,/g, ''));
     }else{
-      this.incomingData[listt.id].roadprice = listt.roadprice;
+      this.incomingData.roadprice = listt.roadprice;
     }
-    
     this.incomingData[listt.id].emi = listt.emi
     this.incomingData[listt.id].quantityy = listt.quantityy
     this.incomingData[listt.id].variant = listt.variant
