@@ -43,7 +43,14 @@ export class DataHandlerService {
       maxPower:	'MAX HP 605' ,
       maxTorque:	'2,050lb',
       GVWR:	'60.6K',
-      style: [{'border-radius': `50%`}]
+      style: [{'border-radius': `50%`}],
+      select_variant: ['73" Hi-Rise Sleeper', '73" Sky-Rise Sleeper', '56" Low-Roof Sleeper','56" Hi-Rise Sleeper'],
+      color_options: {
+        white: 'White',
+        black: 'Black',
+        blue: 'Blue',
+        grey: 'Grey',
+      }
     },
     {
       name: '2024 RH613',
@@ -53,6 +60,12 @@ export class DataHandlerService {
       maxPower:	'MAX HP 515' ,
       maxTorque:	'1,850lb',
       GVWR:	'60K',
+      select_variant: ['56" Low-Roof Sleeper', '56" Hi-Rise Sleeper'],
+      color_options: {
+        white: 'White',
+        black: 'Black',
+        blue: 'Blue',
+      },
     },
     {
       name: '2024 CV515',
@@ -62,6 +75,13 @@ export class DataHandlerService {
       maxPower:	'MAX HP 350' ,
       maxTorque:	'700lb',
       GVWR:	'19.5K',
+      select_variant: ['73" Hi-Rise Sleeper', '73" Sky-Rise Sleeper', '56" Low-Roof Sleeper','56" Hi-Rise Sleeper'],
+      color_options: {
+        white: 'White',
+        black: 'Black',
+        blue: 'Blue',
+        grey: 'Grey',
+      },
     },
     {
       name: '2024 MV607',
@@ -71,6 +91,13 @@ export class DataHandlerService {
       maxPower:	'MAX HP 360' ,
       maxTorque:	'1,150lb',
       GVWR:	'54.6K',
+      select_variant: ['73" Hi-Rise Sleeper', '73" Sky-Rise Sleeper', '56" Low-Roof Sleeper','56" Hi-Rise Sleeper'],
+      color_options: {
+        white: 'White',
+        black: 'Black',
+        blue: 'Blue',
+        grey: 'Grey',
+      },
     },
     {
       name: '2024 HV513',
@@ -80,6 +107,13 @@ export class DataHandlerService {
       maxPower:	'MAX HP 515' ,
       maxTorque:	'1,850lb',
       GVWR:	'60K',
+      select_variant: ['73" Hi-Rise Sleeper', '73" Sky-Rise Sleeper', '56" Low-Roof Sleeper','56" Hi-Rise Sleeper'],
+      color_options: {
+        white: 'White',
+        black: 'Black',
+        blue: 'Blue',
+        grey: 'Grey',
+      },
     },
     {
       name: '2024 HX620',
@@ -89,6 +123,13 @@ export class DataHandlerService {
       maxPower:	'MAX HP 605' ,
       maxTorque:	'2,050lb',
       GVWR:	'74K',
+      select_variant: ['73" Hi-Rise Sleeper', '73" Sky-Rise Sleeper', '56" Low-Roof Sleeper','56" Hi-Rise Sleeper'],
+      color_options: {
+        white: 'White',
+        black: 'Black',
+        blue: 'Blue',
+        grey: 'Grey',
+      },
     }
   ]
 }

@@ -14,6 +14,8 @@ import { HttpClient } from '@angular/common/http';
 import { RedirectMenuService } from 'src/services/redirect-menu.service';
 
 import { FormGroup, FormBuilder, FormControl } from '@angular/forms';
+import { DataHandlerService } from 'src/services/data-handler.service';
+
 
 declare var $: any;
 
@@ -398,7 +400,8 @@ export class CarSubRedesignComponent implements OnInit {
     private renderer: Renderer2,
     private formBuilder: FormBuilder,
     private el: ElementRef,
-    private http: HttpClient
+    private http: HttpClient,
+    private dataHandler: DataHandlerService
   ) {
     this.loanHire = 'HirePurchase'
     this.myObserver = this.router.events.subscribe((event) => {
@@ -447,99 +450,7 @@ export class CarSubRedesignComponent implements OnInit {
     });
   }
 
-
-  carDetails = [
-    {
-      name: 'W990',
-      engine_capacity: '2.8L/213',
-      transmmission_type: 'Manual',
-      Fuel_Type: 'Petrol',
-      color_options: {
-        white: 'White',
-        black: 'Black',
-        blue: 'Blue',
-        grey: 'Grey',
-      },
-      category: 'Trailers',
-      emi: '811',
-      select_variant: ['W990', 'Next Generation', 'Signature Edition'],
-    },
-    {
-      name: 'T680',
-      engine_capacity: '12.6L',
-      transmmission_type: 'Automatic',
-      Fuel_Type: 'Diesel',
-      color_options: {
-        white: 'White',
-        black: 'Black',
-        grey: 'Grey',
-      },
-      category: 'Trucks',
-      emi: '2,778',
-      select_variant: ['Next Generation', 'Signature Edition'],
-    },
-    {
-      name: 'T880',
-      engine_capacity: '2.2L/213',
-      transmmission_type: 'Automatic',
-      Fuel_Type: 'Diesel',
-      color_options: {
-        white: 'Orange',
-        black: 'Blue',
-        blue: 'Grey',
-      },
-      category: 'Trailers',
-      emi: '1,400',
-      select_variant: ['T880', 'Next Generation', 'Signature Edition'],
-    },
-    {
-      name: 'T280',
-      engine_capacity: '3.5L/213',
-      transmmission_type: 'Manual',
-      Fuel_Type: 'Diesel',
-      color_options: {
-        white: 'White',
-        black: 'Black',
-        blue: 'Blue',
-        grey: 'Grey',
-      },
-      category: 'Trailers',
-      emi: '1,400',
-      select_variant: ['Next Generation', 'Signature Edition'],
-    },
-    {
-      name: 'W900',
-      engine_capacity: '3.5L/213',
-      transmmission_type: 'Manual',
-      Fuel_Type: 'Diesel',
-      color_options: {
-        white: 'White',
-        black: 'Black',
-        blue: 'Blue',
-        grey: 'Grey',
-      },
-      category: 'Trailers',
-      emi: '1,400',
-      select_variant: ['W900', 'Next Generation', 'Signature Edition'],
-    },
-    {
-      name: 'T380',
-      engine_capacity: '3.5L/213',
-      transmmission_type: 'Manual',
-      Fuel_Type: 'Diesel',
-      color_options: {
-        white: 'White',
-        black: 'Black',
-        blue: 'Blue',
-        grey: 'Grey',
-      },
-      category: 'Trailers',
-      emi: '1,400',
-      select_variant: ['T380', 'Next Generation', 'Signature Edition'],
-    }
-
-  ];
-
+  carDetails = this.dataHandler.vehicleDetails;
 
   //this.currentCar = this.carDetails.filter((car) => { return car.name === this.techDetailsParameter.name; })
 
