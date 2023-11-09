@@ -8,6 +8,8 @@ import { flatMap, partition } from 'rxjs';
 import { RedirectMenuService } from 'src/services/redirect-menu.service';
 
 import { FormGroup, FormBuilder, FormControl } from '@angular/forms';
+import { DataHandlerService } from 'src/services/data-handler.service';
+
 
 declare var $: any;
 
@@ -26,14 +28,24 @@ export class CarSubsCardComponent implements OnInit {
   ownership:any = "Business";
   currentCarDetails!:any;
   eligibleForm: FormGroup;
-  @Input() techDetailsParameter: any = {
-    capacity: 120,
-    gear: "1,850lb",
-    imgUrl: "../../assets/Truck2.png",
-    name: "T680",
-    price: "172,784",
-    speed: "MX-13",
-    type: "455 HP"};
+  @Input() techDetailsParameter: any = 
+    {
+      name: '2024 LoneStar',
+      imgUrl: '../assets/NaviStar/2024-Lonestar/2024-loanstar-homepage-card.png',
+      price: this.dataHandler.formatter.format(180822),
+      engineType:	'CUMMINS X15',
+      maxPower:	'MAX HP 605' ,
+      maxTorque:	'2,050lb',
+      GVWR:	'60.6K',
+      style: [{'border-radius': `50%`}],
+      select_variant: ['73" Hi-Rise Sleeper', '73" Sky-Rise Sleeper', '56" Low-Roof Sleeper','56" Hi-Rise Sleeper'],
+      color_options: {
+        white: 'White',
+        black: 'Black',
+        blue: 'Blue',
+        grey: 'Grey',
+      }
+    };
 
   @Input() compid=0;
   updatedPrice:any;
@@ -255,7 +267,9 @@ export class CarSubsCardComponent implements OnInit {
     private redirectMenu: RedirectMenuService,
     private router: Router,
     private renderer: Renderer2,
-    private formBuilder: FormBuilder
+    private formBuilder: FormBuilder,
+    private dataHandler: DataHandlerService
+
   ) {
     this.ngOnInit()
     // this.myObserver = this.router.events.subscribe((event) => {
@@ -294,99 +308,7 @@ export class CarSubsCardComponent implements OnInit {
     });
   }
 
-  carDetails = [
-    {
-      name: 'W990',
-      engine_capacity: '2.8L/213',
-      transmmission_type: 'Manual',
-      Fuel_Type: 'Petrol',
-      color_options: {
-        white: 'White',
-        black: 'Black',
-        blue: 'Blue',
-        grey: 'Grey',
-      },
-      category: 'Trailers',
-      emi: '811',
-      select_variant: ['W990', 'Next Generation', 'Signature Edition'],
-    },
-    {
-      name: 'T680',
-      engine_capacity: '12.6L',
-      transmmission_type: 'Automatic',
-      Fuel_Type: 'Diesel',
-      color_options: {
-        white: 'White',
-        black: 'Black',
-        grey: 'Grey',
-      },
-      category: 'Trucks',
-      emi: '2,778',
-      select_variant: ['Next Generation', 'Signature Edition'],
-    },
-    {
-      name: 'T880',
-      engine_capacity: '2.2L/213',
-      transmmission_type: 'Automatic',
-      Fuel_Type: 'Diesel',
-      color_options: {
-        white: 'Orange',
-        black: 'Blue',
-        blue: 'Grey',
-      },
-      category: 'Trailers',
-      emi: '1,400',
-      select_variant: ['T880', 'Next Generation', 'Signature Edition'],
-    },
-    {
-      name: 'T280',
-      engine_capacity: '3.5L/213',
-      transmmission_type: 'Manual',
-      Fuel_Type: 'Diesel',
-      color_options: {
-        white: 'White',
-        black: 'Black',
-        blue: 'Blue',
-        grey: 'Grey',
-      },
-      category: 'Trailers',
-      emi: '1,400',
-      select_variant: ['Next Generation', 'Signature Edition'],
-    },
-    {
-      name: 'W900',
-      engine_capacity: '3.5L/213',
-      transmmission_type: 'Manual',
-      Fuel_Type: 'Diesel',
-      color_options: {
-        white: 'White',
-        black: 'Black',
-        blue: 'Blue',
-        grey: 'Grey',
-      },
-      category: 'Trailers',
-      emi: '1,400',
-      select_variant: ['W900', 'Next Generation', 'Signature Edition'],
-    },
-    {
-      name: 'T380',
-      engine_capacity: '3.5L/213',
-      transmmission_type: 'Manual',
-      Fuel_Type: 'Diesel',
-      color_options: {
-        white: 'White',
-        black: 'Black',
-        blue: 'Blue',
-        grey: 'Grey',
-      },
-      category: 'Trailers',
-      emi: '1,400',
-      select_variant: ['T380', 'Next Generation', 'Signature Edition'],
-    }
-
-  ];
-
- 
+  carDetails = this.dataHandler.vehicleDetails;
 
   ngOnInit() {
     const labels = document.querySelectorAll('label');
