@@ -9,6 +9,7 @@ import { RedirectMenuService } from 'src/services/redirect-menu.service';
 
 import { FormGroup, FormBuilder, FormControl } from '@angular/forms';
 import { DataHandlerService } from 'src/services/data-handler.service';
+import { UserCart, VehicleDetails } from 'src/services/models';
 
 
 declare var $: any;
@@ -310,7 +311,16 @@ export class CarSubsCardComponent implements OnInit {
 
   carDetails = this.dataHandler.vehicleDetails;
 
+  userCart!: UserCart;
+  models: VehicleDetails[] = [];
+
   ngOnInit() {
+    console.log('Readymade --tech', this.techDetailsParameter);
+    this.models.filter(this.techDetailsParameter['name'])
+    // const vehicle = this.techDetailsParameter
+    
+    // this.userCart.variant
+    
     const labels = document.querySelectorAll('label');
     
     this.updatedPrice = this.techDetailsParameter.price;

@@ -20,6 +20,7 @@
             <i class="fa-solid cardangle" [class.fa-angle-down]="!isCarCardVisible"
                 [class.fa-angle-up]="isCarCardVisible" (click)="expandCard()" style="margin-left: 50px;"></i>
         </div>
+         
 
         <!-- <div [style.display]="isCarCardVisible ? 'inherit' : 'none'"
         [style.height]="isCarCardVisible ? 'fit-content' : '0'"> -->
@@ -166,7 +167,7 @@
                 <div class="color-div">
                     <p class="mt-4">Color</p>
                     <div style="display: flex;">
-                        <div *ngFor="let item of colorList">
+                        <div *ngFor="let item of colorList; index as i">
                             <button class="dot redbtn color{{item}}" style="outline: solid 2px #a38c8c;"
                                 (click)="outline($event)"></button>
                         </div>

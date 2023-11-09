@@ -1,4 +1,5 @@
 import { Injectable } from '@angular/core';
+import { UserCart } from './models';
 
 @Injectable({
   providedIn: 'root'
@@ -32,6 +33,16 @@ export class DataHandlerService {
 
   getVehicleListMaster(): any[] {
     return this.vehicleDetails;
+  }
+
+  userCart!: UserCart;
+
+  setUserCard(cart: UserCart) {
+    this.userCart = cart;
+  } 
+
+  getUserCart() {
+    return this.userCart;
   }
 
   vehicleDetails = [
