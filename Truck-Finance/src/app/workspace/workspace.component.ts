@@ -224,10 +224,14 @@ export class WorkspaceComponent {
 
   }
   setWorkSpace(details: any): void {
+    let truck =[];
+    for ( let i=0; i< details.truckList.length; i++){
+      truck.push(details.truckList[i].name)
+     }
     let data = {
           appID: details.applicationId,
           customerName: "John Smith",
-          carSelection: "T680,W990",
+          carSelection: truck,
           financing: this.dataHandler.formatter.format(details.price),
           status: "Pending"
         }
