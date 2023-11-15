@@ -120,7 +120,7 @@ export class CarSubRedesignComponent implements OnInit {
     } 
 
   }
-  Paccar: string = ''
+  Navistar: string = ''
   Monthly: string = ''
   Advance: string = ''
   AUD: string = ''
@@ -131,20 +131,20 @@ export class CarSubRedesignComponent implements OnInit {
 
     // Use the selectedValue to populate other fields or properties
     if (selectedValue === 'Term') {
-      this.Paccar = 'Paccar';
+      this.Navistar = 'Navistar';
       this.Monthly = 'Monthly';
       this.Advance = 'Advance';
       this.AUD = 'AUD ($)';
       this.lessor = '5.24'
     } else if (selectedValue === '12 Months') {
-      this.Paccar = 'Paccar';
+      this.Navistar = 'Navistar';
       this.Monthly = 'Monthly';
       this.Advance = 'Advance';
       this.AUD = 'AUD ($)';
       this.lessor = '5.24'
     }
     else if (selectedValue === 'Select') {
-      this.Paccar = '';
+      this.Navistar = '';
       this.Monthly = '';
       this.Advance = '';
       this.AUD = '';
