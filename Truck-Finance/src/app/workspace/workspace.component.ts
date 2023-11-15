@@ -6,6 +6,7 @@ import { NavigationEnd, Router } from '@angular/router';
 import { RedirectMenuService } from 'src/services/redirect-menu.service';
 import { AgGridModule } from 'ag-grid-angular';
 import { JsonOperationService } from '../json-operation.service';
+import { DataHandlerService } from 'src/services/data-handler.service';
 
 @Component({
   selector: 'app-workspace',
@@ -18,10 +19,13 @@ export class WorkspaceComponent {
   currentUrl: any;
   techDetailsParameter: any;
   default: string = '';
+  rowData$ : any;
 
   constructor(private http: HttpClient, private router: Router,
     private redirectMenu: RedirectMenuService,
-    private jsonOperation: JsonOperationService) {
+    private jsonOperation: JsonOperationService,
+    private dataHandler: DataHandlerService) {
+      
     this.myObserver = this.router.events.subscribe((event) => {
       if (event instanceof NavigationEnd) {
         this.currentUrl = event.url;
@@ -30,7 +34,8 @@ export class WorkspaceComponent {
           this.techDetailsParameter = navigation.extras.state;
           if (this.techDetailsParameter.comp == "credit") {
             this.default = "No";
-            this.pushData(this.techDetailsParameter);
+            this.pushData(this.techDetailsParameter);  
+            this.setWorkSpace(this.techDetailsParameter);
           } else if (this.techDetailsParameter.comp == "apply") {
             this.default = "No";
             this.updateData(this.techDetailsParameter);
@@ -41,14 +46,10 @@ export class WorkspaceComponent {
   }
 
   ngOnInit() {
-    // this.rowData$ = this.http.get<any[]>('../../assets/JSONfiles/workspace.json');
-    if (this.default != "No") {
-      this.http.get<any[]>('../../assets/JSONfiles/workspace.json').subscribe((data: any) => {
-        this.rowData$ = data;
-      });
-    }
-
-
+    this.dataHandler.getRowData().subscribe(data => {
+      this.rowData$ = data;
+      console.log('Data updated in workspace component', this.rowData$);
+    });
   }
 
 
@@ -141,8 +142,7 @@ export class WorkspaceComponent {
     },
     headerHeight: 30
   };
-  // public rowData$!: Observable<any[]>;
-  public rowData$!: any[];
+
   redirect(path: string) {
     this.redirectMenu.redirectTo(path);
   }
@@ -223,27 +223,38 @@ export class WorkspaceComponent {
     return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
 
   }
-
-  pushData(ipData: any) {
-    // {"appID":"UNE8783", "customerName":"Jane Cooper", "carSelection":"2023 Toyota Glanza", "financing":"$1,40,000", "status":"Pending"},
+  setWorkSpace(details: any): void {
     let data = {
-      appID: ipData.applicationId,
-      customerName: "John Smith",
-      carSelection: "T680,W990",
-      financing: '$' + this.numberWithCommas(ipData.price)+ '0',
-      status: "Pending"
-    }
+          appID: details.applicationId,
+          customerName: "John Smith",
+          carSelection: "T680,W990",
+          financing: this.dataHandler.formatter.format(details.price),
+          status: "Pending"
+        }
 
     this.jsonOperation.pushData(data).subscribe(
       print => {
         this.rowData$ = print;
+        // Update the DataService with the new rowData$
+        this.dataHandler.setRowData(this.rowData$);
+        console.log('this.rowData$', this.rowData$);
       }
-    )
+    );
   }
-  updateData(ipData: any) {
 
-    console.log("updating data", ipData);
-
+   pushData(techDetailsParameter: any) {
+    
+    // {"appID":"UNE8783", "customerName":"Jane Cooper", "carSelection":"2023 Toyota Glanza", "financing":"$1,40,000", "status":"Pending"},
+    // let value;
+    // setTimeout(async () => {
+    //   value = await this.dataHandler.setWorkSpace(this.techDetailsParameter);
+    //   console.log("valueeeee",value)
+    // }, 5000);
+   
+    
+  }
+  updateData(ipData: any) { 
+    
     // {"appID":"UNE8783", "customerName":"Jane Cooper", "carSelection":"2023 Toyota Glanza", "financing":"$1,40,000", "status":"Pending"},
     let data = {
       appID: ipData.tableData.appID,
@@ -256,6 +267,7 @@ export class WorkspaceComponent {
     this.jsonOperation.pushData(data).subscribe(
       print => {
         this.rowData$ = print;
+        this.dataHandler.setRowData(this.rowData$);
       }
     )
   }

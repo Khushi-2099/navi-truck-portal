@@ -1,4 +1,7 @@
+import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
+import { BehaviorSubject, Observable } from 'rxjs';
+import { JsonOperationService } from 'src/app/json-operation.service';
 
 @Injectable({
   providedIn: 'root'
@@ -7,11 +10,32 @@ export class DataHandlerService {
 
   vehicleList: string[] = [''];
   vehicleListMaster: string[] =  [];
+  workspaceList:any[] = []
+  workspaceDetails:any[] = []
+  private rowDataSubject = new BehaviorSubject<any[]>([]);
+  public rowData$ = this.rowDataSubject.asObservable();
 
-  constructor() { 
+  constructor( private jsonOperation: JsonOperationService, private http: HttpClient) { 
     this.vehicleListMaster =  this.vehicleDetails.map(x => x.name);
     this.setVehicleList(this.vehicleListMaster);
     }
+
+    workspace = [
+      {
+        "appID": "UNE8783",
+        "customerName": "Jane Cooper",
+        "carSelection": "T280",
+        "financing": "$271,840",
+        "status": "Prospect"
+      },
+      {
+        "appID": "UNE8512",
+        "customerName": "Floyd Miles",
+        "carSelection": "W900",
+        "financing": "$284,640",
+        "status": "Pending"
+      }
+    ]
 
   getVehicleList(): string[] {
     this.vehicleList = this.vehicleDetails.map(x => x.name);
@@ -32,6 +56,23 @@ export class DataHandlerService {
 
   getVehicleListMaster(): any[] {
     return this.vehicleDetails;
+  }
+
+  getWorkspace(){
+    this.workspaceList = this.workspace;
+    return this.workspaceList;  
+  }
+  
+  setRowData(data: any[]): void {
+    this.rowDataSubject.next(data);
+  }
+
+  getRowData(): Observable<any[]> {
+    return this.rowData$;
+  }
+
+  getWorkspaceData(){
+    return this.rowData$;
   }
 
   vehicleDetails = [
