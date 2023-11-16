@@ -268,7 +268,7 @@ export class CarSubsCardComponent implements OnInit {
     private router: Router,
     private renderer: Renderer2,
     private formBuilder: FormBuilder,
-    private dataHandler: DataHandlerService
+    public dataHandler: DataHandlerService
 
   ) {
     this.ngOnInit()

@@ -232,7 +232,7 @@
                 <div *ngIf="currentCarDetails[0].category == 'Trucks'">
                     <div class="d-flex radio-btn-group mt-4">
                         <label class="mt-auto mb-auto OCR-cc d-flex" for="">On Road:</label>
-                        <label class="ocr-input">$ {{numberWithCommas(storePrice)}}.60</label>
+                        <label class="ocr-input">{{ this.dataHandler.formatter.format(storePrice)}}.60</label>
                         
                     </div>
                     <div class="d-flex radio-btn-group mt-3">
@@ -251,7 +251,7 @@
                 <div *ngIf="currentCarDetails[0].category == 'Trailers'">
                     <div class="d-flex radio-btn-group mt-4">
                         <label class="mt-auto mb-auto OCR-cc d-flex" for="">On Road:</label>
-                        <label class="ocr-input">$ {{numberWithCommas(storePrice)}}.00</label>
+                        <label class="ocr-input">{{this.dataHandler.formatter.format(storePrice)}}.00</label>
                         
                     </div>
                     <div class="d-flex radio-btn-group mt-3">

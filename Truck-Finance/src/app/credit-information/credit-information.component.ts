@@ -17,6 +17,7 @@ import { RedirectMenuService } from 'src/services/redirect-menu.service';
 import { MessageService } from 'primeng/api';
 
 import { leftcard } from '../carddetails';
+import { DataHandlerService } from 'src/services/data-handler.service';
 
  
 
@@ -47,7 +48,7 @@ export class CreditInformationComponent implements OnInit {
   leftcard = leftcard;
   currentInstallment : any;
 
-  taxes:Number =0;
+  taxes=0;
 
   DSR_ratio : number | undefined ;
 
@@ -132,7 +133,9 @@ export class CreditInformationComponent implements OnInit {
 
     private router: Router,
 
-    private redirect: RedirectMenuService
+    private redirect: RedirectMenuService,
+
+    public dataHandler: DataHandlerService
 
   ) {
 
@@ -149,7 +152,7 @@ export class CreditInformationComponent implements OnInit {
           this.techDetailsParameter = navigation.extras.state;
           console.log("Taxes");
           
-          this.taxes = Number(this.techDetailsParameter.price) * 0.11;
+          this.taxes = (this.techDetailsParameter.price) * 0.11;
           this.currentInstallment = this.techDetailsParameter.leftcard.currentInstallment;
 
           console.log('from credit comp', this.techDetailsParameter);

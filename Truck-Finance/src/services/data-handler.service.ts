@@ -24,14 +24,14 @@ export class DataHandlerService {
       {
         "appID": "UNE8783",
         "customerName": "Jane Cooper",
-        "carSelection": "T280",
+        "carSelection": "2024 Loan Star",
         "financing": "$271,840",
         "status": "Prospect"
       },
       {
         "appID": "UNE8512",
         "customerName": "Floyd Miles",
-        "carSelection": "W900",
+        "carSelection": "2024 RH613",
         "financing": "$284,640",
         "status": "Pending"
       }

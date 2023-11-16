@@ -49,15 +49,15 @@
                 </div>
                 <div class="package-details">
                     <p style="font-family: Verdana;"><b>{{package}}</b></p>
-                    <p style="font-family: Verdana; color: #0381BA;"><b>${{numberWithCommas(techDetailsParameter.leftcard.currentInstallment)}}/month</b></p>
-                    <p style="font-family: Verdana; font-family: Verdana;"><b>${{numberWithCommas(techDetailsParameter.price)}}0</b></p>
-                    <p style="font-family: Verdana">${{numberWithCommas(techDetailsParameter.balloon ? techDetailsParameter.balloon : '0')}}</p>
+                    <p style="font-family: Verdana; color: #0381BA;"><b>{{ this.dataHandler.formatter.format(techDetailsParameter.leftcard.currentInstallment)}}/month</b></p>
+                    <p style="font-family: Verdana; font-family: Verdana;"><b>{{this.dataHandler.formatter.format(techDetailsParameter.price)}}0</b></p>
+                    <p style="font-family: Verdana">{{this.dataHandler.formatter.format(techDetailsParameter.balloon ? techDetailsParameter.balloon : '0')}}</p>
                     <p>$20,667.82</p>
                     <p style="font-family: Verdana;">{{techDetailsParameter.leftcard.repaymentfrequency}}</p>
                     <p style="font-family: Verdana;">{{techDetailsParameter.leftcard.APR}}</p>
                     <p style="font-family: Verdana;">{{techDetailsParameter.leftcard.addonInstallment}}</p>
-                    <p>$ {{numberWithCommas(taxes)}}</p>
-                    <p style="font-family: Verdana;"><b>${{numberWithCommas(techDetailsParameter.leftcard.currentInstallment)}}</b></p>
+                    <p>{{this.dataHandler.formatter.format(taxes)}}</p>
+                    <p style="font-family: Verdana;"><b>{{this.dataHandler.formatter.format(techDetailsParameter.leftcard.currentInstallment)}}</b></p>
 
                 </div>
             </div>

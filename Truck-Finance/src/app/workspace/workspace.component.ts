@@ -218,11 +218,6 @@ export class WorkspaceComponent {
       }
     }
   }
-  numberWithCommas(x: any) {
-
-    return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
-
-  }
   setWorkSpace(details: any): void {
     let truck =[];
     for ( let i=0; i< details.truckList.length; i++){
