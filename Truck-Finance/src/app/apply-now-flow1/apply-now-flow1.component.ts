@@ -7,6 +7,8 @@ import { leftcard } from '../carddetails';
 import { Router, NavigationEnd } from '@angular/router';
 import { RedirectMenuService } from 'src/services/redirect-menu.service';
 import { BooleanAdvancedFilterModel } from 'ag-grid-community';
+import { DataHandlerService } from 'src/services/data-handler.service';
+
 @Component({
   selector: 'app-apply-now-flow1',
   templateUrl: './apply-now-flow1.component.html',
@@ -15,12 +17,10 @@ import { BooleanAdvancedFilterModel } from 'ag-grid-community';
 export class ApplyNowFlow1Component implements OnInit {
   taxes: number | undefined;
 
-  numberWithCommas(x: any) {
+  // numberWithCommas(x: any) {
+  //   return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+  // }
 
-    return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
-
-    
-  }
 
   radio2 = 'Individual';
   radio1 = 'Individual';
@@ -120,6 +120,7 @@ export class ApplyNowFlow1Component implements OnInit {
 
   constructor(private router: Router, private fb: FormBuilder,
     private redirectMenu: RedirectMenuService, 
+    public dataHandler: DataHandlerService
   ) {
     this.radio1 = "Business";
     this.myObserver = this.router.events.subscribe((event) => {

@@ -6,18 +6,17 @@ import { Observable } from 'rxjs';
 import { HttpClient } from '@angular/common/http';
 import { RedirectMenuService } from 'src/services/redirect-menu.service';
 import { NavigationEnd, Router } from '@angular/router';
+import { DataHandlerService } from 'src/services/data-handler.service';
+
 
 @Component({
   selector: 'app-approved',
   templateUrl: './approved.component.html',
-  styleUrls: ['./approved.component.scss']
+  styleUrls: ['./approved.component.scss'],
 })
 export class ApprovedComponent {
-
   numberWithCommas(x: any) {
-
-    return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
-
+    return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ',');
   }
   accountDetails = accountDetails;
   disbursmentdetails = disbursmentdetails;
@@ -74,16 +73,21 @@ export class ApprovedComponent {
     return '<div class="ag-cell">' + params.value + '</div>';
   }
   ngOnInit() {
-    this.rowData$ = this.http.get<any[]>('../../assets/JSONfiles/approved-data.json');
+    this.rowData$ = this.http.get<any[]>(
+      '../../assets/JSONfiles/approved-data.json'
+    );
     if (this.techDetailsParameter.pramData.pramData.option == 0) {
-      this.package = "Standard"
-    }
-    else {
-      this.package = "Advanced"
+      this.package = 'Standard';
+    } else {
+      this.package = 'Advanced';
     }
   }
-  
-  constructor(private router: Router, private http: HttpClient, private redirectMenu: RedirectMenuService,
+
+  constructor(
+    private router: Router,
+    private http: HttpClient,
+    private redirectMenu: RedirectMenuService,
+    public dataHandler: DataHandlerService
   ) {
     this.myObserver = this.router.events.subscribe((event) => {
       if (event instanceof NavigationEnd) {

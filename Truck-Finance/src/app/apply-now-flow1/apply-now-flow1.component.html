@@ -51,13 +51,11 @@
       </div>
       <div class="package-details" style="margin-right: 0;">
         <p style="font-family: 'Verdana';"><b>{{package}}</b></p>
-        <!-- <b>{{numberWithCommas(techDetailsParameter.emi)}}/month</b> -->
-        <p style="font-family: 'Verdana';color: #0381BA;"><b>${{numberWithCommas(techDetailsParameter.emi)}}/month</b>
+        <p style="font-family: 'Verdana';color: #0381BA;"><b>{{this.dataHandler.formatter.format(techDetailsParameter.emi)}}/month</b>
         </p>
+        <p style="font-family: 'Verdana'; font-family: 'Verdana';"><b>{{this.dataHandler.formatter.format(total_amt)}}</b></p>
 
-        <p style="font-family: 'Verdana'; font-family: 'Verdana';"><b>${{numberWithCommas(total_amt)}}</b></p>
-
-        <p style="font-family: 'Verdana';">${{numberWithCommas(techDetailsParameter.balloon ? techDetailsParameter.balloon : '0')}}</p>
+        <p style="font-family: 'Verdana';">{{this.dataHandler.formatter.format(techDetailsParameter.balloon ? techDetailsParameter.balloon : '0')}}</p>
         <p>$20,667.82</p>
 
         <p style="font-family: 'Verdana';">{{leftcard.repaymentfrequency}}</p>
@@ -66,8 +64,8 @@
 
         <p style="font-family: 'Verdana';">{{ leftcard.addonInstallment }}</p>
         
+        <p style="font-family: 'Verdana';"><b>{{this.dataHandler.formatter.format(display_First_Pay)}}</b></p>
 
-        <p style="font-family: 'Verdana';"><b>${{numberWithCommas(display_First_Pay)}}</b></p>
 
 
       </div>

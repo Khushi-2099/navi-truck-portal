@@ -47,11 +47,11 @@
                 <div class="package-details" style="margin-right: 0;">
                     <p style="font-family: 'Verdana';"><b>{{package}}</b></p>
             
-                    <p style="font-family: 'Verdana'; font-size: 12.8px; color: #0381BA;"><b>${{numberWithCommas(techDetailsParameter.pramData.pramData.leftcard.currentInstallment)}}/month</b></p>
+                    <p style="font-family: 'Verdana'; font-size: 12.8px; color: #0381BA;"><b>{{this.dataHandler.formatter.format(techDetailsParameter.pramData.pramData.leftcard.currentInstallment)}}/month</b></p>
             
                     <p style="font-family: 'Verdana'; font-family: 'Verdana';"><b>{{numberWithCommas(techDetailsParameter.pramData.tableData.financing)}}</b></p>
             
-                    <p style="font-family: 'Verdana';">${{techDetailsParameter.pramData.pramData.balloon ? techDetailsParameter.pramData.pramData.balloon : '0'}}</p>
+                    <p style="font-family: 'Verdana';">{{this.dataHandler.formatter.format(techDetailsParameter.pramData.pramData.balloon ? techDetailsParameter.pramData.pramData.balloon : '0')}}</p>
                     <p>$20,667.82</p>
             
                     <p style="font-family: 'Verdana';">Monthly</p>
@@ -62,7 +62,7 @@
             
                     <!-- <p style="font-family: 'Verdana'; font-family: 'Verdana';"><b>{{techDetailsParameter.pramData.pramData.leftcard.yourfinalinstallment}}</b></p> -->
             
-                    <p style="font-family: 'Verdana';"><b>$ {{numberWithCommas(techDetailsParameter.pramData.pramData.leftcard.currentInstallment)}}</b></p>
+                    <p style="font-family: 'Verdana';"><b>{{this.dataHandler.formatter.format(techDetailsParameter.pramData.pramData.leftcard.currentInstallment)}}</b></p>
             
                 </div>
             </div>

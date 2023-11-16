@@ -51,8 +51,20 @@ export class DataHandlerService {
   formatter = new Intl.NumberFormat('en-US', {
     style: 'currency',
     currency: 'USD',
-    maximumFractionDigits: 0
+    maximumFractionDigits: 2
   })
+  //Remove decimals if value is 0
+  // formatCurrency(value: number): string {
+  //   const formattedValue = this.formatter.format(value);
+
+  //   const numericValue = Number(formattedValue.replace(/[^0-9.-]+/g, ''));
+
+  //   if (numericValue % 1 === 0) {
+  //     return numericValue.toFixed(0);
+  //   } else {
+  //     return formattedValue;
+  //   }
+  // }
 
   getVehicleListMaster(): any[] {
     return this.vehicleDetails;

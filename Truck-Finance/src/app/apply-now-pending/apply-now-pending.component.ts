@@ -2,6 +2,8 @@ import { Component, OnInit } from '@angular/core';
 import { MessageService } from 'primeng/api';
 import { NavigationEnd, Router } from '@angular/router';
 import { RedirectMenuService } from 'src/services/redirect-menu.service';
+import { DataHandlerService } from 'src/services/data-handler.service';
+
 
 interface UploadEvent {
   originalEvent: Event;
@@ -22,9 +24,14 @@ export class ApplyNowPendingComponent implements OnInit{
   currentUrl: any;
   techDetailsParameter: any;
   showCredit: boolean = true;
-  package:string='Standard'
+  package: string = 'Standard';
 
-  constructor(private messageService: MessageService, private router: Router, private redirectMenu: RedirectMenuService) {
+  constructor(
+    private messageService: MessageService,
+    private router: Router,
+    private redirectMenu: RedirectMenuService,
+    public dataHandler: DataHandlerService
+  ) {
     this.myObserver = this.router.events.subscribe((event) => {
       if (event instanceof NavigationEnd) {
         this.currentUrl = event.url;
