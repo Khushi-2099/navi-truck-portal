@@ -36,7 +36,7 @@ export class CarSubsCardComponent implements OnInit {
       engineType:	'CUMMINS X15',
       maxPower:	'MAX HP 605' ,
       maxTorque:	'2,050lb',
-      GVWR:	'60.6K',
+      GVWR:	'60.6K GVWR',
       style: [{'border-radius': `50%`}],
       select_variant: ['73" Hi-Rise Sleeper', '73" Sky-Rise Sleeper', '56" Low-Roof Sleeper','56" Hi-Rise Sleeper'],
       color_options: {
