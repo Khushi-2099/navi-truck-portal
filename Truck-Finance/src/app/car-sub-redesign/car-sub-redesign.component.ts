@@ -103,6 +103,7 @@ export class CarSubRedesignComponent implements OnInit {
       const totalPrice = singleUnitPrice * this.incomingData[i].quantityy
       finalPrice += totalPrice;
     } 
+    this.totalonroadprice = finalPrice;
     return finalPrice;
   }
 
