@@ -498,9 +498,11 @@ export class CarSubsCardComponent implements OnInit {
   }
 
   filterDetails() {
+    
     this.specificaiton = this.carDetails.find(
       (element) => element.name == this.techDetailsParameter.name
-    );
+      );
+      console.log('specification',this.specificaiton);
 
     this.getColorList(this.specificaiton);
   }
