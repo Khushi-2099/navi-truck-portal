@@ -256,7 +256,7 @@ export class ApplyNowFlow1Component implements OnInit {
       this.street = '2701, Navistar Drive'; 
 
       // ,  VIC 3153, Australia  U 8 796 HIGH STREET KEW EAST, VICTORIA, 3102
-      this.state = 'Illinois(LI)';
+      this.state = 'Illinois';
       this.city = 'Lisle';
       this.country = 'USA';
       this.zipcode = '60532';
