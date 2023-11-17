@@ -153,13 +153,13 @@
                 <div class="dealershipp">
                     <p class="deall"><b>Product :</b> Hire Purchase </p>
                     <p class="deall"><b>Installment Timing :</b> Advance </p>
-                    <p class="deall"><b>Contract Start Date :</b> 02/11/2023 </p>
+                    <p class="deall"><b>Contract Start Date :</b> {{currentDate}} </p>
                 </div>
 
                 <div class="dealershipp">
                     <p class="deall"><b>Currency :</b> USD ($) </p>
                     <p class="deall"><b>Business Unit :</b> NaviStar </p>
-                    <p class="deall"><b>Contract Maturity Date :</b> 02/11/2028 </p>
+                    <p class="deall"><b>Contract Maturity Date :</b> {{currentDate}} </p>
                 </div>
 
             </div>
@@ -291,7 +291,7 @@
                             <p class="empty-box-p1"><b>
                                     {{numberWithCommas(techDetailsParameter.pramData.tableData.financing)}}</b></p>
 
-                            <p class="text-muted empty-box-p2">11-10-2023, 04:15pm</p>
+                            <p class="text-muted empty-box-p2">{{currentDateWithTime}}</p>
 
                             <p class="empty-box-p3"><b>Ref.No:637232772</b></p>
 
