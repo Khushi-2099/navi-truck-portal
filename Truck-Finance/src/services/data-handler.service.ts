@@ -58,7 +58,7 @@ export class DataHandlerService {
       {
         "appID": "UNE8783",
         "customerName": "Jane Cooper",
-        "carSelection": "2024 Loan Star",
+        "carSelection": "2024 LoneStar",
         "financing": "$271,840",
         "status": "Prospect"
       },
