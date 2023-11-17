@@ -67,6 +67,7 @@ export class CarSubsCardComponent implements OnInit {
 
   increNum(){
     this.quantityy++;
+    this.dataHandler.increaseQuantity(this.compid);
     this.storePrice = this.storePrice.replace(/,/g, '');
     this.outGoingData.emit({id:this.compid, 
       roadprice:this.storePrice,
@@ -84,6 +85,7 @@ export class CarSubsCardComponent implements OnInit {
   decreNum(){
     if (this.quantityy >1){
       this.quantityy--;
+      this.dataHandler.decreaseQuantity(this.compid);
       this.storePrice = this.storePrice.replace(/,/g, '');
       this.outGoingData.emit({id:this.compid, 
         roadprice:this.storePrice,
@@ -679,6 +681,7 @@ export class CarSubsCardComponent implements OnInit {
 
   selecMile(num: number) {
     this.mile = num;
+    this.dataHandler.updateMileage(this.compid, num);
     this.outGoingData.emit({id:this.compid, 
       roadprice:this.storePrice,
       emi:this.showEmi(this.calculateEMI(this.techDetailsParameter.price)),

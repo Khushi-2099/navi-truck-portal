@@ -92,7 +92,7 @@ export class CarSubRedesignComponent implements OnInit {
     // const emi = principal * monthlyInterestRate * ((Math.pow(1+rateOfInterestMonthly, timeInMonths))/(Math.pow(1+rateOfInterestMonthly, timeInMonths) - 1));
 
     const emi = principal/timeInMonths;
-    this.totalemiprice = emi;
+    this.totalemiprice = this.dataHandler.updateEMIPrice(emi);
   }
 
   calculateTotalAmount() {

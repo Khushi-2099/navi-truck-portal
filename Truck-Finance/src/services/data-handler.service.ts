@@ -2,6 +2,7 @@ import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { BehaviorSubject, Observable } from 'rxjs';
 import { JsonOperationService } from 'src/app/json-operation.service';
+import { CartItems } from './model';
 
 @Injectable({
   providedIn: 'root'
@@ -14,6 +15,39 @@ export class DataHandlerService {
   workspaceDetails:any[] = []
   private rowDataSubject = new BehaviorSubject<any[]>([]);
   public rowData$ = this.rowDataSubject.asObservable();
+
+  cartItems: CartItems[] = [
+    {
+      id: 0,
+      quanity: 1,
+      mileageCost: 0
+    },
+    {
+      id: 1,
+      quanity: 1,
+      mileageCost: 0
+    },
+    {
+      id: 2,
+      quanity: 1,
+      mileageCost: 0
+    },
+    {
+      id: 3,
+      quanity: 1,
+      mileageCost: 0
+    },
+    {
+      id: 4,
+      quanity: 1,
+      mileageCost: 0
+    },
+    {
+      id: 5,
+      quanity: 1,
+      mileageCost: 0
+    }
+  ]
 
   constructor( private jsonOperation: JsonOperationService, private http: HttpClient) { 
     this.vehicleListMaster =  this.vehicleDetails.map(x => x.name);
@@ -85,6 +119,39 @@ export class DataHandlerService {
 
   getWorkspaceData(){
     return this.rowData$;
+  }
+
+  increaseQuantity(id: number) {
+    this.cartItems.forEach(item => {
+      if (id === item.id) {
+        item.quanity++;
+      }
+    })    
+  }
+
+  decreaseQuantity(id: number) {
+    this.cartItems.forEach(item => {
+      if (id === item.id) {
+        item.quanity--;
+      }
+    })
+  }
+
+  updateMileage(id: number, num: number) {
+    this.cartItems.forEach(item => {
+      if (id === item.id) {
+        item.mileageCost = num * 1000;
+      }
+    })    
+
+  }
+
+  updateEMIPrice(cost: number) {
+    let tempTotal = 0;
+    this.cartItems.forEach(item => {
+        tempTotal += item.mileageCost * item.quanity;
+    })
+    return tempTotal + cost;
   }
 
   vehicleDetails = [
