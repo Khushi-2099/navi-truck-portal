@@ -158,7 +158,7 @@ export class DataHandlerService {
     {
       name: '2024 LoneStar',
       imgUrl: '../assets/NaviStar/2024-Lonestar/2024-loanstar-homepage-card.png',
-      price: this.formatter.format(180822),
+      price: this.formatter.format(179721),
       engineType:	'CUMMINS X15',
       maxPower:	'MAX HP 605' ,
       maxTorque:	'2,050lb',
@@ -190,7 +190,7 @@ export class DataHandlerService {
     {
       name: '2024 CV515',
       imgUrl: '../assets/NaviStar/2023-CV515/2023-CV515-homepage-card.png',
-      price: this.formatter.format(180822),
+      price: this.formatter.format(232254),
       engineType:	'Intl. 6.6',
       maxPower:	'MAX HP 350' ,
       maxTorque:	'700lb',
@@ -206,7 +206,7 @@ export class DataHandlerService {
     {
       name: '2024 MV607',
       imgUrl: '../assets/NaviStar/2024-MV607/2024-MV607-homepage-card.png',
-      price: this.formatter.format(180822),
+      price: this.formatter.format(171640),
       engineType:	'CUMMINS L9',
       maxPower:	'MAX HP 360' ,
       maxTorque:	'1,150lb',
@@ -222,11 +222,11 @@ export class DataHandlerService {
     {
       name: '2024 HV513',
       imgUrl: '../assets/NaviStar/2024-HV513/2024-HV513-homepage-card.png',
-      price: this.formatter.format(180822),
+      price: this.formatter.format(231260),
       engineType:	'Intl. A26',
       maxPower:	'MAX HP 515' ,
       maxTorque:	'1,850lb',
-      GVWR:	'60K',
+      GVWR:	'74K',
       select_variant: ['73" Hi-Rise Sleeper', '73" Sky-Rise Sleeper', '56" Low-Roof Sleeper','56" Hi-Rise Sleeper'],
       color_options: {
         white: 'White',
@@ -238,7 +238,7 @@ export class DataHandlerService {
     {
       name: '2024 HX620',
       imgUrl: '../assets/NaviStar/2024-HX620/2024-HX620-homepage-card.png',
-      price: this.formatter.format(180822),
+      price: this.formatter.format(108045),
       engineType:	'CUMMINS X15',
       maxPower:	'MAX HP 605' ,
       maxTorque:	'2,050lb',
