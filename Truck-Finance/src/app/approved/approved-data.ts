@@ -1,7 +1,7 @@
 export const accountDetails = {
     accountNumber: ' 22-444-7777777-08',
     bankandbranchname: 'ABC Bank 7171' ,
-    AccounName : 'John Smith',
+    AccounName : 'TNZ Enterprises Ltd',
     AccountType: 'Savings',
     paymentMethod: 'Direct Debit'
   };  

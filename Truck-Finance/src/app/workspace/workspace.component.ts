@@ -225,7 +225,7 @@ export class WorkspaceComponent {
      }
     let data = {
           appID: details.applicationId,
-          customerName: "John Smith",
+          customerName: "TNZ Enterprises Ltd", 
           carSelection: truck,
           financing: this.dataHandler.formatter.format(details.price),
           status: "Pending"
