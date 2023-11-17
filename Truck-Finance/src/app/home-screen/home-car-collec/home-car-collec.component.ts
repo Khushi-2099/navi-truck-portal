@@ -21,7 +21,7 @@ export class HomeCarCollecComponent {
     {
       name:"2024 LoneStar",
 
-      price: "$180,822",
+      price: "$179,721",
 
       imgUrl: "../../assets/NaviStar/2024-Lonestar/truck-lonestar.png",
 
@@ -57,9 +57,9 @@ export class HomeCarCollecComponent {
 
     {
 
-      name:"2023 CV515",
+      name:"2024 CV515",
 
-      price: "$180,822",
+      price: "$232,254",
 
       imgUrl: "../../assets/NaviStar/2023-CV515/truck-cv515.png",
 
@@ -77,7 +77,7 @@ export class HomeCarCollecComponent {
 
       name:"2024 MV607",
 
-      price: "$180,822",
+      price: "$171,640",
 
       imgUrl: "../../assets/NaviStar/2024-MV607/truck-mv607.png",
 
@@ -96,7 +96,7 @@ export class HomeCarCollecComponent {
 
       name:"2024 HV513",
 
-      price: "$180,822",
+      price: "$231,260",
 
       imgUrl : "../../assets/NaviStar/2024-HV513/truck-hv513.png", 
 
@@ -114,7 +114,7 @@ export class HomeCarCollecComponent {
 
       name:"2024 HX620",
 
-      price: "$180,822",
+      price: "$108,045",
 
       imgUrl: "../../assets/NaviStar/2024-HX620/truck-hx620.png",
 
