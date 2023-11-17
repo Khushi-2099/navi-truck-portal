@@ -158,7 +158,7 @@ export class DataHandlerService {
     {
       name: '2024 LoneStar',
       imgUrl: '../assets/NaviStar/2024-Lonestar/truck-lonestar.png',
-      price: this.formatter.format(180822),
+      price: this.formatter.format(179721),
       engineType:	'CUMMINS X15',
       maxPower:	'MAX HP 605' ,
       maxTorque:	'2,050lb',
@@ -188,9 +188,9 @@ export class DataHandlerService {
       },
     },
     {
-      name: '2023 CV515',
+      name: '2024 CV515',
       imgUrl: '../assets/NaviStar/2023-CV515/truck-cv515.png',
-      price: this.formatter.format(180822),
+      price: this.formatter.format(232254),
       engineType:	'Intl. 6.6',
       maxPower:	'MAX HP 350' ,
       maxTorque:	'700lb',
@@ -206,7 +206,7 @@ export class DataHandlerService {
     {
       name: '2024 MV607',
       imgUrl: '../assets/NaviStar/2024-MV607/truck-mv607.png',
-      price: this.formatter.format(180822),
+      price: this.formatter.format(171640),
       engineType:	'CUMMINS L9',
       maxPower:	'MAX HP 360' ,
       maxTorque:	'1,150lb',
@@ -222,7 +222,7 @@ export class DataHandlerService {
     {
       name: '2024 HV513',
       imgUrl: '../assets/NaviStar/2024-HV513/truck-hv513.png',
-      price: this.formatter.format(180822),
+      price: this.formatter.format(231260),
       engineType:	'Intl. A26',
       maxPower:	'MAX HP 515' ,
       maxTorque:	'1,850lb',
@@ -238,7 +238,7 @@ export class DataHandlerService {
     {
       name: '2024 HX620',
       imgUrl: '../assets/NaviStar/2024-HX620/truck-hx620.png',
-      price: this.formatter.format(180822),
+      price: this.formatter.format(108045),
       engineType:	'CUMMINS X15',
       maxPower:	'MAX HP 605' ,
       maxTorque:	'2,050lb',
