@@ -57,24 +57,29 @@ export class CarSubRedesignComponent implements OnInit {
 
   
 
-  setCarData(listt: { id: number, roadprice: any, emi: any, quantityy: number, variant:[any, any], service:[any, any], tenure:any }) {
-    if (typeof listt.roadprice == 'string'){    
-      let value = listt.roadprice.split("$");
-      this.incomingData[listt.id].roadprice = Number(value[1].replace(/,/g, ''));
-    }else{
-      this.incomingData.roadprice = listt.roadprice;
-    }
+  setCarData(listt: { id: number, roadprice: any, emi: any, quantityy: number, variant:[any, any], service:[any, any], tenure:any, accessories:any}) {
     this.incomingData[listt.id].emi = listt.emi
     this.incomingData[listt.id].quantityy = listt.quantityy
     this.incomingData[listt.id].variant = listt.variant
     this.incomingData[listt.id].service = listt.service
     this.incomingData[listt.id].tenure = listt.tenure
+    this.incomingData[listt.id].accessories = listt.accessories
+    if (typeof listt.roadprice == 'string'){  
+      if(listt.roadprice.includes("$")){ 
+        let value = listt.roadprice.split("$");
+        this.incomingData[listt.id].roadprice = Number(value[1].replace(/,/g, ''));
+      } else {
+        this.incomingData[listt.id].roadprice = Number(listt.roadprice.replace(/,/g, ''));
+      }
+    } else {
+      this.incomingData.roadprice = listt.roadprice;
+    }
     this.calculateTotalPrice();
-    
+
     this.calculateNewEMI(this.rateOfInterestMonthly, Number(listt.tenure));
     // this.calculateTotalAmount()
     // this.incomingData.forEach((a: { roadprice: number; }) => sum += a.roadprice);
-
+    console.log("INCOMINGDATA", this.incomingData)
   }
   ORC :number = 8173.90;
 
@@ -96,10 +101,11 @@ export class CarSubRedesignComponent implements OnInit {
   }
 
   calculateTotalAmount() {
+
     // note that: accessories is not available, tax is not available
     let finalPrice = 0;
     for (let i = 0; i < this.incomingData.length; i++) {
-      const singleUnitPrice = this.checkAvailability(this.incomingData[i].roadprice) + this.checkAvailability(this.incomingData[i].variant[1]) + this.checkAvailability(this.incomingData[i].service[1]) + this.checkAvailability(this.incomingData[i].accesories) + this.checkAvailability(this.incomingData[i].tax)
+      const singleUnitPrice = this.checkAvailability(this.incomingData[i].roadprice) + this.checkAvailability(this.incomingData[i].variant[1]) + this.checkAvailability(this.incomingData[i].service[1]) + this.checkAvailability(this.incomingData[i].accesories) + this.checkAvailability(this.incomingData[i].tax) + this.checkAvailability(this.incomingData[i].accessories)
       const totalPrice = singleUnitPrice * this.incomingData[i].quantityy
       finalPrice += totalPrice;
     } 
@@ -115,7 +121,7 @@ export class CarSubRedesignComponent implements OnInit {
     this.totalonroadprice = 0
     this.totalemiprice = 0
     for (let i = 0; i < this.incomingData.length; i++) {
-      this.totalonroadprice += (this.incomingData[i].roadprice + ((this.ORC +0.6) /2)  ) * this.incomingData[i].quantityy
+      this.totalonroadprice += (this.incomingData[i].accessories + this.incomingData[i].roadprice + ((this.ORC +0.6) /2) + this.incomingData[i].accessories ) * this.incomingData[i].quantityy 
       this.totalemiprice += ((this.incomingData[i].emi-1980)/2) * this.incomingData[i].quantityy
       
     } 
