@@ -104,12 +104,8 @@ import { CarSubsCardComponent } from './car-subs-card/car-subs-card.component';
     Howitworks2Component,
     LandingpageComponent,
     CarSubsCardComponent
-
-
   ],
   imports: [
-   
-    
     BrowserModule,
     FormsModule,
     AppRoutingModule,
@@ -122,8 +118,6 @@ import { CarSubsCardComponent } from './car-subs-card/car-subs-card.component';
     TimelineModule,
     AgGridModule,
     HttpClientModule,
-  
-    
     FileUploadModule,
     DialogModule
   ],

@@ -40,8 +40,7 @@
             <div>
                 <div class="car-details px-2">
                     <h2>{{techDetailsParameter.name}}</h2>
-                    <p class="mb-4 mt-3">Engine Capacity {{specificaiton.engine_capacity}} ·
-                        {{specificaiton.Fuel_Type}} · {{specificaiton.transmmission_type}} </p>
+                    <p class="mb-4 mt-3">Engine Capacity: {{specificaiton.engineType}} · {{specificaiton.maxPower}} · {{specificaiton.maxTorque}}</p>
                     <h2>Service Package</h2>
 
                     <div class="d-flex radio-btn-group mt-3">
@@ -176,12 +175,12 @@
                     <h2 class="mt-4 accessories">Accessories <span>(optional)</span></h2>
                     <div class="d-flex mt-3 my-2">
                         <div>
-                            <img (click)="addBorder()" id="speedometer" class="speedometer iconss"
+                            <img (click)="addBorder(compid)" id="speedometer{{compid}}" class="speedometer iconss"
                                 src="../../assets/logos/dashcam.png" style="margin-right: 20px;">
                             <div class="info">Dashcam</div>
                         </div>
                         <div>
-                            <img (click)="addBorder2()" class="iconss" id="engine"
+                            <img (click)="addBorder2(compid)" class="speedometer iconss" id="engine{{compid}}"
                                 src="../../assets/logos/built-in-wifi.jpg">
                             <div class="info">Built-in WiFi</div>
                         </div>

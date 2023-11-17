@@ -2,6 +2,7 @@ import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { BehaviorSubject, Observable } from 'rxjs';
 import { JsonOperationService } from 'src/app/json-operation.service';
+import { CartItems } from './model';
 
 @Injectable({
   providedIn: 'root'
@@ -15,6 +16,39 @@ export class DataHandlerService {
   private rowDataSubject = new BehaviorSubject<any[]>([]);
   public rowData$ = this.rowDataSubject.asObservable();
 
+  cartItems: CartItems[] = [
+    {
+      id: 0,
+      quanity: 1,
+      mileageCost: 0
+    },
+    {
+      id: 1,
+      quanity: 1,
+      mileageCost: 0
+    },
+    {
+      id: 2,
+      quanity: 1,
+      mileageCost: 0
+    },
+    {
+      id: 3,
+      quanity: 1,
+      mileageCost: 0
+    },
+    {
+      id: 4,
+      quanity: 1,
+      mileageCost: 0
+    },
+    {
+      id: 5,
+      quanity: 1,
+      mileageCost: 0
+    }
+  ]
+
   constructor( private jsonOperation: JsonOperationService, private http: HttpClient) { 
     this.vehicleListMaster =  this.vehicleDetails.map(x => x.name);
     this.setVehicleList(this.vehicleListMaster);
@@ -24,7 +58,7 @@ export class DataHandlerService {
       {
         "appID": "UNE8783",
         "customerName": "Jane Cooper",
-        "carSelection": "2024 Loan Star",
+        "carSelection": "2024 LoneStar",
         "financing": "$271,840",
         "status": "Prospect"
       },
@@ -87,11 +121,44 @@ export class DataHandlerService {
     return this.rowData$;
   }
 
+  increaseQuantity(id: number) {
+    this.cartItems.forEach(item => {
+      if (id === item.id) {
+        item.quanity++;
+      }
+    })    
+  }
+
+  decreaseQuantity(id: number) {
+    this.cartItems.forEach(item => {
+      if (id === item.id) {
+        item.quanity--;
+      }
+    })
+  }
+
+  updateMileage(id: number, num: number) {
+    this.cartItems.forEach(item => {
+      if (id === item.id) {
+        item.mileageCost = num * 1000;
+      }
+    })    
+
+  }
+
+  updateEMIPrice(cost: number) {
+    let tempTotal = 0;
+    this.cartItems.forEach(item => {
+        tempTotal += item.mileageCost * item.quanity;
+    })
+    return tempTotal + cost;
+  }
+
   vehicleDetails = [
     {
       name: '2024 LoneStar',
-      imgUrl: '../assets/NaviStar/2024-Lonestar/2024-loanstar-homepage-card.png',
-      price: this.formatter.format(180822),
+      imgUrl: '../assets/NaviStar/2024-Lonestar/truck-lonestar.png',
+      price: this.formatter.format(179721),
       engineType:	'CUMMINS X15',
       maxPower:	'MAX HP 605' ,
       maxTorque:	'2,050lb',
@@ -107,7 +174,7 @@ export class DataHandlerService {
     },
     {
       name: '2024 RH613',
-      imgUrl: '../assets/NaviStar/2024-RH613/2024-RH613-homepage-card .png',
+      imgUrl: '../assets/NaviStar/2024-RH613/truck-rh613.png',
       price: this.formatter.format(180822),
       engineType:	'Int. A26',
       maxPower:	'MAX HP 515' ,
@@ -122,8 +189,8 @@ export class DataHandlerService {
     },
     {
       name: '2024 CV515',
-      imgUrl: '../assets/NaviStar/2023-CV515/2023-CV515-homepage-card.png',
-      price: this.formatter.format(180822),
+      imgUrl: '../assets/NaviStar/2023-CV515/truck-cv515.png',
+      price: this.formatter.format(232254),
       engineType:	'Intl. 6.6',
       maxPower:	'MAX HP 350' ,
       maxTorque:	'700lb',
@@ -138,8 +205,8 @@ export class DataHandlerService {
     },
     {
       name: '2024 MV607',
-      imgUrl: '../assets/NaviStar/2024-MV607/2024-MV607-homepage-card.png',
-      price: this.formatter.format(180822),
+      imgUrl: '../assets/NaviStar/2024-MV607/truck-mv607.png',
+      price: this.formatter.format(171640),
       engineType:	'CUMMINS L9',
       maxPower:	'MAX HP 360' ,
       maxTorque:	'1,150lb',
@@ -154,12 +221,12 @@ export class DataHandlerService {
     },
     {
       name: '2024 HV513',
-      imgUrl: '../assets/NaviStar/2024-HV513/2024-HV513-homepage-card.png',
-      price: this.formatter.format(180822),
+      imgUrl: '../assets/NaviStar/2024-HV513/truck-hv513.png',
+      price: this.formatter.format(231260),
       engineType:	'Intl. A26',
       maxPower:	'MAX HP 515' ,
       maxTorque:	'1,850lb',
-      GVWR:	'60K',
+      GVWR:	'74K',
       select_variant: ['73" Hi-Rise Sleeper', '73" Sky-Rise Sleeper', '56" Low-Roof Sleeper','56" Hi-Rise Sleeper'],
       color_options: {
         white: 'White',
@@ -170,8 +237,8 @@ export class DataHandlerService {
     },
     {
       name: '2024 HX620',
-      imgUrl: '../assets/NaviStar/2024-HX620/2024-HX620-homepage-card.png',
-      price: this.formatter.format(180822),
+      imgUrl: '../assets/NaviStar/2024-HX620/truck-hx620.png',
+      price: this.formatter.format(108045),
       engineType:	'CUMMINS X15',
       maxPower:	'MAX HP 605' ,
       maxTorque:	'2,050lb',

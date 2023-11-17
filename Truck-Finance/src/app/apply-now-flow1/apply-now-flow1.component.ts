@@ -237,8 +237,8 @@ export class ApplyNowFlow1Component implements OnInit {
       this.est='';
       this.writeus='';
       this.preferred='Email';
-      this.phone='(021) 825 234';
-      this.fax='(06) 455 4456';
+      this.phone='(+1) 331-332-5000';
+      this.fax='(+1) 800-448-7825';
       this.gmail='TNZcustomercare@hotmail.com';
       this.street1='Level1, 72 Archer Street';
       this.mailing='Level1, 72 Archer Street';
@@ -249,17 +249,17 @@ export class ApplyNowFlow1Component implements OnInit {
       this.mobile = '(+61) 3 9721 1500';
       this.home = '(+61) 3 4737 9530';
       this.email = 'john.smith@gmail.com';
-      this.citizen = 'Australia';
+      this.citizen = 'USA';
       this.resident = 'Permanent';
       this.yearsataddress = 'Public Company';
       this.status = 'Registered'
-      this.street = 'TNZ Centre, 833 Collins'; 
+      this.street = '2701, NaviStar drive'; 
 
       // ,  VIC 3153, Australia  U 8 796 HIGH STREET KEW EAST, VICTORIA, 3102
-      this.state = 'Victoria';
-      this.city = 'Melbourne';
-      this.country = 'Australia';
-      this.zipcode = '3008';
+      this.state = 'Illinois(LI)';
+      this.city = 'Lisle';
+      this.country = 'USA';
+      this.zipcode = '60532';
       this.employer = 'Ace Viticulture LTD';
       this.yearsatjob = '03';
       this.designation = 'Manager';

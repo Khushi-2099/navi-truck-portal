@@ -27,7 +27,8 @@ export class ApprovedComponent {
   isCarCardVisible1: boolean = false;
   package: string = 'Standard'
   // ORC : number = 1972.09;
-
+  currentDate:string | undefined
+  currentDateWithTime:string | undefined
   public rowData$!: Observable<any[]>;
 
   isCarCardVisible: boolean[] = [];
@@ -81,8 +82,24 @@ export class ApprovedComponent {
     } else {
       this.package = 'Advanced';
     }
+    let currentDate = new Date();
+    let year = currentDate.getFullYear();
+    let month = currentDate.getMonth() + 1; // Months are zero-based, so add 1
+    let day = currentDate.getDate();
+    let hours = currentDate.getHours();
+    let minutes = currentDate.getMinutes();
+    let ampm = hours >= 12 ? 'pm' : 'am';
+    hours = hours % 12;
+    hours = hours ? hours : 12; // the hour '0' should be '12'
+    minutes = minutes < 10 ? 0 + minutes : minutes;
+    this.currentDate = this.padZero(day) + '/' + this.padZero(month) + '/' + year;
+    this.currentDateWithTime = this.padZero(day) + '-' + this.padZero(month) + '-' + year + ', ' + this.padZero(hours) + ':' + this.padZero(minutes) + ampm;
+
   }
 
+  padZero(num: number) {
+    return num < 10 ? '0' + num : num;
+}
   constructor(
     private router: Router,
     private http: HttpClient,
