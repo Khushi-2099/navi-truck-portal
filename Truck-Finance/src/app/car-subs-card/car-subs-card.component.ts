@@ -702,12 +702,13 @@ export class CarSubsCardComponent implements OnInit {
   wifiPrice = "$ 0";
 
   addBorder(compid: number) {
+   
     let elem = document.getElementById('speedometer0') as HTMLElement;
-    let check1 = document.getElementById('radio13') as HTMLInputElement ;
-    
     let elem1 = document.getElementById('speedometer1') as HTMLElement;
-    let check2 = document.getElementById('radio15') as HTMLInputElement ;
+
     if (this.border1 == false) {
+      let check1 = document.getElementById('radio15') as HTMLInputElement ;
+  
       // this.check1 = false;
       this.accessories = this.accessories ? this.accessories + 300 : 300;
       if(compid == 0) {
@@ -715,14 +716,15 @@ export class CarSubsCardComponent implements OnInit {
           'style',
           'border:1px solid #0381BA;margin-right: 1rem;height: 2.6rem;width: auto;padding: 0.2rem;border-radius:0.2rem'
         );
-        // check1.checked = true;
+        check1.checked = true;
       }
       if(compid === 1){
+        let check2 = document.getElementById('radio13') as HTMLInputElement ;
         elem1.setAttribute(
           'style',
           'border:1px solid #0381BA;margin-right: 1rem;height: 2.6rem;width: auto;padding: 0.2rem;border-radius:0.2rem'
         );
-        // check2.checked = true;
+        check2.checked = true;
       }
      
 
@@ -770,12 +772,16 @@ export class CarSubsCardComponent implements OnInit {
       // elem.setAttribute('style', 'border:none');
       this.border1 = false;
       if(compid == 0) {
+        let elem = document.getElementById('speedometer0') as HTMLElement;
+        let check1 = document.getElementById('radio15') as HTMLInputElement ;
         elem.removeAttribute('style');
-        // check1.checked = false;
+        check1.checked = false;
       }
       if(compid === 1){
+        let elem1 = document.getElementById('speedometer1') as HTMLElement;
+        let check2 = document.getElementById('radio13') as HTMLInputElement ;
         elem1.removeAttribute('style');
-        // check2.checked = false;
+        check2.checked = false;
       }
       this.dashCamPrice = "$ 0";
       this.accessories = this.accessories == 300 || 2700 ? this.accessories - 300 : this.accessories;
@@ -822,25 +828,27 @@ export class CarSubsCardComponent implements OnInit {
 
   addBorder2(compid: number) {
     let elem = document.getElementById('engine0') as HTMLElement;
-    let check2 = document.getElementById('radio14') as HTMLInputElement ;
     let elem1 = document.getElementById('engine1') as HTMLElement;
-    let check3 = document.getElementById('radio16') as HTMLInputElement ;
     if (this.border2 == false) {
       this.accessories = this.accessories ? this.accessories + 2400 : 2400;
 
       if(compid == 0) {
+        let check3 = document.getElementById('radio16') as HTMLInputElement ;
+
         elem.setAttribute(
           'style',
           'border:1px solid #0381BA;margin-right: 1rem;height: 2.6rem;width: auto;padding: 0.2rem;border-radius:0.2rem'
         );
-        // check2.checked = true;
+        check3.checked = true;
       }
       if(compid === 1){
+        let check2 = document.getElementById('radio14') as HTMLInputElement ;
+
         elem1.setAttribute(
           'style',
           'border:1px solid #0381BA;margin-right: 1rem;height: 2.6rem;width: auto;padding: 0.2rem;border-radius:0.2rem'
         );
-        // check3.checked = true;
+        check2.checked = true;
       }
 
       this.border2 = true;
@@ -888,12 +896,15 @@ export class CarSubsCardComponent implements OnInit {
 
       this.border2 = false;
       if(compid == 0) {
+        let check3 = document.getElementById('radio16') as HTMLInputElement ;
+
         elem.removeAttribute('style');
-        // check2.checked = false;
+        check3.checked = false;
       }
       if(compid === 1){
+        let check2 = document.getElementById('radio14') as HTMLInputElement ;
         elem1.removeAttribute('style');
-        // check3.checked = false;
+        check2.checked = false;
       }      this.wifiPrice = "$ 0";
       this.accessories = this.accessories == 2400 || 2700 ? this.accessories - 2400 : this.accessories;
 
