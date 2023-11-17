@@ -459,10 +459,11 @@
                                         </label>
                                     </div>
                                     <label class="qoute-num">
-                                        $ {{numberWithCommas(incomingData[0].roadprice * 0.10)}}
+                                        <!-- $ {{numberWithCommas(incomingData[0].roadprice * 0.10)}} -->
+                                        {{formatter.format(incomingData[0].roadprice * 0.10)}}
                                     </label>
                                 </div>
-                                <div class="qoute-radio-body1" style="margin-left: 0;">
+                                <!-- <div class="qoute-radio-body1" style="margin-left: 0;">
                                     <div class="qoute-leasehire form-checkbox form-check-inline">
                                         <input type="checkbox" name="radio12" checked disabled>
                                         <label class="form-check-label" for="inlineRadio1">
@@ -472,8 +473,8 @@
                                     <label class="qoute-num">
                                         $ {{ORC}}
                                     </label>
-                                </div>
-                                <div class="qoute-radio-body1" style="margin-left: 0;">
+                                </div> -->
+                                <!-- <div class="qoute-radio-body1" style="margin-left: 0;">
                                     <div class="qoute-leasehire form-checkbox form-check-inline">
                                         <input type="checkbox" name="radio12" checked disabled>
                                         <label class="form-check-label" for="inlineRadio1">
@@ -483,7 +484,7 @@
                                     <label class="qoute-num">
                                         $ 817.39
                                     </label>
-                                </div>
+                                </div> -->
                                 <div class="qoute-radio-body1" style="margin-left: 0;">
                                     <div class="qoute-leasehire form-checkbox form-check-inline">
                                         <input type="checkbox" name="radio12" checked disabled>
@@ -497,14 +498,14 @@
                                 </div>
                                 <div class="qoute-radio-body1" style="margin-left: 0;">
                                     <div class="qoute-leasehire form-checkbox form-check-inline">
-                                        <input type="checkbox" id="radio13" value="dashcam" disabled>
+                                        <input type="checkbox" id="radio15" value="dashcam" disabled>
                                         <label class="form-check-label" for="inlineRadio1">Dashcam</label>
                                     </div>
                                     <label class="qoute-num">300</label>
                                 </div>
                                 <div class="qoute-radio-body1" style="margin-left: 0;">
                                     <div class="qoute-leasehire form-checkbox form-check-inline">
-                                        <input type="checkbox" id="radio14" value="wifi" disabled>
+                                        <input type="checkbox" id="radio16" value="wifi" disabled>
                                         <label class="form-check-label" for="inlineRadio1">
                                             Built-in WiFi
                                         </label>
@@ -513,8 +514,10 @@
                                 </div>
                                 <div class="qoute-head2">
                                     <label>Total On-Road Price:</label>
-                                    <label>$ {{numberWithCommas(incomingData[0].roadprice *
-                                        this.incomingData[0].quantityy)}}</label>
+                                    <label>
+                                        $ {{numberWithCommas(incomingData[0].roadprice * this.incomingData[0].quantityy)}}
+                                        {{formatter.format(incomingData[0].roadprice * 0.10)}}
+                                    </label>
                                 </div>
                             </div>
     
@@ -576,7 +579,8 @@
                                         </label>
                                     </div>
                                     <label class="qoute-num">
-                                        $ {{numberWithCommas(incomingData[1].roadprice * 0.10)}}
+                                        <!-- $ {{numberWithCommas(incomingData[1].roadprice * 0.10)}} -->
+                                        {{formatter.format(incomingData[0].roadprice * 0.10)}}
                                     </label>
                                 </div>
                                 <div class="qoute-radio-body1" style="margin-left: 0;">
@@ -584,19 +588,22 @@
                                         <input type="checkbox" id="radio13" value="dashcam" disabled>
                                         <label class="form-check-label" for="inlineRadio1">Dashcam</label>
                                     </div>
-                                    <label class="qoute-num">{{dashCamPrice}}</label>
+                                    <label class="qoute-num">300</label>
                                 </div>
                                 <div class="qoute-radio-body1" style="margin-left: 0;">
                                     <div class="qoute-leasehire form-checkbox form-check-inline">
                                         <input type="checkbox" id="radio14" value="wifi" disabled>
                                         <label class="form-check-label" for="inlineRadio1">Built-in WiFi</label>
                                     </div>
-                                    <label class="qoute-num">{{wifiPrice}}</label>
+                                    <label class="qoute-num">2,400</label>
                                 </div>
                                 <div class="qoute-head2">
                                     <label>Total On-Road Price:</label>
-                                    <label>$ {{numberWithCommas(incomingData[1].roadprice *
-                                        incomingData[1].quantityy)}}</label>
+                                    <!-- <label>$ {{numberWithCommas(incomingData[1].roadprice *
+                                        incomingData[1].quantityy)}}</label> -->
+                                    <label>
+                                        {{formatter.format(incomingData[1].roadprice * incomingData[1].quantityy)}}
+                                    </label>
                                 </div>
                             </div>
                         </div>
