@@ -23,7 +23,7 @@ export class HomeCarCollecComponent {
 
       price: "$180,822",
 
-      imgUrl: "../../assets/Truck5.png",
+      imgUrl: "../../assets/NaviStar/2024-Lonestar/truck-lonestar.png",
 
       speed: 'X-15',
 
@@ -43,7 +43,7 @@ export class HomeCarCollecComponent {
 
       price: "$180,822",
 
-      imgUrl: "../../assets/Truck2.png",
+      imgUrl: "../../assets/NaviStar/2024-RH613/truck-rh613.png",
 
       speed: 'Int. A26',
 
@@ -57,11 +57,11 @@ export class HomeCarCollecComponent {
 
     {
 
-      name:"2023 GV515",
+      name:"2023 CV515",
 
       price: "$180,822",
 
-      imgUrl: "../../assets/Truck3.png",
+      imgUrl: "../../assets/NaviStar/2023-CV515/truck-cv515.png",
 
       speed: 'Int. 6.6',
 
@@ -79,7 +79,7 @@ export class HomeCarCollecComponent {
 
       price: "$180,822",
 
-      imgUrl: "../../assets/Truck4.png",
+      imgUrl: "../../assets/NaviStar/2024-MV607/truck-mv607.png",
 
       speed: 'L-9',
 
@@ -98,7 +98,7 @@ export class HomeCarCollecComponent {
 
       price: "$180,822",
 
-      imgUrl : "../../assets/W900.png", 
+      imgUrl : "../../assets/NaviStar/2024-HV513/truck-hv513.png", 
 
       speed: 'Int. A26',
 
@@ -116,7 +116,7 @@ export class HomeCarCollecComponent {
 
       price: "$180,822",
 
-      imgUrl: "../../assets/Truck6.png",
+      imgUrl: "../../assets/NaviStar/2024-HX620/truck-hx620.png",
 
       speed: 'X-15',
 
